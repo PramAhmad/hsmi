@@ -17,6 +17,7 @@ class Menfess extends Model
     protected $fillable = [
         'content',
         'sender_name',
+    'to_name',
         'user_id',
         'spotify_link',
         'status',
