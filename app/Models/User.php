@@ -16,7 +16,7 @@ use Jeffgreco13\FilamentBreezy\Traits\TwoFactorAuthenticatable;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable implements FilamentUser, HasAvatar, MustVerifyEmail
+class User extends Authenticatable implements  HasAvatar, MustVerifyEmail
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable, HasRoles, TwoFactorAuthenticatable, HasApiTokens;
@@ -32,6 +32,14 @@ class User extends Authenticatable implements FilamentUser, HasAvatar, MustVerif
         'password',
         'avatar_url',
         'social_media',
+        'bio',
+        'position',
+        'fun_fact',
+        'hobby',
+        'phone',
+        'nim',
+        'semester',
+        'angkatan',
     ];
 
     /**
@@ -66,11 +74,69 @@ class User extends Authenticatable implements FilamentUser, HasAvatar, MustVerif
 
     public function getFilamentAvatarUrl(): ?string
     {
-        return $this->avatar_url ? Storage::url($this->avatar_url) : null;
+        return $this->avatar_url 
+            ? Storage::url($this->avatar_url)
+            : "https://ui-avatars.com/api/?name=" . urlencode($this->name) . "&background=0ea5e9&color=ffffff";
     }
 
-    public function canAccessPanel(Panel $panel): bool
+    // Helper methods untuk social media
+    public function getSocialMediaByPlatform($platform)
     {
-        return true;
+        if (!$this->social_media) return null;
+        
+        $socialMedia = collect($this->social_media)->firstWhere('platform', $platform);
+        return $socialMedia['url'] ?? null;
+    }
+public function getFormattedSocialMedia()
+{
+    if (!$this->social_media) return collect([]);
+    
+    return collect($this->social_media)->map(function ($item) {
+        return [
+            'platform' => $item['platform'],
+            'url' => $item['url'],
+            'icon' => $this->getSocialIcon($item['platform'])
+        ];
+    });
+}
+
+    private function getSocialIcon($platform)
+    {
+        $icons = [
+            'instagram' => 'fa-brands fa-instagram',
+            'linkedin' => 'fa-brands fa-linkedin',
+            'github' => 'fa-brands fa-github',
+            'twitter' => 'fa-brands fa-twitter',
+            'youtube' => 'fa-brands fa-youtube',
+            'tiktok' => 'fa-brands fa-tiktok',
+            'behance' => 'fa-brands fa-behance',
+            'facebook' => 'fa-brands fa-facebook',
+            'whatsapp' => 'fa-brands fa-whatsapp',
+        ];
+
+        return $icons[$platform] ?? 'fa-solid fa-link';
+    }
+
+    // Helper untuk role display
+    public function getRoleDisplayName()
+    {
+        $roleMap = [
+            'ketua' => ['name' => 'Ketua HMSI', 'emoji' => '👑'],
+            'wakil_ketua' => ['name' => 'Wakil Ketua', 'emoji' => '👸'],
+            'sekretaris' => ['name' => 'Sekretaris', 'emoji' => '📝'],
+            'bendahara' => ['name' => 'Bendahara', 'emoji' => '💰'],
+            'koordinator_acara' => ['name' => 'Koordinator Acara', 'emoji' => '🎪'],
+            'koordinator_humas' => ['name' => 'Koordinator Humas', 'emoji' => '📢'],
+            'koordinator_it' => ['name' => 'Koordinator IT', 'emoji' => '💻'],
+            'koordinator_kreatif' => ['name' => 'Koordinator Kreatif', 'emoji' => '🎨'],
+            'pengurus' => ['name' => 'Pengurus', 'emoji' => '⭐'],
+        ];
+
+        $primaryRole = $this->roles->first();
+        if ($primaryRole && isset($roleMap[$primaryRole->name])) {
+            return $roleMap[$primaryRole->name];
+        }
+
+        return ['name' => 'Tim HMSI', 'emoji' => '⭐'];
     }
 }
