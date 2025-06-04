@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="{{ asset('learnit/assets/css/nice-select.css') }}">
     <!-- Style css -->
     <link rel="stylesheet" href="{{ asset('learnit/assets/css/style.css') }}">
+    @stack('css')
+    @vite(['resources/css/app.css'])
 </head>
 
 <body>
