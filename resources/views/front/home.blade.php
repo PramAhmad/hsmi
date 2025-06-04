@@ -1,681 +1,950 @@
 @extends('front.layout')
 
 @section('content')
+<!-- Home Section -->
 <section class="banner-six-area bg-image paralax__animation"
-            data-background="{{ asset('learnit/assets/images/bg/banner-six-bg.jpg') }}">
-            <div class="banner-six__shape1" data-depth="0.03">
-                <img class="animation__sunMove" src="{{ asset('learnit/assets/images/shape/banner-six-shape1.png') }}" alt="image">
-            </div>
-            <div class="banner-six__shape2" data-depth="0.03">
-                <img class="animation__arryLeftRight" src="{{ asset('learnit/assets/images/shape/banner-six-shape2.png') }}" alt="image">
-            </div>
-            <div class="banner-six__shape3" data-depth="0.03">
-                <img class="animation__arryUpDown" src="{{ asset('learnit/assets/images/shape/banner-six-shape3.png') }}" alt="image">
-            </div>
-            <div class="container">
-                <div class="banner-two__content">
-                    <h5 class="mb-10 primary-color text-capitalize wow fadeInUp" data-wow-delay="00ms"
-                        data-wow-duration="1500ms">ONLINE LARNING COURSE</h5>
-                    <h1 class="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">Art Is The Future
-                        Of
-                        <span class="primary-color">Creativity <img src="{{ asset('learnit/assets/images/shape/banner-span-shape.png') }}"
-                                alt="shape"></span>
-                    </h1>
-                    <p class="mt-20 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">Aonsectetur
-                        adipiscing elit Aenean scelerisque augue vitae consequat Quisque eget
-                        congue!</p>
-                    <a href="course.html" class="btn-one mt-50 wow fadeInUp" data-wow-delay="600ms"
-                        data-wow-duration="1500ms">Explore Courses<i class="fa-light fa-arrow-right-long"></i></a>
+    data-background="{{ asset('learnit/assets/images/bg/banner-six-bg.jpg') }}">
+    <div class="banner-six__shape1" data-depth="0.03">
+        <img class="animation__sunMove" src="{{ asset('learnit/assets/images/shape/banner-six-shape1.png') }}" alt="image">
+    </div>
+    <div class="banner-six__shape2" data-depth="0.03">
+        <img class="animation__arryLeftRight" src="{{ asset('learnit/assets/images/shape/banner-six-shape2.png') }}" alt="image">
+    </div>
+    <div class="banner-six__shape3" data-depth="0.03">
+        <img class="animation__arryUpDown" src="{{ asset('learnit/assets/images/shape/banner-six-shape3.png') }}" alt="image">
+    </div>
+    <div class="container">
+        <div class="banner-two__content">
+            <h5 class="mb-4 text-sky-500 text-sm font-semibold uppercase tracking-widest wow fadeInUp" data-wow-delay="00ms"
+                data-wow-duration="1500ms">HIMPUNAN MAHASISWA SISTEM INFORMASI</h5>
+            <h1 class="text-5xl lg:text-6xl font-bold text-white leading-tight wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                Teknologi Adalah Masa Depan
+                <span class="text-sky-500 relative inline-block">
+                    Inovasi 
+                    <img src="{{ asset('learnit/assets/images/shape/banner-span-shape.png') }}" alt="shape" class="absolute -bottom-2 left-0 w-full">
+                </span>
+            </h1>
+            <p class="mt-8 text-lg text-gray-200 leading-relaxed max-w-2xl wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                Wadah kreativitas dan inovasi mahasiswa Sistem Informasi Universitas Siliwangi untuk berkembang dan berkarya dalam dunia teknologi informasi.
+            </p>
+            <a href="#activities" class="inline-flex items-center gap-3 bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 mt-12 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                Jelajahi Kegiatan
+                <i class="fa-light fa-arrow-right-long text-xl"></i>
+            </a>
+        </div>
+    </div>
+    <div class="banner-six__image">
+        <img class="w-100 animation__arryLeftRight" src="{{ asset('images/hmsi.jpg') }}" alt="HMSI Unsil">
+        <img class="shape1 animation__arryUpDown" src="{{ asset('learnit/assets/images/shape/banner-six-image-shape1.png') }}" alt="image">
+        <img class="shape3" src="{{ asset('learnit/assets/images/shape/banner-six-image-shape3.png') }}" alt="image">
+    </div>
+    <div class="banner-five__cloud-shape image">
+        <img src="{{ asset('learnit/assets/images/bg/cloud-bottom.png') }}" alt="shape">
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about-five-area pt-32 pb-32">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
+                <div class="about-five__image">
+                    <img class="shape slide-up-down" src="{{ asset('learnit/assets/images/shape/about-five-shape.png') }}" alt="image">
+                    <img class="w-100" src="{{ asset('learnit/assets/images/about/about-five-image.png') }}" alt="image">
+                    <img class="w-100 bg-shape" src="{{ asset('learnit/assets/images/bg/about-five-image-bg.png') }}" alt="shape">
                 </div>
             </div>
-            <div class="banner-six__image">
-                <img class="w-100 animation__arryLeftRight" src="{{ asset('learnit/assets/images/banner/banner-six-hero.png') }}" alt="image">
-                <img class="shape1 animation__arryUpDown" src="{{ asset('learnit/assets/images/shape/banner-six-image-shape1.png') }}"
-                    alt="image">
-                <img class="shape3" src="{{ asset('learnit/assets/images/shape/banner-six-image-shape3.png') }}" alt="image">
-
-            </div>
-            <div class="banner-five__cloud-shape image">
-                <img src="{{ asset('learnit/assets/images/bg/cloud-bottom.png') }}" alt="shape">
-            </div>
-        </section>
-
-        <section class="about-five-area pt-120 pb-120">
-            <div class="container">
-                <div class="row g-5">
-                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div class="about-five__image">
-                            <img class="shape slide-up-down" src="{{ asset('learnit/assets/images/shape/about-five-shape.png') }}" alt="image">
-                            <img class="w-100" src="{{ asset('learnit/assets/images/about/about-five-image.png') }}" alt="image">
-                            <img class="w-100 bg-shape" src="{{ asset('learnit/assets/images/bg/about-five-image-bg.png') }}" alt="shape">
-                        </div>
+            <div class="col-lg-6">
+                <div class="section-header-three">
+                    <h5 class="text-sky-500 text-sm font-semibold uppercase tracking-widest mb-4 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">Tentang Kami</h5>
+                    <h2 class="text-4xl font-bold text-gray-800 leading-tight mb-6 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                        Himpunan Mahasiswa
+                        <span class="text-sky-500 relative inline-block">
+                            Sistem Informasi 
+                            <img src="{{ asset('learnit/assets/images/shape/header-shape.png') }}" alt="shape" class="absolute -bottom-2 left-0 w-full">
+                        </span>
+                    </h2>
+                    <p class="text-gray-600 text-lg leading-relaxed wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                        HMSI Universitas Siliwangi adalah organisasi kemahasiswaan yang bergerak dalam bidang teknologi informasi dan sistem informasi, menjadi wadah pengembangan potensi mahasiswa.
+                    </p>
+                </div>
+                <div class="about-two__item mt-8 mb-10">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <ul class="space-y-4 wow fadeInDown" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <li class="flex items-center gap-3">
+                                <span class="w-6 h-6 bg-sky-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg width="12" height="10" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.38446 13.1797C7.34201 13.1797 7.30003 13.171 7.26115 13.1539C7.22227 13.1369 7.18732 13.1121 7.15852 13.0809L1.06661 6.49119C1.026 6.44726 0.999078 6.39244 0.989139 6.33344C0.9792 6.27445 0.986676 6.21384 1.01065 6.15902C1.03463 6.10421 1.07406 6.05758 1.12413 6.02483C1.17419 5.99208 1.23272 5.97464 1.29255 5.97464H4.22486C4.26888 5.97464 4.3124 5.98409 4.35246 6.00234C4.39252 6.0206 4.42821 6.04723 4.4571 6.08045L6.49304 8.42273C6.71307 7.95239 7.13901 7.16925 7.88646 6.21497C8.99144 4.8042 11.0468 2.7294 14.5632 0.85642C14.6312 0.820227 14.7102 0.810833 14.7848 0.830094C14.8593 0.849355 14.924 0.895871 14.9659 0.960456C15.0078 1.02504 15.024 1.103 15.0113 1.17894C14.9985 1.25488 14.9578 1.32328 14.897 1.37064C14.8836 1.38113 13.5278 2.44882 11.9674 4.40448C10.5314 6.20417 8.62239 9.14694 7.68304 12.946C7.66654 13.0128 7.62816 13.0721 7.57402 13.1144C7.51989 13.1568 7.45312 13.1799 7.38436 13.1799L7.38446 13.1797Z" fill="white" />
+                                    </svg>
+                                </span>
+                                <h4 class="text-lg font-semibold text-gray-800">Pengembangan Soft Skills</h4>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-6 h-6 bg-sky-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg width="12" height="10" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.38446 13.1797C7.34201 13.1797 7.30003 13.171 7.26115 13.1539C7.22227 13.1369 7.18732 13.1121 7.15852 13.0809L1.06661 6.49119C1.026 6.44726 0.999078 6.39244 0.989139 6.33344C0.9792 6.27445 0.986676 6.21384 1.01065 6.15902C1.03463 6.10421 1.07406 6.05758 1.12413 6.02483C1.17419 5.99208 1.23272 5.97464 1.29255 5.97464H4.22486C4.26888 5.97464 4.3124 5.98409 4.35246 6.00234C4.39252 6.0206 4.42821 6.04723 4.4571 6.08045L6.49304 8.42273C6.71307 7.95239 7.13901 7.16925 7.88646 6.21497C8.99144 4.8042 11.0468 2.7294 14.5632 0.85642C14.6312 0.820227 14.7102 0.810833 14.7848 0.830094C14.8593 0.849355 14.924 0.895871 14.9659 0.960456C15.0078 1.02504 15.024 1.103 15.0113 1.17894C14.9985 1.25488 14.9578 1.32328 14.897 1.37064C14.8836 1.38113 13.5278 2.44882 11.9674 4.40448C10.5314 6.20417 8.62239 9.14694 7.68304 12.946C7.66654 13.0128 7.62816 13.0721 7.57402 13.1144C7.51989 13.1568 7.45312 13.1799 7.38436 13.1799L7.38446 13.1797Z" fill="white" />
+                                    </svg>
+                                </span>
+                                <h4 class="text-lg font-semibold text-gray-800">Jaringan Alumni</h4>
+                            </li>
+                        </ul>
+                        <ul class="space-y-4 wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
+                            <li class="flex items-center gap-3">
+                                <span class="w-6 h-6 bg-sky-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg width="12" height="10" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.38446 13.1797C7.34201 13.1797 7.30003 13.171 7.26115 13.1539C7.22227 13.1369 7.18732 13.1121 7.15852 13.0809L1.06661 6.49119C1.026 6.44726 0.999078 6.39244 0.989139 6.33344C0.9792 6.27445 0.986676 6.21384 1.01065 6.15902C1.03463 6.10421 1.07406 6.05758 1.12413 6.02483C1.17419 5.99208 1.23272 5.97464 1.29255 5.97464H4.22486C4.26888 5.97464 4.3124 5.98409 4.35246 6.00234C4.39252 6.0206 4.42821 6.04723 4.4571 6.08045L6.49304 8.42273C6.71307 7.95239 7.13901 7.16925 7.88646 6.21497C8.99144 4.8042 11.0468 2.7294 14.5632 0.85642C14.6312 0.820227 14.7102 0.810833 14.7848 0.830094C14.8593 0.849355 14.924 0.895871 14.9659 0.960456C15.0078 1.02504 15.024 1.103 15.0113 1.17894C14.9985 1.25488 14.9578 1.32328 14.897 1.37064C14.8836 1.38113 13.5278 2.44882 11.9674 4.40448C10.5314 6.20417 8.62239 9.14694 7.68304 12.946C7.66654 13.0128 7.62816 13.0721 7.57402 13.1144C7.51989 13.1568 7.45312 13.1799 7.38436 13.1799L7.38446 13.1797Z" fill="white" />
+                                    </svg>
+                                </span>
+                                <h4 class="text-lg font-semibold text-gray-800">Project Kolaboratif</h4>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-6 h-6 bg-sky-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg width="12" height="10" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.38446 13.1797C7.34201 13.1797 7.30003 13.171 7.26115 13.1539C7.22227 13.1369 7.18732 13.1121 7.15852 13.0809L1.06661 6.49119C1.026 6.44726 0.999078 6.39244 0.989139 6.33344C0.9792 6.27445 0.986676 6.21384 1.01065 6.15902C1.03463 6.10421 1.07406 6.05758 1.12413 6.02483C1.17419 5.99208 1.23272 5.97464 1.29255 5.97464H4.22486C4.26888 5.97464 4.3124 5.98409 4.35246 6.00234C4.39252 6.0206 4.42821 6.04723 4.4571 6.08045L6.49304 8.42273C6.71307 7.95239 7.13901 7.16925 7.88646 6.21497C8.99144 4.8042 11.0468 2.7294 14.5632 0.85642C14.6312 0.820227 14.7102 0.810833 14.7848 0.830094C14.8593 0.849355 14.924 0.895871 14.9659 0.960456C15.0078 1.02504 15.024 1.103 15.0113 1.17894C14.9985 1.25488 14.9578 1.32328 14.897 1.37064C14.8836 1.38113 13.5278 2.44882 11.9674 4.40448C10.5314 6.20417 8.62239 9.14694 7.68304 12.946C7.66654 13.0128 7.62816 13.0721 7.57402 13.1144C7.51989 13.1568 7.45312 13.1799 7.38436 13.1799L7.38446 13.1797Z" fill="white" />
+                                    </svg>
+                                </span>
+                                <h4 class="text-lg font-semibold text-gray-800">Kompetisi & Event</h4>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="section-header-three">
-                            <h5 class="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">About us</h5>
-                            <h2 class="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">Top Choice for
-                                <span>Children <img src="{{ asset('learnit/assets/images/shape/header-shape.png') }}" alt="shape"></span>
-                            </h2>
-                            <p class="wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">Aonsectetur
-                                adipiscing elit Aenean scelerisque augue vitae consequat Juisque eget congue velit in
-                                cursus.</p>
+                </div>
+                <div class="flex flex-wrap items-center gap-6 wow fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
+                    <a href="/about" class="inline-flex items-center gap-3 bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        Tentang Kami
+                        <i class="fa-light fa-arrow-right-long"></i>
+                    </a>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-sky-500 rounded-full flex items-center justify-center">
+                            <span class="pxl__zigzag">
+                                <svg width="24" height="24" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_918_1337)">
+                                        <path d="M5.41667 4.33337H9.75L11.9167 9.75004L9.20833 11.375C10.3685 13.7275 12.2725 15.6315 14.625 16.7917L16.25 14.0834L21.6667 16.25V20.5834C21.6667 21.158 21.4384 21.7091 21.0321 22.1154C20.6257 22.5218 20.0746 22.75 19.5 22.75C15.2742 22.4932 11.2885 20.6987 8.2949 17.7051C5.3013 14.7115 3.5068 10.7258 3.25 6.50004C3.25 5.9254 3.47827 5.3743 3.8846 4.96798C4.29093 4.56165 4.84203 4.33337 5.41667 4.33337Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M16.25 7.58337C16.8246 7.58337 17.3757 7.81165 17.7821 8.21798C18.1884 8.6243 18.4167 9.1754 18.4167 9.75004" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M16.25 3.25C17.9739 3.25 19.6272 3.93482 20.8462 5.15381C22.0652 6.37279 22.75 8.02609 22.75 9.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath>
+                                            <rect width="26" height="26" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
                         </div>
-                        <div class="about-two__item mt-30 mb-40">
-                            <ul class="wow fadeInDown" data-wow-delay="00ms" data-wow-duration="1500ms">
-                                <li class="mb-4">
-                                    <span><svg width="16" height="14" viewBox="0 0 16 14" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.38446 13.1797C7.34201 13.1797 7.30003 13.171 7.26115 13.1539C7.22227 13.1369 7.18732 13.1121 7.15852 13.0809L1.06661 6.49119C1.026 6.44726 0.999078 6.39244 0.989139 6.33344C0.9792 6.27445 0.986676 6.21384 1.01065 6.15902C1.03463 6.10421 1.07406 6.05758 1.12413 6.02483C1.17419 5.99208 1.23272 5.97464 1.29255 5.97464H4.22486C4.26888 5.97464 4.3124 5.98409 4.35246 6.00234C4.39252 6.0206 4.42821 6.04723 4.4571 6.08045L6.49304 8.42273C6.71307 7.95239 7.13901 7.16925 7.88646 6.21497C8.99144 4.8042 11.0468 2.7294 14.5632 0.85642C14.6312 0.820227 14.7102 0.810833 14.7848 0.830094C14.8593 0.849355 14.924 0.895871 14.9659 0.960456C15.0078 1.02504 15.024 1.103 15.0113 1.17894C14.9985 1.25488 14.9578 1.32328 14.897 1.37064C14.8836 1.38113 13.5278 2.44882 11.9674 4.40448C10.5314 6.20417 8.62239 9.14694 7.68304 12.946C7.66654 13.0128 7.62816 13.0721 7.57402 13.1144C7.51989 13.1568 7.45312 13.1799 7.38436 13.1799L7.38446 13.1797Z"
-                                                fill="#181818" />
-                                        </svg>
-                                    </span>
-                                    <h4 class="fs-18">Flexible Course Plan</h4>
-                                </li>
-                                <li>
-                                    <span><svg width="16" height="14" viewBox="0 0 16 14" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.38446 13.1797C7.34201 13.1797 7.30003 13.171 7.26115 13.1539C7.22227 13.1369 7.18732 13.1121 7.15852 13.0809L1.06661 6.49119C1.026 6.44726 0.999078 6.39244 0.989139 6.33344C0.9792 6.27445 0.986676 6.21384 1.01065 6.15902C1.03463 6.10421 1.07406 6.05758 1.12413 6.02483C1.17419 5.99208 1.23272 5.97464 1.29255 5.97464H4.22486C4.26888 5.97464 4.3124 5.98409 4.35246 6.00234C4.39252 6.0206 4.42821 6.04723 4.4571 6.08045L6.49304 8.42273C6.71307 7.95239 7.13901 7.16925 7.88646 6.21497C8.99144 4.8042 11.0468 2.7294 14.5632 0.85642C14.6312 0.820227 14.7102 0.810833 14.7848 0.830094C14.8593 0.849355 14.924 0.895871 14.9659 0.960456C15.0078 1.02504 15.024 1.103 15.0113 1.17894C14.9985 1.25488 14.9578 1.32328 14.897 1.37064C14.8836 1.38113 13.5278 2.44882 11.9674 4.40448C10.5314 6.20417 8.62239 9.14694 7.68304 12.946C7.66654 13.0128 7.62816 13.0721 7.57402 13.1144C7.51989 13.1568 7.45312 13.1799 7.38436 13.1799L7.38446 13.1797Z"
-                                                fill="#181818" />
-                                        </svg>
-                                    </span>
-                                    <h4 class="fs-18">Expert mentors</h4>
-                                </li>
-                            </ul>
-                            <ul class="wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-                                <li class="mb-4">
-                                    <span><svg width="16" height="14" viewBox="0 0 16 14" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.38446 13.1797C7.34201 13.1797 7.30003 13.171 7.26115 13.1539C7.22227 13.1369 7.18732 13.1121 7.15852 13.0809L1.06661 6.49119C1.026 6.44726 0.999078 6.39244 0.989139 6.33344C0.9792 6.27445 0.986676 6.21384 1.01065 6.15902C1.03463 6.10421 1.07406 6.05758 1.12413 6.02483C1.17419 5.99208 1.23272 5.97464 1.29255 5.97464H4.22486C4.26888 5.97464 4.3124 5.98409 4.35246 6.00234C4.39252 6.0206 4.42821 6.04723 4.4571 6.08045L6.49304 8.42273C6.71307 7.95239 7.13901 7.16925 7.88646 6.21497C8.99144 4.8042 11.0468 2.7294 14.5632 0.85642C14.6312 0.820227 14.7102 0.810833 14.7848 0.830094C14.8593 0.849355 14.924 0.895871 14.9659 0.960456C15.0078 1.02504 15.024 1.103 15.0113 1.17894C14.9985 1.25488 14.9578 1.32328 14.897 1.37064C14.8836 1.38113 13.5278 2.44882 11.9674 4.40448C10.5314 6.20417 8.62239 9.14694 7.68304 12.946C7.66654 13.0128 7.62816 13.0721 7.57402 13.1144C7.51989 13.1568 7.45312 13.1799 7.38436 13.1799L7.38446 13.1797Z"
-                                                fill="#181818" />
-                                        </svg>
-                                    </span>
-                                    <h4 class="fs-18">Educator Support</h4>
-                                </li>
-                                <li>
-                                    <span><svg width="16" height="14" viewBox="0 0 16 14" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.38446 13.1797C7.34201 13.1797 7.30003 13.171 7.26115 13.1539C7.22227 13.1369 7.18732 13.1121 7.15852 13.0809L1.06661 6.49119C1.026 6.44726 0.999078 6.39244 0.989139 6.33344C0.9792 6.27445 0.986676 6.21384 1.01065 6.15902C1.03463 6.10421 1.07406 6.05758 1.12413 6.02483C1.17419 5.99208 1.23272 5.97464 1.29255 5.97464H4.22486C4.26888 5.97464 4.3124 5.98409 4.35246 6.00234C4.39252 6.0206 4.42821 6.04723 4.4571 6.08045L6.49304 8.42273C6.71307 7.95239 7.13901 7.16925 7.88646 6.21497C8.99144 4.8042 11.0468 2.7294 14.5632 0.85642C14.6312 0.820227 14.7102 0.810833 14.7848 0.830094C14.8593 0.849355 14.924 0.895871 14.9659 0.960456C15.0078 1.02504 15.024 1.103 15.0113 1.17894C14.9985 1.25488 14.9578 1.32328 14.897 1.37064C14.8836 1.38113 13.5278 2.44882 11.9674 4.40448C10.5314 6.20417 8.62239 9.14694 7.68304 12.946C7.66654 13.0128 7.62816 13.0721 7.57402 13.1144C7.51989 13.1568 7.45312 13.1799 7.38436 13.1799L7.38446 13.1797Z"
-                                                fill="#181818" />
-                                        </svg>
-                                    </span>
-                                    <h4 class="fs-18">Lifetime Access</h4>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="d-flex align-items-center gap-4 wow fadeInDown" data-wow-delay="400ms"
-                            data-wow-duration="1500ms">
-                            <a href="about.html" class="btn-one">About Us<i
-                                    class="fa-light fa-arrow-right-long"></i></a>
-                            <div class="d-flex flex-wrap gap-2 align-items-center">
-                                <div class="about-five__call-icon">
-                                    <span class="pxl__zigzag"><svg width="26" height="26" viewBox="0 0 26 26"
-                                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_918_1337)">
-                                                <path
-                                                    d="M5.41667 4.33337H9.75L11.9167 9.75004L9.20833 11.375C10.3685 13.7275 12.2725 15.6315 14.625 16.7917L16.25 14.0834L21.6667 16.25V20.5834C21.6667 21.158 21.4384 21.7091 21.0321 22.1154C20.6257 22.5218 20.0746 22.75 19.5 22.75C15.2742 22.4932 11.2885 20.6987 8.2949 17.7051C5.3013 14.7115 3.5068 10.7258 3.25 6.50004C3.25 5.9254 3.47827 5.3743 3.8846 4.96798C4.29093 4.56165 4.84203 4.33337 5.41667 4.33337Z"
-                                                    stroke="white" stroke-width="2" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M16.25 7.58337C16.8246 7.58337 17.3757 7.81165 17.7821 8.21798C18.1884 8.6243 18.4167 9.1754 18.4167 9.75004"
-                                                    stroke="white" stroke-width="2" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M16.25 3.25C17.9739 3.25 19.6272 3.93482 20.8462 5.15381C22.0652 6.37279 22.75 8.02609 22.75 9.75"
-                                                    stroke="white" stroke-width="2" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </g>
-                                            <defs>
-                                                <clipPath>
-                                                    <rect width="26" height="26" fill="white" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg></span>
-                                </div>
-                                <div class="info">
-                                    <span class="sm-font fw-500 secondary-color">Call Us Now</span>
-                                    <h5>+208-555-0112</h5>
-                                </div>
-                            </div>
+                        <div>
+                            <span class="text-sm font-medium text-gray-500">Hubungi Kami</span>
+                            <h5 class="text-lg font-bold text-gray-800">@hmsi_unsil</h5>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <section class="courses-six-area pt-120 pb-120">
-            <div class="container">
-                <div class="section-header text-center mb-60">
-                    <h5 class="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">Top Class Courses</h5>
-                    <h2 class="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">Choose <span>Our Top
-                            <img src="{{ asset('learnit/assets/images/shape/header-shape.png') }}" alt="shape"></span>
-                        Courses</h2>
+<!-- Menfess Section -->
+<section class="relative bg-slate-50 pt-32 pb-32">
+    <!-- Background Shapes -->
+    <div class="absolute top-10 left-10 opacity-20">
+        <div class="w-20 h-20 bg-sky-500 rounded-full animate-pulse"></div>
+    </div>
+    <div class="absolute top-1/2 right-10 opacity-10">
+        <div class="w-32 h-32 bg-sky-400 rounded-full animate-bounce"></div>
+    </div>
+    
+    <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Content -->
+            <div class="order-2 lg:order-1">
+                <div class="mb-10">
+                    <h5 class="text-sky-500 uppercase tracking-widest font-semibold text-sm mb-3 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">HMSI MENFESS</h5>
+                    <h2 class="text-4xl font-bold text-gray-800 leading-tight wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                        Cerita & Curhat <span class="text-sky-500 relative">
+                            Anonim
+                            <img src="{{ asset('learnit/assets/images/shape/header-shape.png') }}" alt="shape" class="absolute -bottom-2 left-0 w-full">
+                        </span>
+                    </h2>
                 </div>
-                <div class="row g-4">
-                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                        <div class="courses-six__item bor">
-                            <div class="courses-six__image image">
-                                <img src="{{ asset('learnit/assets/images/courses/courses-six-image1.png') }}" alt="image">
-                                <div class="courses-price">
-                                    <h5 class="fs-18">$49</h5>
-                                </div>
-                            </div>
-                            <div class="courses-six__content">
-                                <div class="tag mb-20">Beginner</div>
-                                <h3><a href="course-details.html" class="primary-hover">The Ultimate Drawing Course
-                                        Beginners</a>
-                                </h3>
-                                <ul class="d-flex align-items-center gap-4 my-3">
-                                    <li>
-                                        <svg class="me-1" width="16" height="14" viewBox="0 0 16 14" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M7.99967 2.29208C7.74714 1.80254 7.36475 1.39195 6.89439 1.10526C6.42403 0.81858 5.88385 0.666869 5.33301 0.666748C3.67734 0.666748 2.33301 2.01108 2.33301 3.66675C2.33301 5.32241 3.67734 6.66675 5.33301 6.66675C5.88385 6.66663 6.42403 6.51492 6.89439 6.22823C7.36475 5.94155 7.74714 5.53095 7.99967 5.04142C8.25215 5.531 8.63453 5.94164 9.1049 6.22833C9.57527 6.51502 10.1155 6.6667 10.6663 6.66675C12.322 6.66675 13.6663 5.32241 13.6663 3.66675C13.6663 2.01108 12.322 0.666748 10.6663 0.666748C10.1155 0.666869 9.57532 0.81858 9.10496 1.10526C8.6346 1.39195 8.25221 1.80254 7.99967 2.29208ZM10.6663 1.33341C11.954 1.33341 12.9997 2.37908 12.9997 3.66675C12.9997 4.95441 11.954 6.00008 10.6663 6.00008C9.37867 6.00008 8.33301 4.95441 8.33301 3.66675C8.33301 2.37908 9.37867 1.33341 10.6663 1.33341ZM5.33301 1.33341C6.62067 1.33341 7.66634 2.37908 7.66634 3.66675C7.66634 4.95441 6.62067 6.00008 5.33301 6.00008C4.04534 6.00008 2.99967 4.95441 2.99967 3.66675C2.99967 2.37908 4.04534 1.33341 5.33301 1.33341ZM7.99967 7.58342C8.41301 7.42208 8.86267 7.33342 9.33301 7.33342H11.9997C14.0247 7.33342 15.6663 8.97508 15.6663 11.0001V12.3334C15.6663 12.5986 15.561 12.853 15.3734 13.0405C15.1859 13.2281 14.9316 13.3334 14.6663 13.3334H1.33301C1.06779 13.3334 0.813437 13.2281 0.625901 13.0405C0.438365 12.853 0.333008 12.5986 0.333008 12.3334V11.0001C0.333008 8.97508 1.97467 7.33342 3.99967 7.33342H6.66634C7.13667 7.33342 7.58634 7.42208 7.99967 7.58342ZM9.66634 11.0001V12.3334C9.66634 12.4218 9.63122 12.5066 9.56871 12.5691C9.5062 12.6316 9.42141 12.6667 9.33301 12.6667H1.33301C1.2446 12.6667 1.15982 12.6316 1.09731 12.5691C1.03479 12.5066 0.999674 12.4218 0.999674 12.3334V11.0001C0.999674 10.2044 1.31574 9.44137 1.87835 8.87876C2.44096 8.31615 3.20403 8.00008 3.99967 8.00008H6.66634C7.46199 8.00008 8.22505 8.31615 8.78766 8.87876C9.35027 9.44137 9.66634 10.2044 9.66634 11.0001ZM10.276 12.6667H14.6663C14.7547 12.6667 14.8395 12.6316 14.902 12.5691C14.9646 12.5066 14.9997 12.4218 14.9997 12.3334V11.0001C14.9997 10.2044 14.6836 9.44137 14.121 8.87876C13.5584 8.31615 12.7953 8.00008 11.9997 8.00008H9.33301C9.16267 8.00008 8.99534 8.01441 8.83267 8.04175C9.29799 8.38193 9.6764 8.82718 9.93711 9.34125C10.1978 9.85532 10.3335 10.4237 10.333 11.0001V12.3334C10.333 12.4504 10.313 12.5624 10.276 12.6667Z"
-                                                fill="#181818" />
-                                        </svg>
-                                        <a class="primary-hover fs-14" href="#0">180 Students</a>
-                                    </li>
-                                    <li>
-                                        <svg class="me-1" width="14" height="16" viewBox="0 0 14 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M10.1515 15.7576H2.00607C1.32728 15.7576 0.793945 15.2242 0.793945 14.5455V1.45455C0.793945 0.775765 1.32728 0.242432 2.00607 0.242432H11.9939C12.6727 0.242432 13.2061 0.775765 13.2061 1.45455V12.7758C13.2061 12.9212 13.1091 13.0182 12.9636 13.0182C12.8182 13.0182 12.7212 12.9212 12.7212 12.7758V1.45455C12.7212 1.04243 12.4061 0.72728 11.9939 0.72728H2.00607C1.59395 0.72728 1.27879 1.04243 1.27879 1.45455V14.5455C1.27879 14.9576 1.59395 15.2727 2.00607 15.2727H10.1515C10.297 15.2727 10.3939 15.3697 10.3939 15.5152C10.3939 15.6606 10.297 15.7576 10.1515 15.7576Z"
-                                                fill="#181818" />
-                                            <path
-                                                d="M10.2001 15.7576H10.1758C10.0304 15.7576 9.93339 15.6606 9.93339 15.5152V13.6727C9.93339 13.0424 10.4425 12.5333 11.0728 12.5333H12.9395C13.0364 12.5333 13.1334 12.5818 13.1576 12.6788C13.2061 12.7758 13.1819 12.8727 13.1092 12.9455L10.3698 15.6849C10.3213 15.7333 10.2728 15.7576 10.2001 15.7576ZM11.0728 13.0182C10.7092 13.0182 10.4182 13.3091 10.4182 13.6727V14.9576L12.3576 13.0182H11.0728ZM7.0243 4.24244C7.00006 4.24244 6.97582 4.24244 6.95158 4.2182L3.55764 3.0788C3.46067 3.05456 3.38794 2.95759 3.38794 2.86062C3.38794 2.76365 3.46067 2.66668 3.55764 2.64244L6.95158 1.50305C7.00006 1.4788 7.04855 1.4788 7.09703 1.50305L10.394 2.64244C10.491 2.66668 10.5637 2.76365 10.5637 2.86062C10.5637 2.95759 10.491 3.05456 10.394 3.0788L7.09703 4.2182C7.07279 4.24244 7.04855 4.24244 7.0243 4.24244ZM4.38188 2.86062L7.0243 3.73335L9.56976 2.86062L7.0243 1.98789L4.38188 2.86062Z"
-                                                fill="#181818" />
-                                            <path
-                                                d="M7.00002 5.59996C6.22426 5.59996 5.42426 5.55148 4.60002 5.45451C4.47881 5.43027 4.38184 5.3333 4.38184 5.21208V3.22421C4.38184 3.07875 4.47881 2.98178 4.62426 2.98178C4.76971 2.98178 4.86668 3.07875 4.86668 3.22421V4.9939C6.29699 5.13936 7.70305 5.1636 9.03638 4.9939V3.22421C9.03638 3.07875 9.13335 2.98178 9.27881 2.98178C9.42426 2.98178 9.52123 3.07875 9.52123 3.22421V5.21208C9.52123 5.3333 9.42426 5.43027 9.30305 5.45451C8.57578 5.55148 7.80002 5.59996 7.00002 5.59996ZM10.2 5.09087C10.0546 5.09087 9.95759 4.9939 9.95759 4.84845V3.03027C9.95759 2.88481 10.0546 2.78784 10.2 2.78784C10.3455 2.78784 10.4424 2.88481 10.4424 3.03027V4.84845C10.4424 4.9939 10.3455 5.09087 10.2 5.09087Z"
-                                                fill="#181818" />
-                                            <path
-                                                d="M10.3702 5.18797H10.055C9.90955 5.18797 9.81258 5.091 9.81258 4.94555C9.81258 4.80009 9.90955 4.70312 10.055 4.70312H10.3702C10.5156 4.70312 10.6126 4.80009 10.6126 4.94555C10.6126 5.091 10.5156 5.18797 10.3702 5.18797ZM10.8308 7.53949H5.86107C5.71561 7.53949 5.61864 7.44252 5.61864 7.29706C5.61864 7.15161 5.71561 7.05464 5.86107 7.05464H10.8308C10.9762 7.05464 11.0732 7.15161 11.0732 7.29706C11.0732 7.44252 10.9762 7.53949 10.8308 7.53949ZM10.8308 9.55161H5.86107C5.71561 9.55161 5.61864 9.45464 5.61864 9.30919C5.61864 9.16373 5.71561 9.06676 5.86107 9.06676H10.8308C10.9762 9.06676 11.0732 9.16373 11.0732 9.30919C11.0732 9.45464 10.9762 9.55161 10.8308 9.55161ZM10.8308 11.5637H5.86107C5.71561 11.5637 5.61864 11.4668 5.61864 11.3213C5.61864 11.1759 5.71561 11.0789 5.86107 11.0789H10.8308C10.9762 11.0789 11.0732 11.1759 11.0732 11.3213C11.0732 11.4668 10.9762 11.5637 10.8308 11.5637ZM8.35804 13.5759H5.86107C5.71561 13.5759 5.61864 13.4789 5.61864 13.3334C5.61864 13.188 5.71561 13.091 5.86107 13.091H8.35804C8.50349 13.091 8.60046 13.188 8.60046 13.3334C8.60046 13.4789 8.50349 13.5759 8.35804 13.5759ZM4.06713 7.97585H3.17016C3.0247 7.97585 2.92773 7.87888 2.92773 7.73343V6.83646C2.92773 6.691 3.0247 6.59403 3.17016 6.59403H4.06713C4.21258 6.59403 4.30955 6.691 4.30955 6.83646V7.73343C4.30955 7.87888 4.21258 7.97585 4.06713 7.97585ZM3.41258 7.491H3.8247V7.07888H3.41258V7.491ZM4.06713 9.98797H3.17016C3.0247 9.98797 2.92773 9.891 2.92773 9.74555V8.84858C2.92773 8.70312 3.0247 8.60616 3.17016 8.60616H4.06713C4.21258 8.60616 4.30955 8.70312 4.30955 8.84858V9.74555C4.30955 9.891 4.21258 9.98797 4.06713 9.98797ZM3.41258 9.50313H3.8247V9.091H3.41258V9.50313ZM4.06713 12.0001H3.17016C3.0247 12.0001 2.92773 11.9031 2.92773 11.7577V10.8607C2.92773 10.7152 3.0247 10.6183 3.17016 10.6183H4.06713C4.21258 10.6183 4.30955 10.7152 4.30955 10.8607V11.7577C4.30955 11.9031 4.21258 12.0001 4.06713 12.0001ZM3.41258 11.5152H3.8247V11.1031H3.41258V11.5152ZM4.06713 14.0122H3.17016C3.0247 14.0122 2.92773 13.9152 2.92773 13.7698V12.8728C2.92773 12.7274 3.0247 12.6304 3.17016 12.6304H4.06713C4.21258 12.6304 4.30955 12.7274 4.30955 12.8728V13.7698C4.30955 13.9152 4.21258 14.0122 4.06713 14.0122ZM3.41258 13.5274H3.8247V13.1152H3.41258V13.5274Z"
-                                                fill="#181818" />
-                                        </svg>
-                                        <a class="primary-hover fs-14" href="#0">12 Lessons</a>
-                                    </li>
-                                </ul>
-                                <div class="bor-top pt-3 d-flex align-items-center justify-content-between gap-3">
-                                    <div class="d-flex gap-2 align-items-center">
-                                        <img src="{{ asset('learnit/assets/images/courses/courses-user1.jpg') }}" alt="image">
-                                        <a href="#0" class="primary-hover">Rahat Hasan</a>
-                                    </div>
-                                    <div class="star">
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star disabled"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div class="courses-six__item bor">
-                            <div class="courses-six__image image">
-                                <img src="{{ asset('learnit/assets/images/courses/courses-six-image2.png') }}" alt="image">
-                                <div class="courses-price">
-                                    <h5 class="fs-18">Free</h5>
-                                </div>
-                            </div>
-                            <div class="courses-six__content">
-                                <div class="tag mb-20">Expert</div>
-                                <h3><a href="course-details.html" class="primary-hover">The Art & Science of Figure
-                                        Drawing</a>
-                                </h3>
-                                <ul class="d-flex align-items-center gap-4 my-3">
-                                    <li>
-                                        <svg class="me-1" width="16" height="14" viewBox="0 0 16 14" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M7.99967 2.29208C7.74714 1.80254 7.36475 1.39195 6.89439 1.10526C6.42403 0.81858 5.88385 0.666869 5.33301 0.666748C3.67734 0.666748 2.33301 2.01108 2.33301 3.66675C2.33301 5.32241 3.67734 6.66675 5.33301 6.66675C5.88385 6.66663 6.42403 6.51492 6.89439 6.22823C7.36475 5.94155 7.74714 5.53095 7.99967 5.04142C8.25215 5.531 8.63453 5.94164 9.1049 6.22833C9.57527 6.51502 10.1155 6.6667 10.6663 6.66675C12.322 6.66675 13.6663 5.32241 13.6663 3.66675C13.6663 2.01108 12.322 0.666748 10.6663 0.666748C10.1155 0.666869 9.57532 0.81858 9.10496 1.10526C8.6346 1.39195 8.25221 1.80254 7.99967 2.29208ZM10.6663 1.33341C11.954 1.33341 12.9997 2.37908 12.9997 3.66675C12.9997 4.95441 11.954 6.00008 10.6663 6.00008C9.37867 6.00008 8.33301 4.95441 8.33301 3.66675C8.33301 2.37908 9.37867 1.33341 10.6663 1.33341ZM5.33301 1.33341C6.62067 1.33341 7.66634 2.37908 7.66634 3.66675C7.66634 4.95441 6.62067 6.00008 5.33301 6.00008C4.04534 6.00008 2.99967 4.95441 2.99967 3.66675C2.99967 2.37908 4.04534 1.33341 5.33301 1.33341ZM7.99967 7.58342C8.41301 7.42208 8.86267 7.33342 9.33301 7.33342H11.9997C14.0247 7.33342 15.6663 8.97508 15.6663 11.0001V12.3334C15.6663 12.5986 15.561 12.853 15.3734 13.0405C15.1859 13.2281 14.9316 13.3334 14.6663 13.3334H1.33301C1.06779 13.3334 0.813437 13.2281 0.625901 13.0405C0.438365 12.853 0.333008 12.5986 0.333008 12.3334V11.0001C0.333008 8.97508 1.97467 7.33342 3.99967 7.33342H6.66634C7.13667 7.33342 7.58634 7.42208 7.99967 7.58342ZM9.66634 11.0001V12.3334C9.66634 12.4218 9.63122 12.5066 9.56871 12.5691C9.5062 12.6316 9.42141 12.6667 9.33301 12.6667H1.33301C1.2446 12.6667 1.15982 12.6316 1.09731 12.5691C1.03479 12.5066 0.999674 12.4218 0.999674 12.3334V11.0001C0.999674 10.2044 1.31574 9.44137 1.87835 8.87876C2.44096 8.31615 3.20403 8.00008 3.99967 8.00008H6.66634C7.46199 8.00008 8.22505 8.31615 8.78766 8.87876C9.35027 9.44137 9.66634 10.2044 9.66634 11.0001ZM10.276 12.6667H14.6663C14.7547 12.6667 14.8395 12.6316 14.902 12.5691C14.9646 12.5066 14.9997 12.4218 14.9997 12.3334V11.0001C14.9997 10.2044 14.6836 9.44137 14.121 8.87876C13.5584 8.31615 12.7953 8.00008 11.9997 8.00008H9.33301C9.16267 8.00008 8.99534 8.01441 8.83267 8.04175C9.29799 8.38193 9.6764 8.82718 9.93711 9.34125C10.1978 9.85532 10.3335 10.4237 10.333 11.0001V12.3334C10.333 12.4504 10.313 12.5624 10.276 12.6667Z"
-                                                fill="#181818" />
-                                        </svg>
-                                        <a class="primary-hover fs-14" href="#0">160 Students</a>
-                                    </li>
-                                    <li>
-                                        <svg class="me-1" width="14" height="16" viewBox="0 0 14 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M10.1515 15.7576H2.00607C1.32728 15.7576 0.793945 15.2242 0.793945 14.5455V1.45455C0.793945 0.775765 1.32728 0.242432 2.00607 0.242432H11.9939C12.6727 0.242432 13.2061 0.775765 13.2061 1.45455V12.7758C13.2061 12.9212 13.1091 13.0182 12.9636 13.0182C12.8182 13.0182 12.7212 12.9212 12.7212 12.7758V1.45455C12.7212 1.04243 12.4061 0.72728 11.9939 0.72728H2.00607C1.59395 0.72728 1.27879 1.04243 1.27879 1.45455V14.5455C1.27879 14.9576 1.59395 15.2727 2.00607 15.2727H10.1515C10.297 15.2727 10.3939 15.3697 10.3939 15.5152C10.3939 15.6606 10.297 15.7576 10.1515 15.7576Z"
-                                                fill="#181818" />
-                                            <path
-                                                d="M10.2001 15.7576H10.1758C10.0304 15.7576 9.93339 15.6606 9.93339 15.5152V13.6727C9.93339 13.0424 10.4425 12.5333 11.0728 12.5333H12.9395C13.0364 12.5333 13.1334 12.5818 13.1576 12.6788C13.2061 12.7758 13.1819 12.8727 13.1092 12.9455L10.3698 15.6849C10.3213 15.7333 10.2728 15.7576 10.2001 15.7576ZM11.0728 13.0182C10.7092 13.0182 10.4182 13.3091 10.4182 13.6727V14.9576L12.3576 13.0182H11.0728ZM7.0243 4.24244C7.00006 4.24244 6.97582 4.24244 6.95158 4.2182L3.55764 3.0788C3.46067 3.05456 3.38794 2.95759 3.38794 2.86062C3.38794 2.76365 3.46067 2.66668 3.55764 2.64244L6.95158 1.50305C7.00006 1.4788 7.04855 1.4788 7.09703 1.50305L10.394 2.64244C10.491 2.66668 10.5637 2.76365 10.5637 2.86062C10.5637 2.95759 10.491 3.05456 10.394 3.0788L7.09703 4.2182C7.07279 4.24244 7.04855 4.24244 7.0243 4.24244ZM4.38188 2.86062L7.0243 3.73335L9.56976 2.86062L7.0243 1.98789L4.38188 2.86062Z"
-                                                fill="#181818" />
-                                            <path
-                                                d="M7.00002 5.59996C6.22426 5.59996 5.42426 5.55148 4.60002 5.45451C4.47881 5.43027 4.38184 5.3333 4.38184 5.21208V3.22421C4.38184 3.07875 4.47881 2.98178 4.62426 2.98178C4.76971 2.98178 4.86668 3.07875 4.86668 3.22421V4.9939C6.29699 5.13936 7.70305 5.1636 9.03638 4.9939V3.22421C9.03638 3.07875 9.13335 2.98178 9.27881 2.98178C9.42426 2.98178 9.52123 3.07875 9.52123 3.22421V5.21208C9.52123 5.3333 9.42426 5.43027 9.30305 5.45451C8.57578 5.55148 7.80002 5.59996 7.00002 5.59996ZM10.2 5.09087C10.0546 5.09087 9.95759 4.9939 9.95759 4.84845V3.03027C9.95759 2.88481 10.0546 2.78784 10.2 2.78784C10.3455 2.78784 10.4424 2.88481 10.4424 3.03027V4.84845C10.4424 4.9939 10.3455 5.09087 10.2 5.09087Z"
-                                                fill="#181818" />
-                                            <path
-                                                d="M10.3702 5.18797H10.055C9.90955 5.18797 9.81258 5.091 9.81258 4.94555C9.81258 4.80009 9.90955 4.70312 10.055 4.70312H10.3702C10.5156 4.70312 10.6126 4.80009 10.6126 4.94555C10.6126 5.091 10.5156 5.18797 10.3702 5.18797ZM10.8308 7.53949H5.86107C5.71561 7.53949 5.61864 7.44252 5.61864 7.29706C5.61864 7.15161 5.71561 7.05464 5.86107 7.05464H10.8308C10.9762 7.05464 11.0732 7.15161 11.0732 7.29706C11.0732 7.44252 10.9762 7.53949 10.8308 7.53949ZM10.8308 9.55161H5.86107C5.71561 9.55161 5.61864 9.45464 5.61864 9.30919C5.61864 9.16373 5.71561 9.06676 5.86107 9.06676H10.8308C10.9762 9.06676 11.0732 9.16373 11.0732 9.30919C11.0732 9.45464 10.9762 9.55161 10.8308 9.55161ZM10.8308 11.5637H5.86107C5.71561 11.5637 5.61864 11.4668 5.61864 11.3213C5.61864 11.1759 5.71561 11.0789 5.86107 11.0789H10.8308C10.9762 11.0789 11.0732 11.1759 11.0732 11.3213C11.0732 11.4668 10.9762 11.5637 10.8308 11.5637ZM8.35804 13.5759H5.86107C5.71561 13.5759 5.61864 13.4789 5.61864 13.3334C5.61864 13.188 5.71561 13.091 5.86107 13.091H8.35804C8.50349 13.091 8.60046 13.188 8.60046 13.3334C8.60046 13.4789 8.50349 13.5759 8.35804 13.5759ZM4.06713 7.97585H3.17016C3.0247 7.97585 2.92773 7.87888 2.92773 7.73343V6.83646C2.92773 6.691 3.0247 6.59403 3.17016 6.59403H4.06713C4.21258 6.59403 4.30955 6.691 4.30955 6.83646V7.73343C4.30955 7.87888 4.21258 7.97585 4.06713 7.97585ZM3.41258 7.491H3.8247V7.07888H3.41258V7.491ZM4.06713 9.98797H3.17016C3.0247 9.98797 2.92773 9.891 2.92773 9.74555V8.84858C2.92773 8.70312 3.0247 8.60616 3.17016 8.60616H4.06713C4.21258 8.60616 4.30955 8.70312 4.30955 8.84858V9.74555C4.30955 9.891 4.21258 9.98797 4.06713 9.98797ZM3.41258 9.50313H3.8247V9.091H3.41258V9.50313ZM4.06713 12.0001H3.17016C3.0247 12.0001 2.92773 11.9031 2.92773 11.7577V10.8607C2.92773 10.7152 3.0247 10.6183 3.17016 10.6183H4.06713C4.21258 10.6183 4.30955 10.7152 4.30955 10.8607V11.7577C4.30955 11.9031 4.21258 12.0001 4.06713 12.0001ZM3.41258 11.5152H3.8247V11.1031H3.41258V11.5152ZM4.06713 14.0122H3.17016C3.0247 14.0122 2.92773 13.9152 2.92773 13.7698V12.8728C2.92773 12.7274 3.0247 12.6304 3.17016 12.6304H4.06713C4.21258 12.6304 4.30955 12.7274 4.30955 12.8728V13.7698C4.30955 13.9152 4.21258 14.0122 4.06713 14.0122ZM3.41258 13.5274H3.8247V13.1152H3.41258V13.5274Z"
-                                                fill="#181818" />
-                                        </svg>
-                                        <a class="primary-hover fs-14" href="#0">15 Lessons</a>
-                                    </li>
-                                </ul>
-                                <div class="bor-top pt-3 d-flex align-items-center justify-content-between gap-3">
-                                    <div class="d-flex gap-2 align-items-center">
-                                        <img src="{{ asset('learnit/assets/images/courses/courses-user2.jpg') }}" alt="image">
-                                        <a href="#0" class="primary-hover">Shanta Roy</a>
-                                    </div>
-                                    <div class="star">
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star disabled"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                        <div class="courses-six__item bor">
-                            <div class="courses-six__image image">
-                                <img src="{{ asset('learnit/assets/images/courses/courses-six-image3.png') }}" alt="image">
-                                <div class="courses-price">
-                                    <h5 class="fs-18">$29</h5>
-                                </div>
-                            </div>
-                            <div class="courses-six__content">
-                                <div class="tag mb-20">Online Art</div>
-                                <h3><a href="course-details.html" class="primary-hover">Modern and Contemporary Art and
-                                        Design</a>
-                                </h3>
-                                <ul class="d-flex align-items-center gap-4 my-3">
-                                    <li>
-                                        <svg class="me-1" width="16" height="14" viewBox="0 0 16 14" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M7.99967 2.29208C7.74714 1.80254 7.36475 1.39195 6.89439 1.10526C6.42403 0.81858 5.88385 0.666869 5.33301 0.666748C3.67734 0.666748 2.33301 2.01108 2.33301 3.66675C2.33301 5.32241 3.67734 6.66675 5.33301 6.66675C5.88385 6.66663 6.42403 6.51492 6.89439 6.22823C7.36475 5.94155 7.74714 5.53095 7.99967 5.04142C8.25215 5.531 8.63453 5.94164 9.1049 6.22833C9.57527 6.51502 10.1155 6.6667 10.6663 6.66675C12.322 6.66675 13.6663 5.32241 13.6663 3.66675C13.6663 2.01108 12.322 0.666748 10.6663 0.666748C10.1155 0.666869 9.57532 0.81858 9.10496 1.10526C8.6346 1.39195 8.25221 1.80254 7.99967 2.29208ZM10.6663 1.33341C11.954 1.33341 12.9997 2.37908 12.9997 3.66675C12.9997 4.95441 11.954 6.00008 10.6663 6.00008C9.37867 6.00008 8.33301 4.95441 8.33301 3.66675C8.33301 2.37908 9.37867 1.33341 10.6663 1.33341ZM5.33301 1.33341C6.62067 1.33341 7.66634 2.37908 7.66634 3.66675C7.66634 4.95441 6.62067 6.00008 5.33301 6.00008C4.04534 6.00008 2.99967 4.95441 2.99967 3.66675C2.99967 2.37908 4.04534 1.33341 5.33301 1.33341ZM7.99967 7.58342C8.41301 7.42208 8.86267 7.33342 9.33301 7.33342H11.9997C14.0247 7.33342 15.6663 8.97508 15.6663 11.0001V12.3334C15.6663 12.5986 15.561 12.853 15.3734 13.0405C15.1859 13.2281 14.9316 13.3334 14.6663 13.3334H1.33301C1.06779 13.3334 0.813437 13.2281 0.625901 13.0405C0.438365 12.853 0.333008 12.5986 0.333008 12.3334V11.0001C0.333008 8.97508 1.97467 7.33342 3.99967 7.33342H6.66634C7.13667 7.33342 7.58634 7.42208 7.99967 7.58342ZM9.66634 11.0001V12.3334C9.66634 12.4218 9.63122 12.5066 9.56871 12.5691C9.5062 12.6316 9.42141 12.6667 9.33301 12.6667H1.33301C1.2446 12.6667 1.15982 12.6316 1.09731 12.5691C1.03479 12.5066 0.999674 12.4218 0.999674 12.3334V11.0001C0.999674 10.2044 1.31574 9.44137 1.87835 8.87876C2.44096 8.31615 3.20403 8.00008 3.99967 8.00008H6.66634C7.46199 8.00008 8.22505 8.31615 8.78766 8.87876C9.35027 9.44137 9.66634 10.2044 9.66634 11.0001ZM10.276 12.6667H14.6663C14.7547 12.6667 14.8395 12.6316 14.902 12.5691C14.9646 12.5066 14.9997 12.4218 14.9997 12.3334V11.0001C14.9997 10.2044 14.6836 9.44137 14.121 8.87876C13.5584 8.31615 12.7953 8.00008 11.9997 8.00008H9.33301C9.16267 8.00008 8.99534 8.01441 8.83267 8.04175C9.29799 8.38193 9.6764 8.82718 9.93711 9.34125C10.1978 9.85532 10.3335 10.4237 10.333 11.0001V12.3334C10.333 12.4504 10.313 12.5624 10.276 12.6667Z"
-                                                fill="#181818" />
-                                        </svg>
-                                        <a class="primary-hover fs-14" href="#0">180 Students</a>
-                                    </li>
-                                    <li>
-                                        <svg class="me-1" width="14" height="16" viewBox="0 0 14 16" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M10.1515 15.7576H2.00607C1.32728 15.7576 0.793945 15.2242 0.793945 14.5455V1.45455C0.793945 0.775765 1.32728 0.242432 2.00607 0.242432H11.9939C12.6727 0.242432 13.2061 0.775765 13.2061 1.45455V12.7758C13.2061 12.9212 13.1091 13.0182 12.9636 13.0182C12.8182 13.0182 12.7212 12.9212 12.7212 12.7758V1.45455C12.7212 1.04243 12.4061 0.72728 11.9939 0.72728H2.00607C1.59395 0.72728 1.27879 1.04243 1.27879 1.45455V14.5455C1.27879 14.9576 1.59395 15.2727 2.00607 15.2727H10.1515C10.297 15.2727 10.3939 15.3697 10.3939 15.5152C10.3939 15.6606 10.297 15.7576 10.1515 15.7576Z"
-                                                fill="#181818" />
-                                            <path
-                                                d="M10.2001 15.7576H10.1758C10.0304 15.7576 9.93339 15.6606 9.93339 15.5152V13.6727C9.93339 13.0424 10.4425 12.5333 11.0728 12.5333H12.9395C13.0364 12.5333 13.1334 12.5818 13.1576 12.6788C13.2061 12.7758 13.1819 12.8727 13.1092 12.9455L10.3698 15.6849C10.3213 15.7333 10.2728 15.7576 10.2001 15.7576ZM11.0728 13.0182C10.7092 13.0182 10.4182 13.3091 10.4182 13.6727V14.9576L12.3576 13.0182H11.0728ZM7.0243 4.24244C7.00006 4.24244 6.97582 4.24244 6.95158 4.2182L3.55764 3.0788C3.46067 3.05456 3.38794 2.95759 3.38794 2.86062C3.38794 2.76365 3.46067 2.66668 3.55764 2.64244L6.95158 1.50305C7.00006 1.4788 7.04855 1.4788 7.09703 1.50305L10.394 2.64244C10.491 2.66668 10.5637 2.76365 10.5637 2.86062C10.5637 2.95759 10.491 3.05456 10.394 3.0788L7.09703 4.2182C7.07279 4.24244 7.04855 4.24244 7.0243 4.24244ZM4.38188 2.86062L7.0243 3.73335L9.56976 2.86062L7.0243 1.98789L4.38188 2.86062Z"
-                                                fill="#181818" />
-                                            <path
-                                                d="M7.00002 5.59996C6.22426 5.59996 5.42426 5.55148 4.60002 5.45451C4.47881 5.43027 4.38184 5.3333 4.38184 5.21208V3.22421C4.38184 3.07875 4.47881 2.98178 4.62426 2.98178C4.76971 2.98178 4.86668 3.07875 4.86668 3.22421V4.9939C6.29699 5.13936 7.70305 5.1636 9.03638 4.9939V3.22421C9.03638 3.07875 9.13335 2.98178 9.27881 2.98178C9.42426 2.98178 9.52123 3.07875 9.52123 3.22421V5.21208C9.52123 5.3333 9.42426 5.43027 9.30305 5.45451C8.57578 5.55148 7.80002 5.59996 7.00002 5.59996ZM10.2 5.09087C10.0546 5.09087 9.95759 4.9939 9.95759 4.84845V3.03027C9.95759 2.88481 10.0546 2.78784 10.2 2.78784C10.3455 2.78784 10.4424 2.88481 10.4424 3.03027V4.84845C10.4424 4.9939 10.3455 5.09087 10.2 5.09087Z"
-                                                fill="#181818" />
-                                            <path
-                                                d="M10.3702 5.18797H10.055C9.90955 5.18797 9.81258 5.091 9.81258 4.94555C9.81258 4.80009 9.90955 4.70312 10.055 4.70312H10.3702C10.5156 4.70312 10.6126 4.80009 10.6126 4.94555C10.6126 5.091 10.5156 5.18797 10.3702 5.18797ZM10.8308 7.53949H5.86107C5.71561 7.53949 5.61864 7.44252 5.61864 7.29706C5.61864 7.15161 5.71561 7.05464 5.86107 7.05464H10.8308C10.9762 7.05464 11.0732 7.15161 11.0732 7.29706C11.0732 7.44252 10.9762 7.53949 10.8308 7.53949ZM10.8308 9.55161H5.86107C5.71561 9.55161 5.61864 9.45464 5.61864 9.30919C5.61864 9.16373 5.71561 9.06676 5.86107 9.06676H10.8308C10.9762 9.06676 11.0732 9.16373 11.0732 9.30919C11.0732 9.45464 10.9762 9.55161 10.8308 9.55161ZM10.8308 11.5637H5.86107C5.71561 11.5637 5.61864 11.4668 5.61864 11.3213C5.61864 11.1759 5.71561 11.0789 5.86107 11.0789H10.8308C10.9762 11.0789 11.0732 11.1759 11.0732 11.3213C11.0732 11.4668 10.9762 11.5637 10.8308 11.5637ZM8.35804 13.5759H5.86107C5.71561 13.5759 5.61864 13.4789 5.61864 13.3334C5.61864 13.188 5.71561 13.091 5.86107 13.091H8.35804C8.50349 13.091 8.60046 13.188 8.60046 13.3334C8.60046 13.4789 8.50349 13.5759 8.35804 13.5759ZM4.06713 7.97585H3.17016C3.0247 7.97585 2.92773 7.87888 2.92773 7.73343V6.83646C2.92773 6.691 3.0247 6.59403 3.17016 6.59403H4.06713C4.21258 6.59403 4.30955 6.691 4.30955 6.83646V7.73343C4.30955 7.87888 4.21258 7.97585 4.06713 7.97585ZM3.41258 7.491H3.8247V7.07888H3.41258V7.491ZM4.06713 9.98797H3.17016C3.0247 9.98797 2.92773 9.891 2.92773 9.74555V8.84858C2.92773 8.70312 3.0247 8.60616 3.17016 8.60616H4.06713C4.21258 8.60616 4.30955 8.70312 4.30955 8.84858V9.74555C4.30955 9.891 4.21258 9.98797 4.06713 9.98797ZM3.41258 9.50313H3.8247V9.091H3.41258V9.50313ZM4.06713 12.0001H3.17016C3.0247 12.0001 2.92773 11.9031 2.92773 11.7577V10.8607C2.92773 10.7152 3.0247 10.6183 3.17016 10.6183H4.06713C4.21258 10.6183 4.30955 10.7152 4.30955 10.8607V11.7577C4.30955 11.9031 4.21258 12.0001 4.06713 12.0001ZM3.41258 11.5152H3.8247V11.1031H3.41258V11.5152ZM4.06713 14.0122H3.17016C3.0247 14.0122 2.92773 13.9152 2.92773 13.7698V12.8728C2.92773 12.7274 3.0247 12.6304 3.17016 12.6304H4.06713C4.21258 12.6304 4.30955 12.7274 4.30955 12.8728V13.7698C4.30955 13.9152 4.21258 14.0122 4.06713 14.0122ZM3.41258 13.5274H3.8247V13.1152H3.41258V13.5274Z"
-                                                fill="#181818" />
-                                        </svg>
-                                        <a class="primary-hover fs-14" href="#0">12 Lessons</a>
-                                    </li>
-                                </ul>
-                                <div class="bor-top pt-3 d-flex align-items-center justify-content-between gap-3">
-                                    <div class="d-flex gap-2 align-items-center">
-                                        <img src="{{ asset('learnit/assets/images/courses/courses-user3.jpg ') }}" alt="image">
-                                        <a href="#0" class="primary-hover">Ayon Sheek</a>
-                                    </div>
-                                    <div class="star">
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star disabled"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+              <div class="space-y-6">
+    @forelse($recentMenfess ?? [] as $index => $menfess)
+    <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 wow fadeInDown border border-gray-100" data-wow-delay="{{ $index * 200 }}ms" data-wow-duration="1500ms">
+        <!-- Header Card -->
+        <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-100">
+            <div class="flex items-center gap-3">
+                <div class="w-3 h-3 bg-sky-500 rounded-full animate-pulse"></div>
+                <span class="text-sm font-medium text-gray-700">{{ $menfess->sender_name }}</span>
             </div>
-        </section>
-
+            <span class="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                {{ $menfess->created_at->diffForHumans() }}
+            </span>
+        </div>
         
-        <!-- Faq area start here -->
-        <section class="faq-six-area sub-bg-two pt-120 pb-120">
-            <div class="faq-six__shape1">
-                <img class="animation__goAll3" src="{{ asset('learnit/assets/images/shape/faq-six-shape1.png') }}" alt="shape">
+        <!-- From & To Section -->
+        <div class="mb-4 space-y-2">
+        
+            <div class="flex items-center gap-2 text-sm">
+                <span class="text-gray-500 font-medium w-12">Untuk:</span>
+                <span class="bg-gradient-to-r from-sky-100 to-blue-100 text-sky-700 px-3 py-1 rounded-full text-xs font-medium">
+                    {{  $menfess->to_name ?: 'Semua' }}
+                </span>
             </div>
-            <div class="faq-six__shape2">
-                <img class="animation__rotateY" src="{{ asset('learnit/assets/images/shape/faq-six-shape2.png') }}" alt="shape">
+        </div>
+        
+        <!-- Message Content -->
+        <div class="mb-4">
+            <div class="bg-gradient-to-r from-gray-50 to-slate-50 rounded-xl p-4 border-l-4 border-sky-500">
+                <div class="text-gray-700 leading-relaxed prose prose-sm max-w-none">
+                    {!! Str::limit($menfess->content, 200) !!}
+                </div>
             </div>
-            <div class="container">
-                <div class="row g-5">
-                    <div class="col-lg-6 order-2 order-lg-1">
-                        <div class="section-header mb-40">
-                            <h5 class="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">FAQ’S</h5>
-                            <h2 class="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">We Are Always
-                                Ensure Best Course For Your <span>Learning <img
-                                        src="{{ asset('learnit/assets/images/shape/header-shape.png') }}" alt="shape"></span></h2>
+        </div>
+        
+        <!-- Spotify Embed -->
+        @if($menfess->spotify_link)
+        <div class="mb-4">
+            @php
+                $spotifyId = null;
+                $isValidSpotify = false;
+                
+                // Check for Spotify track URL patterns
+                if (preg_match('/spotify\.com\/track\/([a-zA-Z0-9]+)/', $menfess->spotify_link, $matches)) {
+                    $spotifyId = $matches[1];
+                    $isValidSpotify = true;
+                } elseif (preg_match('/open\.spotify\.com\/track\/([a-zA-Z0-9]+)/', $menfess->spotify_link, $matches)) {
+                    $spotifyId = $matches[1];
+                    $isValidSpotify = true;
+                } elseif (preg_match('/spotify:track:([a-zA-Z0-9]+)/', $menfess->spotify_link, $matches)) {
+                    $spotifyId = $matches[1];
+                    $isValidSpotify = true;
+                }
+            @endphp
+            
+            @if($isValidSpotify && $spotifyId)
+            <div class="bg-gradient-to-r from-green-400 to-green-500 rounded-xl overflow-hidden shadow-lg">
+                
+                <div class="bg-white">
+                    <iframe src="https://open.spotify.com/embed/track/{{ $spotifyId }}?utm_source=generator&theme=0" 
+                            width="100%" 
+                            height="152" 
+                            frameborder="0" 
+                            allowfullscreen="" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy"
+                            class="rounded-b-xl">
+                    </iframe>
+                </div>
+            </div>
+            @endif
+        </div>
+        @endif
+        
+        <!-- Tags & Footer -->
+        <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+            <!-- Tags -->
+            @if(isset($menfess->tags) && $menfess->tags->count() > 0)
+            <div class="flex flex-wrap gap-2">
+                @foreach($menfess->tags->take(3) as $tag)
+                <span class="bg-gradient-to-r from-sky-400 to-sky-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+                    #{{ $tag->name }}
+                </span>
+                @endforeach
+            </div>
+            @else
+            <div class="flex items-center gap-2 text-gray-400">
+                <i class="fa-regular fa-heart text-sm"></i>
+                <span class="text-xs">Pesan dari hati</span>
+            </div>
+            @endif
+            
+            <!-- Status Badge -->
+            <div class="flex items-center gap-2">
+                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                <span class="text-xs text-gray-500 font-medium">Terkirim</span>
+            </div>
+        </div>
+    </div>
+    @empty
+    <div class="text-center py-16 bg-white rounded-2xl border border-gray-100">
+        <div class="mb-6">
+            <div class="w-20 h-20 bg-gradient-to-br from-sky-100 to-sky-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fa-regular fa-envelope text-3xl text-sky-500"></i>
+            </div>
+        </div>
+        <h5 class="text-xl font-bold text-gray-800 mb-3">Belum ada menfess</h5>
+        <p class="text-gray-500 mb-6 max-w-sm mx-auto">Jadilah yang pertama berbagi cerita, curhat, atau perasaan secara anonim!</p>
+        <a href="{{ route('menfess') }}" 
+           class="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 to-sky-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-sky-600 hover:to-sky-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+            <i class="fa-regular fa-paper-plane"></i>
+            Kirim Menfess Pertama
+        </a>
+    </div>
+    @endforelse
+    
+    @if(isset($recentMenfess) && $recentMenfess->count() > 0)
+    <div class="text-center pt-8">
+        <a href="{{ route('menfess') }}" 
+           class="inline-flex items-center gap-3 bg-gradient-to-r from-sky-500 to-sky-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-sky-600 hover:to-sky-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
+            <i class="fa-regular fa-comments text-lg"></i>
+            Lihat Semua Menfess
+            <i class="fa-light fa-arrow-right-long text-lg"></i>
+        </a>
+    </div>
+    @endif
+</div>
+            </div>
+            
+            <!-- Illustration -->
+            <div class="order-1 lg:order-2 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+                <div class="relative flex items-center justify-center p-10">
+                    <!-- Main illustration container -->
+                    <div class="relative w-full max-w-md bg-gradient-to-br from-sky-400 to-sky-600 rounded-3xl min-h-96 flex items-center justify-center overflow-hidden">
+                        <!-- Background pattern -->
+                        <div class="absolute inset-0 opacity-10">
+                            <div class="w-full h-full bg-repeat opacity-20" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"60\" height=\"60\" viewBox=\"0 0 60 60\"><g fill=\"%23ffffff\" fill-opacity=\"0.1\"><circle cx=\"30\" cy=\"30\" r=\"2\"/></g></svg>')"></div>
                         </div>
-                        <div class="accordion" id="accordionExample">
-                            <div class="accordion-item shadow border-none wow fadeInDown" data-wow-delay="00ms"
-                                data-wow-duration="1500ms">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        How long should a business plan be?
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>It is a long established fact that a reader be distracted by
-                                            the readable content of a page when looking a its layout.
-                                            Many desktop publishing packages and web page.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item shadow border-none wow fadeInDown" data-wow-delay="200ms"
-                                data-wow-duration="1500ms">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        What is included in your services?
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>It is a long established fact that a reader be distracted by
-                                            the readable content of a page when looking a its layout.
-                                            Many desktop publishing packages and web page.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item shadow border-none wow fadeInDown" data-wow-delay="400ms"
-                                data-wow-duration="1500ms">
-                                <h2 class="accordion-header" id="headingthree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapsethree" aria-expanded="false"
-                                        aria-controls="collapsethree">
-                                        What type of company is measured?
-                                    </button>
-                                </h2>
-                                <div id="collapsethree" class="accordion-collapse collapse"
-                                    aria-labelledby="headingthree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>It is a long established fact that a reader be distracted by
-                                            the readable content of a page when looking a its layout.
-                                            Many desktop publishing packages and web page.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                        
+                        <!-- Main icon -->
+                        <div class="relative z-10 w-48 h-48 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                            <i class="fa-solid fa-comments text-6xl text-white/80"></i>
+                        </div>
+                        
+                        <!-- Floating elements -->
+                        <div class="absolute top-16 -right-4 bg-white px-4 py-3 rounded-full shadow-lg flex items-center gap-2 font-semibold text-gray-700 animate-bounce z-20">
+                            <i class="fa-solid fa-heart text-sky-500"></i>
+                            <span class="text-sm">Anonymous</span>
+                        </div>
+                        
+                        <div class="absolute top-64 -left-6 bg-white px-4 py-3 rounded-full shadow-lg flex items-center gap-2 font-semibold text-gray-700 animate-bounce z-20" style="animation-delay: 1s;">
+                            <i class="fa-brands fa-spotify text-green-500"></i>
+                            <span class="text-sm">Music</span>
+                        </div>
+                        
+                        <div class="absolute bottom-20 right-10 bg-white px-4 py-3 rounded-full shadow-lg flex items-center gap-2 font-semibold text-gray-700 animate-bounce z-20" style="animation-delay: 2s;">
+                            <i class="fa-solid fa-comment text-sky-500"></i>
+                            <span class="text-sm">Story</span>
+                        </div>
+                        
+                        <!-- Additional decorative elements -->
+                        <div class="absolute top-1/4 left-4 w-6 h-6 bg-white/30 rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
+                        <div class="absolute bottom-1/3 right-6 w-4 h-4 bg-white/40 rounded-full animate-pulse" style="animation-delay: 1.5s;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Activities Section -->
+<section class="courses-six-area pt-32 pb-32">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h5 class="text-sky-500 uppercase tracking-widest font-semibold text-sm mb-3 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">Kegiatan Terbaru</h5>
+            <h2 class="text-4xl font-bold text-gray-800 leading-tight wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                Program & <span class="text-sky-500 relative inline-block">
+                    Kegiatan
+                    <img src="{{ asset('learnit/assets/images/shape/header-shape.png') }}" alt="shape" class="absolute -bottom-2 left-0 w-full">
+                </span> HMSI
+            </h2>
+        </div>
+        
+        <div class="grid xl:grid-cols-3 md:grid-cols-2 gap-8">
+            @forelse($recentActivities ?? [] as $index => $activity)
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 wow fadeInUp" data-wow-delay="{{ $index * 200 }}ms" data-wow-duration="1500ms">
+                <div class="relative">
+                    @if($activity->image)
+                        <img src="{{ asset('storage/' . $activity->image) }}" alt="{{ $activity->title }}" class="w-full h-60 object-cover">
+                    @else
+                        <img src="{{ asset('learnit/assets/images/courses/courses-six-image1.png') }}" alt="{{ $activity->title }}" class="w-full h-60 object-cover">
+                    @endif
+                    <div class="absolute top-4 right-4 bg-sky-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        FREE
+                    </div>
+                </div>
+                
+                <div class="p-6">
+           
+                    
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 hover:text-sky-500 transition-colors">
+                        <a href="#" class="line-clamp-2">{{ $activity->title }}</a>
+                    </h3>
+                    <!-- desc -->
+                    <p class="text-gray-600 mb-4 ">{!!  Str::limit($activity->description, 100) !!}</p>
+                    
+                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-4">
+                      
+                        <div class="flex items-center gap-1">
+                            <i class="fa-regular fa-clock text-sky-500"></i>
+                            <span>{{ $activity->start_date}} </span>
                         </div>
                     </div>
-                    <div class="col-lg-6 order-1 order-lg-2 wow fadeInLeft" data-wow-delay="200ms"
-                        data-wow-duration="1500ms">
-                        <div class="faq-six__image image">
-                            <img src="{{ asset('learnit/assets/images/faq/faq-six-image.png') }}" alt="image">
-                            <img class="shape animation__floatBob" src="{{ asset('learnit/assets/images/shape/faq-six-image-shape.png') }}"
-                                alt="shape">
-                            <img class="dots animation__floatBob" src="{{ asset('learnit/assets/images/shape/faq-six-image-shape-dots.png') }}"
-                                alt="shape">
+                    
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                        <div class="flex items-center gap-2">
+                            <img src="{{ asset('learnit/assets/images/courses/courses-user1.jpg') }}" 
+                                 alt="HMSI" class="w-8 h-8 rounded-full">
+                            <span class="text-sm font-medium text-gray-700">Tim HMSI</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Faq area end here -->
-        <div class="banner-video-four-area bg-image" data-background="{{ asset('learnit/assets/images/video/video-six-image.jpg') }}">
-            <div class="banner-video__video-btn">
-                <div class="video-btn video-pulse">
-                    <a class="video-popup" href="https://www.youtube.com/watch?v=fR-37iygzsY"><i
-                            class="fa-solid fa-play"></i></a>
+            @empty
+            <div class="col-span-full text-center py-12">
+                <div class="mb-4">
+                    <i class="fa-regular fa-calendar text-5xl text-gray-300"></i>
+                </div>
+                <h5 class="text-xl font-semibold text-gray-600 mb-2">Belum ada kegiatan</h5>
+                <p class="text-gray-400">Kegiatan akan segera hadir!</p>
+            </div>
+            @endforelse
+        </div>
+        
+        @if(isset($recentActivities) && $recentActivities->count() > 0)
+        <div class="text-center mt-12">
+            <a href="{{ route('activities') }}" 
+               class="inline-flex items-center gap-2 bg-sky-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-sky-600 transition-colors">
+                Lihat Semua Kegiatan
+                <i class="fa-light fa-arrow-right-long"></i>
+            </a>
+        </div>
+        @endif
+    </div>
+</section>
+
+<!-- Video Section -->
+<div class="banner-video-four-area bg-image relative" data-background="{{ asset('learnit/assets/images/video/video-six-image.jpg') }}">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="banner-video__video-btn relative z-10">
+        <div class="video-btn video-pulse">
+            <a class="video-popup w-20 h-20 bg-white rounded-full flex items-center justify-center text-sky-500 hover:text-sky-600 transition-colors" href="https://www.youtube.com/watch?v=fR-37iygzsY">
+                <i class="fa-solid fa-play text-2xl ml-1"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<section class="relative bg-gradient-to-br from-sky-50 via-white to-blue-50 pt-32 pb-32 overflow-hidden">
+    <!-- Background Decorations -->
+    <div class="absolute top-20 left-10 opacity-20">
+        <div class="w-24 h-24 bg-sky-500 rounded-full animate-pulse"></div>
+    </div>
+    <div class="absolute bottom-20 right-10 opacity-10">
+        <div class="w-32 h-32 bg-sky-400 rounded-full animate-bounce"></div>
+    </div>
+    <div class="absolute top-1/2 left-1/4 opacity-5">
+        <div class="w-40 h-40 bg-blue-300 rounded-full animate-ping"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <!-- Header Section -->
+        <div class="text-center mb-16">
+            <h5 class="text-sky-500 uppercase tracking-widest font-semibold text-sm mb-3 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                <i class="fa-solid fa-graduation-cap mr-2"></i>
+                BANK MATERI AKADEMIK
+            </h5>
+            <h2 class="text-4xl font-bold text-gray-800 leading-tight wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                Koleksi <span class="text-sky-500 relative inline-block">
+                    Materi Kuliah
+                    <img src="{{ asset('learnit/assets/images/shape/header-shape.png') }}" alt="shape" class="absolute -bottom-2 left-0 w-full">
+                </span> & Referensi
+            </h2>
+            <p class="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto mt-4 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                Akses berbagai materi pembelajaran, latihan soal, dan referensi akademik untuk mendukung perjalanan studimu di Sistem Informasi
+            </p>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="grid md:grid-cols-4 gap-6 mb-12">
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-sky-500 to-sky-600 rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-book text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800">{{ $totalMateri ?? '50+' }}</h3>
+                        <p class="text-gray-600 text-sm">Materi Kuliah</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-clipboard text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800">{{ $totalSoal ?? '500+' }}</h3>
+                        <p class="text-gray-600 text-sm">Bank Soal</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-sky-400 to-sky-500 rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-file-pdf text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800">{{ $totalPdf ?? '100+' }}</h3>
+                        <p class="text-gray-600 text-sm">File PDF</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-400 to-sky-500 rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-users text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800">{{ $totalMahasiswa ?? '200+' }}</h3>
+                        <p class="text-gray-600 text-sm">Mahasiswa Aktif</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <section class="team-two-area pb-120 pt-20">
-            <div class="container">
-                <div class="d-flex align-items-center justify-content-between gap-4 flex-wrap mb-60">
-                    <div class="section-header">
-                        <h5 class="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">OUR INSTRUCTORS</h5>
-                        <h2 class="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">Our <span>Expert <img
-                                    src="{{ asset('learnit/assets/images/shape/header-shape.png') }}" alt="shape"> Instructors
-                            </span>
-                        </h2>
+        <!-- Material Grid -->
+        <div class="grid xl:grid-cols-3 md:grid-cols-2 gap-8">
+            @forelse($recentBankMateri ?? [] as $index => $materi)
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 wow fadeInUp" data-wow-delay="{{ $index * 200 }}ms" data-wow-duration="1500ms">
+                
+                <!-- Content -->
+                <div class="p-6">
+                    <!-- Header with Icon -->
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-gradient-to-r from-sky-500 to-sky-600 rounded-xl flex items-center justify-center">
+                                @if($materi->files && $materi->files->first() && Str::endsWith($materi->files->first()->file_path, '.pdf'))
+                                    <i class="fa-solid fa-file-pdf text-white text-xl"></i>
+                                @else
+                                    <i class="fa-solid fa-book text-white text-xl"></i>
+                                @endif
+                            </div>
+                            <div>
+                                <span class="bg-gradient-to-r from-sky-500 to-sky-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase">
+                                    {{ $materi->kategori ?? 'Materi' }}
+                                </span>
+                            </div>
+                        </div>
+                        
+                        @if($materi->total_halaman)
+                        <span class="text-xs bg-sky-100 text-sky-700 px-2 py-1 rounded-full font-medium">
+                            {{ $materi->total_halaman }} hal
+                        </span>
+                        @endif
                     </div>
-                    <div class="d-flex align-items-center gap-3 wow fadeInUp" data-wow-delay="400ms"
-                        data-wow-duration="1500ms">
-                        <button class="arry-prev team-two__arry-prev"><i
-                                class="fa-light fa-arrow-left-long"></i></button>
-                        <button class="arry-next team-two__arry-next active"><i
-                                class="fa-light fa-arrow-right-long"></i></button>
-                    </div>
-                </div>
-                <div class="swiper team-two__slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="team-two__item">
-                                <div class="team-two__image image">
-                                    <img src="{{ asset('learnit/assets/images/team/team-six-image1.jpg') }}" alt="image">
-                                    <div class="team-two__share">
-                                        <a class="share-icon" href="#0"><i class="fa-light fa-share-nodes"></i></a>
-                                        <ul>
-                                            <li>
-                                                <a href="#0"><i class="fa-brands fa-facebook-f"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#0"><i class="fa-brands fa-instagram"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#0"><i class="fa-brands fa-linkedin-in"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <h4 class="mt-4"><a href="team-details.html" class="primary-hover">Suborna Islam</a>
-                                </h4>
-                                <span>Marketing Expert</span>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="team-two__item">
-                                <div class="team-two__image image">
-                                    <img src="{{ asset('learnit/assets/images/team/team-six-image2.jpg') }}" alt="image">
-                                    <div class="team-two__share">
-                                        <a class="share-icon" href="#0"><i class="fa-light fa-share-nodes"></i></a>
-                                        <ul>
-                                            <li>
-                                                <a href="#0"><i class="fa-brands fa-facebook-f"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#0"><i class="fa-brands fa-instagram"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#0"><i class="fa-brands fa-linkedin-in"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <h4 class="mt-4"><a href="team-details.html" class="primary-hover">Abu Rayhan</a></h4>
-                                <span>UI/UX Designer</span>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="team-two__item">
-                                <div class="team-two__image image">
-                                    <img src="{{ asset('learnit/assets/images/team/team-six-image3.jpg') }}" alt="image">
-                                    <div class="team-two__share">
-                                        <a class="share-icon" href="#0"><i class="fa-light fa-share-nodes"></i></a>
-                                        <ul>
-                                            <li>
-                                                <a href="#0"><i class="fa-brands fa-facebook-f"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#0"><i class="fa-brands fa-instagram"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#0"><i class="fa-brands fa-linkedin-in"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <h4 class="mt-4"><a href="team-details.html" class="primary-hover">Shanta Rohman</a>
-                                </h4>
-                                <span>WordPress Expert</span>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="team-two__item">
-                                <div class="team-two__image image">
-                                    <img src="{{ asset('learnit/assets/images/team/team-six-image4.jpg') }}" alt="image">
-                                    <div class="team-two__share">
-                                        <a class="share-icon" href="#0"><i class="fa-light fa-share-nodes"></i></a>
-                                        <ul>
-                                            <li>
-                                                <a href="#0"><i class="fa-brands fa-facebook-f"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#0"><i class="fa-brands fa-instagram"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#0"><i class="fa-brands fa-linkedin-in"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <h4 class="mt-4"><a href="team-details.html" class="primary-hover">Kawser Ahmed</a></h4>
-                                <span>UI Designer</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="blog-two-area pt-120 pb-120">
-            <div class="container">
-                <div class="section-header mb-60 text-center">
-                    <h5 class="wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">News & Blogs</h5>
-                    <h2 class="wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">Explore <span>Blogs <img
-                                src="{{ asset('learnit/assets/images/shape/header-shape.png') }}" alt="shape"></span> and News
-                    </h2>
-                </div>
-                <div class="row g-4">
-                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                        <div class="blog-two__item">
-                            <a href="blog-details.html" class="blog__image d-block image radius0">
-                                <img src="{{ asset('learnit/assets/images/blog/blog-six-image1.jpg') }}" alt="image">
-                            </a>
-                            <div class="blog-two__content p-4">
-                                <a href="#0" class="tag">Art & Design</a>
-                                <h3><a href="blog-details.html" class="primary-hover">Fixing Tailbone Back Problems soon
-                                        as
-                                        Possible</a></h3>
-                                <ul class="blog-info mt-20">
-                                    <li>
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M14.5436 5.19275C14.5436 7.69093 12.499 9.7355 10.0008 9.7355C7.50268 9.7355 5.45811 7.69093 5.45811 5.19275C5.45811 2.69457 7.50264 0.65 10.0008 0.65C12.499 0.65 14.5436 2.69458 14.5436 5.19275Z"
-                                                stroke="oklch(0.685 0.169 237.323)" stroke-width="1.3" />
-                                            <path
-                                                d="M18.2644 14.6706C18.1052 14.9458 17.9241 15.2073 17.7169 15.4766L17.7168 15.4765L17.7089 15.4873C17.4204 15.8788 17.0845 16.2373 16.7295 16.5924C16.4326 16.8892 16.0933 17.186 15.7568 17.4385C14.0794 18.6911 12.0622 19.3499 9.97818 19.3499C7.8984 19.3499 5.8851 18.6938 4.2098 17.4461C3.84591 17.1504 3.51371 16.8792 3.2269 16.5924L3.21993 16.5854L3.21276 16.5787C2.85667 16.2436 2.54242 15.8877 2.24749 15.4874L2.24751 15.4873L2.24417 15.4829C2.06196 15.24 1.87324 14.9756 1.71923 14.7169C1.83622 14.4559 1.98458 14.1847 2.14525 13.9526L2.14536 13.9527L2.15288 13.9413C3.06988 12.5556 4.53709 11.6388 6.16646 11.4148L6.18604 11.4121L6.20542 11.4082C6.2309 11.4031 6.29498 11.4117 6.34551 11.4496L6.3455 11.4496L6.34951 11.4525C7.41654 12.2401 8.68633 12.6453 10.0008 12.6453C11.3153 12.6453 12.5851 12.2401 13.6522 11.4525L13.6522 11.4525L13.6562 11.4496C13.6716 11.438 13.7404 11.408 13.8492 11.4167C15.4689 11.6435 16.9121 12.5568 17.8525 13.9468L17.8524 13.9469L17.8564 13.9526C18.0166 14.1839 18.1557 14.4231 18.2644 14.6706Z"
-                                                stroke="oklch(0.685 0.169 237.323)" stroke-width="1.3" />
-                                        </svg>
-                                        <a href="#0">By Admin</a>
-                                    </li>
-                                    <li>
-                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M5.66406 3.7915C5.3224 3.7915 5.03906 3.50817 5.03906 3.1665V0.666504C5.03906 0.324837 5.3224 0.0415039 5.66406 0.0415039C6.00573 0.0415039 6.28906 0.324837 6.28906 0.666504V3.1665C6.28906 3.50817 6.00573 3.7915 5.66406 3.7915ZM12.3307 3.7915C11.9891 3.7915 11.7057 3.50817 11.7057 3.1665V0.666504C11.7057 0.324837 11.9891 0.0415039 12.3307 0.0415039C12.6724 0.0415039 12.9557 0.324837 12.9557 0.666504V3.1665C12.9557 3.50817 12.6724 3.7915 12.3307 3.7915ZM6.08073 11.0832C5.9724 11.0832 5.86406 11.0582 5.76406 11.0165C5.65573 10.9748 5.5724 10.9165 5.48906 10.8415C5.33906 10.6832 5.2474 10.4748 5.2474 10.2498C5.2474 10.1415 5.2724 10.0332 5.31406 9.93317C5.35573 9.83317 5.41406 9.7415 5.48906 9.65817C5.5724 9.58317 5.65573 9.52484 5.76406 9.48317C6.06406 9.35817 6.43906 9.42484 6.6724 9.65817C6.8224 9.8165 6.91406 10.0332 6.91406 10.2498C6.91406 10.2998 6.90573 10.3582 6.8974 10.4165C6.88906 10.4665 6.8724 10.5165 6.8474 10.5665C6.83073 10.6165 6.80573 10.6665 6.7724 10.7165C6.7474 10.7582 6.70573 10.7998 6.6724 10.8415C6.51406 10.9915 6.2974 11.0832 6.08073 11.0832ZM8.9974 11.0832C8.88906 11.0832 8.78073 11.0582 8.68073 11.0165C8.5724 10.9748 8.48906 10.9165 8.40573 10.8415C8.25573 10.6832 8.16406 10.4748 8.16406 10.2498C8.16406 10.1415 8.18906 10.0332 8.23073 9.93317C8.2724 9.83317 8.33073 9.7415 8.40573 9.65817C8.48906 9.58317 8.5724 9.52484 8.68073 9.48317C8.98073 9.34984 9.35573 9.42484 9.58906 9.65817C9.73906 9.8165 9.83073 10.0332 9.83073 10.2498C9.83073 10.2998 9.8224 10.3582 9.81406 10.4165C9.80573 10.4665 9.78906 10.5165 9.76406 10.5665C9.7474 10.6165 9.7224 10.6665 9.68906 10.7165C9.66406 10.7582 9.6224 10.7998 9.58906 10.8415C9.43073 10.9915 9.21406 11.0832 8.9974 11.0832ZM11.9141 11.0832C11.8057 11.0832 11.6974 11.0582 11.5974 11.0165C11.4891 10.9748 11.4057 10.9165 11.3224 10.8415L11.2224 10.7165C11.1908 10.6701 11.1656 10.6196 11.1474 10.5665C11.1233 10.5193 11.1065 10.4687 11.0974 10.4165C11.0891 10.3582 11.0807 10.2998 11.0807 10.2498C11.0807 10.0332 11.1724 9.8165 11.3224 9.65817C11.4057 9.58317 11.4891 9.52484 11.5974 9.48317C11.9057 9.34984 12.2724 9.42484 12.5057 9.65817C12.6557 9.8165 12.7474 10.0332 12.7474 10.2498C12.7474 10.2998 12.7391 10.3582 12.7307 10.4165C12.7224 10.4665 12.7057 10.5165 12.6807 10.5665C12.6641 10.6165 12.6391 10.6665 12.6057 10.7165C12.5807 10.7582 12.5391 10.7998 12.5057 10.8415C12.3474 10.9915 12.1307 11.0832 11.9141 11.0832ZM6.08073 13.9998C5.9724 13.9998 5.86406 13.9748 5.76406 13.9332C5.66406 13.8915 5.5724 13.8332 5.48906 13.7582C5.33906 13.5998 5.2474 13.3832 5.2474 13.1665C5.2474 13.0582 5.2724 12.9498 5.31406 12.8498C5.35573 12.7415 5.41406 12.6498 5.48906 12.5748C5.7974 12.2665 6.36406 12.2665 6.6724 12.5748C6.8224 12.7332 6.91406 12.9498 6.91406 13.1665C6.91406 13.3832 6.8224 13.5998 6.6724 13.7582C6.51406 13.9082 6.2974 13.9998 6.08073 13.9998ZM8.9974 13.9998C8.78073 13.9998 8.56406 13.9082 8.40573 13.7582C8.25573 13.5998 8.16406 13.3832 8.16406 13.1665C8.16406 13.0582 8.18906 12.9498 8.23073 12.8498C8.2724 12.7415 8.33073 12.6498 8.40573 12.5748C8.71406 12.2665 9.28073 12.2665 9.58906 12.5748C9.66406 12.6498 9.7224 12.7415 9.76406 12.8498C9.80573 12.9498 9.83073 13.0582 9.83073 13.1665C9.83073 13.3832 9.73906 13.5998 9.58906 13.7582C9.43073 13.9082 9.21406 13.9998 8.9974 13.9998ZM11.9141 13.9998C11.6974 13.9998 11.4807 13.9082 11.3224 13.7582C11.2453 13.6799 11.1856 13.5862 11.1474 13.4832C11.1057 13.3832 11.0807 13.2748 11.0807 13.1665C11.0807 13.0582 11.1057 12.9498 11.1474 12.8498C11.1891 12.7415 11.2474 12.6498 11.3224 12.5748C11.5141 12.3832 11.8057 12.2915 12.0724 12.3498C12.1307 12.3582 12.1807 12.3748 12.2307 12.3998C12.2807 12.4165 12.3307 12.4415 12.3807 12.4748C12.4224 12.4998 12.4641 12.5415 12.5057 12.5748C12.6557 12.7332 12.7474 12.9498 12.7474 13.1665C12.7474 13.3832 12.6557 13.5998 12.5057 13.7582C12.3474 13.9082 12.1307 13.9998 11.9141 13.9998ZM16.0807 7.19984H1.91406C1.5724 7.19984 1.28906 6.9165 1.28906 6.57484C1.28906 6.23317 1.5724 5.94984 1.91406 5.94984H16.0807C16.4224 5.94984 16.7057 6.23317 16.7057 6.57484C16.7057 6.9165 16.4224 7.19984 16.0807 7.19984Z"
-                                                fill="oklch(0.685 0.169 237.323)" />
-                                            <path
-                                                d="M12.3333 17.9582H5.66667C2.625 17.9582 0.875 16.2082 0.875 13.1665V6.08317C0.875 3.0415 2.625 1.2915 5.66667 1.2915H12.3333C15.375 1.2915 17.125 3.0415 17.125 6.08317V13.1665C17.125 16.2082 15.375 17.9582 12.3333 17.9582ZM5.66667 2.5415C3.28333 2.5415 2.125 3.69984 2.125 6.08317V13.1665C2.125 15.5498 3.28333 16.7082 5.66667 16.7082H12.3333C14.7167 16.7082 15.875 15.5498 15.875 13.1665V6.08317C15.875 3.69984 14.7167 2.5415 12.3333 2.5415H5.66667Z"
-                                                fill="oklch(0.685 0.169 237.323)" />
-                                        </svg>
-                                        <a href="#0">Jan 16, 2024</a>
-                                    </li>
-                                </ul>
+                    <!-- Mata Kuliah -->
+                    <div class="mb-3">
+                        <span class="bg-gradient-to-r from-sky-100 to-blue-100 text-sky-700 px-3 py-1 rounded-full text-sm font-medium">
+                            {{ $materi->mataKuliah->nama ?? 'Sistem Informasi' }}
+                        </span>
+                    </div>
+
+                    <!-- Title -->
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-sky-600 transition-colors line-clamp-2">
+                        <a href="#" class="">{{ $materi->judul }}</a>
+                    </h3>
+
+                    <!-- Description -->
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
+                        {{ Str::limit($materi->deskripsi, 120) }}
+                    </p>
+
+                    <!-- Meta Info -->
+                    <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                        <div class="flex items-center gap-4">
+                            <div class="flex items-center gap-1">
+                                <i class="fa-solid fa-star text-yellow-500"></i>
+                                <span>{{ $materi->tingkat_kesulitan ?? 'Menengah' }}</span>
+                            </div>
+                            @if($materi->total_soal)
+                            <div class="flex items-center gap-1">
+                                <i class="fa-solid fa-question-circle text-sky-500"></i>
+                                <span>{{ $materi->total_soal }} soal</span>
+                            </div>
+                            @endif
+                        </div>
+                        <span class="text-xs bg-gray-100 px-2 py-1 rounded">
+                            {{ $materi->tanggal_publikasi ? $materi->tanggal_publikasi->format('M Y') : 'Terbaru' }}
+                        </span>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 bg-gradient-to-r from-sky-500 to-sky-600 rounded-full flex items-center justify-center">
+                                <span class="text-white text-xs font-bold">{{ substr($materi->penulis ?? 'HMSI', 0, 1) }}</span>
+                            </div>
+                            <div>
+                                <span class="text-sm font-medium text-gray-700">{{ $materi->penulis ?? 'Tim HMSI' }}</span>
+                                <p class="text-xs text-gray-500">Kontributor</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div class="blog-two__item">
-                            <a href="blog-details.html" class="blog__image d-block image radius0">
-                                <img src="{{ asset('learnit/assets/images/blog/blog-six-image2.jpg') }}" alt="image">
-                            </a>
-                            <div class="blog-two__content p-4">
-                                <a href="#0" class="tag">Business</a>
-                                <h3><a href="blog-details.html" class="primary-hover">How to Remedy Tailbone Back the
-                                        Problems</a></h3>
-                                <ul class="blog-info mt-20">
-                                    <li>
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M14.5436 5.19275C14.5436 7.69093 12.499 9.7355 10.0008 9.7355C7.50268 9.7355 5.45811 7.69093 5.45811 5.19275C5.45811 2.69457 7.50264 0.65 10.0008 0.65C12.499 0.65 14.5436 2.69458 14.5436 5.19275Z"
-                                                stroke="oklch(0.685 0.169 237.323)" stroke-width="1.3" />
-                                            <path
-                                                d="M18.2644 14.6706C18.1052 14.9458 17.9241 15.2073 17.7169 15.4766L17.7168 15.4765L17.7089 15.4873C17.4204 15.8788 17.0845 16.2373 16.7295 16.5924C16.4326 16.8892 16.0933 17.186 15.7568 17.4385C14.0794 18.6911 12.0622 19.3499 9.97818 19.3499C7.8984 19.3499 5.8851 18.6938 4.2098 17.4461C3.84591 17.1504 3.51371 16.8792 3.2269 16.5924L3.21993 16.5854L3.21276 16.5787C2.85667 16.2436 2.54242 15.8877 2.24749 15.4874L2.24751 15.4873L2.24417 15.4829C2.06196 15.24 1.87324 14.9756 1.71923 14.7169C1.83622 14.4559 1.98458 14.1847 2.14525 13.9526L2.14536 13.9527L2.15288 13.9413C3.06988 12.5556 4.53709 11.6388 6.16646 11.4148L6.18604 11.4121L6.20542 11.4082C6.2309 11.4031 6.29498 11.4117 6.34551 11.4496L6.3455 11.4496L6.34951 11.4525C7.41654 12.2401 8.68633 12.6453 10.0008 12.6453C11.3153 12.6453 12.5851 12.2401 13.6522 11.4525L13.6522 11.4525L13.6562 11.4496C13.6716 11.438 13.7404 11.408 13.8492 11.4167C15.4689 11.6435 16.9121 12.5568 17.8525 13.9468L17.8524 13.9469L17.8564 13.9526C18.0166 14.1839 18.1557 14.4231 18.2644 14.6706Z"
-                                                stroke="oklch(0.685 0.169 237.323)" stroke-width="1.3" />
-                                        </svg>
-                                        <a href="#0">By Admin</a>
-                                    </li>
-                                    <li>
-                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M5.66406 3.7915C5.3224 3.7915 5.03906 3.50817 5.03906 3.1665V0.666504C5.03906 0.324837 5.3224 0.0415039 5.66406 0.0415039C6.00573 0.0415039 6.28906 0.324837 6.28906 0.666504V3.1665C6.28906 3.50817 6.00573 3.7915 5.66406 3.7915ZM12.3307 3.7915C11.9891 3.7915 11.7057 3.50817 11.7057 3.1665V0.666504C11.7057 0.324837 11.9891 0.0415039 12.3307 0.0415039C12.6724 0.0415039 12.9557 0.324837 12.9557 0.666504V3.1665C12.9557 3.50817 12.6724 3.7915 12.3307 3.7915ZM6.08073 11.0832C5.9724 11.0832 5.86406 11.0582 5.76406 11.0165C5.65573 10.9748 5.5724 10.9165 5.48906 10.8415C5.33906 10.6832 5.2474 10.4748 5.2474 10.2498C5.2474 10.1415 5.2724 10.0332 5.31406 9.93317C5.35573 9.83317 5.41406 9.7415 5.48906 9.65817C5.5724 9.58317 5.65573 9.52484 5.76406 9.48317C6.06406 9.35817 6.43906 9.42484 6.6724 9.65817C6.8224 9.8165 6.91406 10.0332 6.91406 10.2498C6.91406 10.2998 6.90573 10.3582 6.8974 10.4165C6.88906 10.4665 6.8724 10.5165 6.8474 10.5665C6.83073 10.6165 6.80573 10.6665 6.7724 10.7165C6.7474 10.7582 6.70573 10.7998 6.6724 10.8415C6.51406 10.9915 6.2974 11.0832 6.08073 11.0832ZM8.9974 11.0832C8.88906 11.0832 8.78073 11.0582 8.68073 11.0165C8.5724 10.9748 8.48906 10.9165 8.40573 10.8415C8.25573 10.6832 8.16406 10.4748 8.16406 10.2498C8.16406 10.1415 8.18906 10.0332 8.23073 9.93317C8.2724 9.83317 8.33073 9.7415 8.40573 9.65817C8.48906 9.58317 8.5724 9.52484 8.68073 9.48317C8.98073 9.34984 9.35573 9.42484 9.58906 9.65817C9.73906 9.8165 9.83073 10.0332 9.83073 10.2498C9.83073 10.2998 9.8224 10.3582 9.81406 10.4165C9.80573 10.4665 9.78906 10.5165 9.76406 10.5665C9.7474 10.6165 9.7224 10.6665 9.68906 10.7165C9.66406 10.7582 9.6224 10.7998 9.58906 10.8415C9.43073 10.9915 9.21406 11.0832 8.9974 11.0832ZM11.9141 11.0832C11.8057 11.0832 11.6974 11.0582 11.5974 11.0165C11.4891 10.9748 11.4057 10.9165 11.3224 10.8415L11.2224 10.7165C11.1908 10.6701 11.1656 10.6196 11.1474 10.5665C11.1233 10.5193 11.1065 10.4687 11.0974 10.4165C11.0891 10.3582 11.0807 10.2998 11.0807 10.2498C11.0807 10.0332 11.1724 9.8165 11.3224 9.65817C11.4057 9.58317 11.4891 9.52484 11.5974 9.48317C11.9057 9.34984 12.2724 9.42484 12.5057 9.65817C12.6557 9.8165 12.7474 10.0332 12.7474 10.2498C12.7474 10.2998 12.7391 10.3582 12.7307 10.4165C12.7224 10.4665 12.7057 10.5165 12.6807 10.5665C12.6641 10.6165 12.6391 10.6665 12.6057 10.7165C12.5807 10.7582 12.5391 10.7998 12.5057 10.8415C12.3474 10.9915 12.1307 11.0832 11.9141 11.0832ZM6.08073 13.9998C5.9724 13.9998 5.86406 13.9748 5.76406 13.9332C5.66406 13.8915 5.5724 13.8332 5.48906 13.7582C5.33906 13.5998 5.2474 13.3832 5.2474 13.1665C5.2474 13.0582 5.2724 12.9498 5.31406 12.8498C5.35573 12.7415 5.41406 12.6498 5.48906 12.5748C5.7974 12.2665 6.36406 12.2665 6.6724 12.5748C6.8224 12.7332 6.91406 12.9498 6.91406 13.1665C6.91406 13.3832 6.8224 13.5998 6.6724 13.7582C6.51406 13.9082 6.2974 13.9998 6.08073 13.9998ZM8.9974 13.9998C8.78073 13.9998 8.56406 13.9082 8.40573 13.7582C8.25573 13.5998 8.16406 13.3832 8.16406 13.1665C8.16406 13.0582 8.18906 12.9498 8.23073 12.8498C8.2724 12.7415 8.33073 12.6498 8.40573 12.5748C8.71406 12.2665 9.28073 12.2665 9.58906 12.5748C9.66406 12.6498 9.7224 12.7415 9.76406 12.8498C9.80573 12.9498 9.83073 13.0582 9.83073 13.1665C9.83073 13.3832 9.73906 13.5998 9.58906 13.7582C9.43073 13.9082 9.21406 13.9998 8.9974 13.9998ZM11.9141 13.9998C11.6974 13.9998 11.4807 13.9082 11.3224 13.7582C11.2453 13.6799 11.1856 13.5862 11.1474 13.4832C11.1057 13.3832 11.0807 13.2748 11.0807 13.1665C11.0807 13.0582 11.1057 12.9498 11.1474 12.8498C11.1891 12.7415 11.2474 12.6498 11.3224 12.5748C11.5141 12.3832 11.8057 12.2915 12.0724 12.3498C12.1307 12.3582 12.1807 12.3748 12.2307 12.3998C12.2807 12.4165 12.3307 12.4415 12.3807 12.4748C12.4224 12.4998 12.4641 12.5415 12.5057 12.5748C12.6557 12.7332 12.7474 12.9498 12.7474 13.1665C12.7474 13.3832 12.6557 13.5998 12.5057 13.7582C12.3474 13.9082 12.1307 13.9998 11.9141 13.9998ZM16.0807 7.19984H1.91406C1.5724 7.19984 1.28906 6.9165 1.28906 6.57484C1.28906 6.23317 1.5724 5.94984 1.91406 5.94984H16.0807C16.4224 5.94984 16.7057 6.23317 16.7057 6.57484C16.7057 6.9165 16.4224 7.19984 16.0807 7.19984Z"
-                                                fill="oklch(0.685 0.169 237.323)" />
-                                            <path
-                                                d="M12.3333 17.9582H5.66667C2.625 17.9582 0.875 16.2082 0.875 13.1665V6.08317C0.875 3.0415 2.625 1.2915 5.66667 1.2915H12.3333C15.375 1.2915 17.125 3.0415 17.125 6.08317V13.1665C17.125 16.2082 15.375 17.9582 12.3333 17.9582ZM5.66667 2.5415C3.28333 2.5415 2.125 3.69984 2.125 6.08317V13.1665C2.125 15.5498 3.28333 16.7082 5.66667 16.7082H12.3333C14.7167 16.7082 15.875 15.5498 15.875 13.1665V6.08317C15.875 3.69984 14.7167 2.5415 12.3333 2.5415H5.66667Z"
-                                                fill="oklch(0.685 0.169 237.323)" />
-                                        </svg>
-                                        <a href="#0">Jan 20, 2024</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-6 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                        <div class="blog-two__item">
-                            <a href="blog-details.html" class="blog__image d-block image radius0">
-                                <img src="{{ asset('learnit/assets/images/blog/blog-six-image3.jpg') }}" alt="image">
-                            </a>
-                            <div class="blog-two__content p-4">
-                                <a href="#0" class="tag">Marketing</a>
-                                <h3><a href="blog-details.html" class="primary-hover">Make Your Own Expanding
-                                        Contracting Content</a></h3>
-                                <ul class="blog-info mt-20">
-                                    <li>
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M14.5436 5.19275C14.5436 7.69093 12.499 9.7355 10.0008 9.7355C7.50268 9.7355 5.45811 7.69093 5.45811 5.19275C5.45811 2.69457 7.50264 0.65 10.0008 0.65C12.499 0.65 14.5436 2.69458 14.5436 5.19275Z"
-                                                stroke="oklch(0.685 0.169 237.323)" stroke-width="1.3" />
-                                            <path
-                                                d="M18.2644 14.6706C18.1052 14.9458 17.9241 15.2073 17.7169 15.4766L17.7168 15.4765L17.7089 15.4873C17.4204 15.8788 17.0845 16.2373 16.7295 16.5924C16.4326 16.8892 16.0933 17.186 15.7568 17.4385C14.0794 18.6911 12.0622 19.3499 9.97818 19.3499C7.8984 19.3499 5.8851 18.6938 4.2098 17.4461C3.84591 17.1504 3.51371 16.8792 3.2269 16.5924L3.21993 16.5854L3.21276 16.5787C2.85667 16.2436 2.54242 15.8877 2.24749 15.4874L2.24751 15.4873L2.24417 15.4829C2.06196 15.24 1.87324 14.9756 1.71923 14.7169C1.83622 14.4559 1.98458 14.1847 2.14525 13.9526L2.14536 13.9527L2.15288 13.9413C3.06988 12.5556 4.53709 11.6388 6.16646 11.4148L6.18604 11.4121L6.20542 11.4082C6.2309 11.4031 6.29498 11.4117 6.34551 11.4496L6.3455 11.4496L6.34951 11.4525C7.41654 12.2401 8.68633 12.6453 10.0008 12.6453C11.3153 12.6453 12.5851 12.2401 13.6522 11.4525L13.6522 11.4525L13.6562 11.4496C13.6716 11.438 13.7404 11.408 13.8492 11.4167C15.4689 11.6435 16.9121 12.5568 17.8525 13.9468L17.8524 13.9469L17.8564 13.9526C18.0166 14.1839 18.1557 14.4231 18.2644 14.6706Z"
-                                                stroke="oklch(0.685 0.169 237.323)" stroke-width="1.3" />
-                                        </svg>
-                                        <a href="#0">By Admin</a>
-                                    </li>
-                                    <li>
-                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M5.66406 3.7915C5.3224 3.7915 5.03906 3.50817 5.03906 3.1665V0.666504C5.03906 0.324837 5.3224 0.0415039 5.66406 0.0415039C6.00573 0.0415039 6.28906 0.324837 6.28906 0.666504V3.1665C6.28906 3.50817 6.00573 3.7915 5.66406 3.7915ZM12.3307 3.7915C11.9891 3.7915 11.7057 3.50817 11.7057 3.1665V0.666504C11.7057 0.324837 11.9891 0.0415039 12.3307 0.0415039C12.6724 0.0415039 12.9557 0.324837 12.9557 0.666504V3.1665C12.9557 3.50817 12.6724 3.7915 12.3307 3.7915ZM6.08073 11.0832C5.9724 11.0832 5.86406 11.0582 5.76406 11.0165C5.65573 10.9748 5.5724 10.9165 5.48906 10.8415C5.33906 10.6832 5.2474 10.4748 5.2474 10.2498C5.2474 10.1415 5.2724 10.0332 5.31406 9.93317C5.35573 9.83317 5.41406 9.7415 5.48906 9.65817C5.5724 9.58317 5.65573 9.52484 5.76406 9.48317C6.06406 9.35817 6.43906 9.42484 6.6724 9.65817C6.8224 9.8165 6.91406 10.0332 6.91406 10.2498C6.91406 10.2998 6.90573 10.3582 6.8974 10.4165C6.88906 10.4665 6.8724 10.5165 6.8474 10.5665C6.83073 10.6165 6.80573 10.6665 6.7724 10.7165C6.7474 10.7582 6.70573 10.7998 6.6724 10.8415C6.51406 10.9915 6.2974 11.0832 6.08073 11.0832ZM8.9974 11.0832C8.88906 11.0832 8.78073 11.0582 8.68073 11.0165C8.5724 10.9748 8.48906 10.9165 8.40573 10.8415C8.25573 10.6832 8.16406 10.4748 8.16406 10.2498C8.16406 10.1415 8.18906 10.0332 8.23073 9.93317C8.2724 9.83317 8.33073 9.7415 8.40573 9.65817C8.48906 9.58317 8.5724 9.52484 8.68073 9.48317C8.98073 9.34984 9.35573 9.42484 9.58906 9.65817C9.73906 9.8165 9.83073 10.0332 9.83073 10.2498C9.83073 10.2998 9.8224 10.3582 9.81406 10.4165C9.80573 10.4665 9.78906 10.5165 9.76406 10.5665C9.7474 10.6165 9.7224 10.6665 9.68906 10.7165C9.66406 10.7582 9.6224 10.7998 9.58906 10.8415C9.43073 10.9915 9.21406 11.0832 8.9974 11.0832ZM11.9141 11.0832C11.8057 11.0832 11.6974 11.0582 11.5974 11.0165C11.4891 10.9748 11.4057 10.9165 11.3224 10.8415L11.2224 10.7165C11.1908 10.6701 11.1656 10.6196 11.1474 10.5665C11.1233 10.5193 11.1065 10.4687 11.0974 10.4165C11.0891 10.3582 11.0807 10.2998 11.0807 10.2498C11.0807 10.0332 11.1724 9.8165 11.3224 9.65817C11.4057 9.58317 11.4891 9.52484 11.5974 9.48317C11.9057 9.34984 12.2724 9.42484 12.5057 9.65817C12.6557 9.8165 12.7474 10.0332 12.7474 10.2498C12.7474 10.2998 12.7391 10.3582 12.7307 10.4165C12.7224 10.4665 12.7057 10.5165 12.6807 10.5665C12.6641 10.6165 12.6391 10.6665 12.6057 10.7165C12.5807 10.7582 12.5391 10.7998 12.5057 10.8415C12.3474 10.9915 12.1307 11.0832 11.9141 11.0832ZM6.08073 13.9998C5.9724 13.9998 5.86406 13.9748 5.76406 13.9332C5.66406 13.8915 5.5724 13.8332 5.48906 13.7582C5.33906 13.5998 5.2474 13.3832 5.2474 13.1665C5.2474 13.0582 5.2724 12.9498 5.31406 12.8498C5.35573 12.7415 5.41406 12.6498 5.48906 12.5748C5.7974 12.2665 6.36406 12.2665 6.6724 12.5748C6.8224 12.7332 6.91406 12.9498 6.91406 13.1665C6.91406 13.3832 6.8224 13.5998 6.6724 13.7582C6.51406 13.9082 6.2974 13.9998 6.08073 13.9998ZM8.9974 13.9998C8.78073 13.9998 8.56406 13.9082 8.40573 13.7582C8.25573 13.5998 8.16406 13.3832 8.16406 13.1665C8.16406 13.0582 8.18906 12.9498 8.23073 12.8498C8.2724 12.7415 8.33073 12.6498 8.40573 12.5748C8.71406 12.2665 9.28073 12.2665 9.58906 12.5748C9.66406 12.6498 9.7224 12.7415 9.76406 12.8498C9.80573 12.9498 9.83073 13.0582 9.83073 13.1665C9.83073 13.3832 9.73906 13.5998 9.58906 13.7582C9.43073 13.9082 9.21406 13.9998 8.9974 13.9998ZM11.9141 13.9998C11.6974 13.9998 11.4807 13.9082 11.3224 13.7582C11.2453 13.6799 11.1856 13.5862 11.1474 13.4832C11.1057 13.3832 11.0807 13.2748 11.0807 13.1665C11.0807 13.0582 11.1057 12.9498 11.1474 12.8498C11.1891 12.7415 11.2474 12.6498 11.3224 12.5748C11.5141 12.3832 11.8057 12.2915 12.0724 12.3498C12.1307 12.3582 12.1807 12.3748 12.2307 12.3998C12.2807 12.4165 12.3307 12.4415 12.3807 12.4748C12.4224 12.4998 12.4641 12.5415 12.5057 12.5748C12.6557 12.7332 12.7474 12.9498 12.7474 13.1665C12.7474 13.3832 12.6557 13.5998 12.5057 13.7582C12.3474 13.9082 12.1307 13.9998 11.9141 13.9998ZM16.0807 7.19984H1.91406C1.5724 7.19984 1.28906 6.9165 1.28906 6.57484C1.28906 6.23317 1.5724 5.94984 1.91406 5.94984H16.0807C16.4224 5.94984 16.7057 6.23317 16.7057 6.57484C16.7057 6.9165 16.4224 7.19984 16.0807 7.19984Z"
-                                                fill="oklch(0.685 0.169 237.323)" />
-                                            <path
-                                                d="M12.3333 17.9582H5.66667C2.625 17.9582 0.875 16.2082 0.875 13.1665V6.08317C0.875 3.0415 2.625 1.2915 5.66667 1.2915H12.3333C15.375 1.2915 17.125 3.0415 17.125 6.08317V13.1665C17.125 16.2082 15.375 17.9582 12.3333 17.9582ZM5.66667 2.5415C3.28333 2.5415 2.125 3.69984 2.125 6.08317V13.1665C2.125 15.5498 3.28333 16.7082 5.66667 16.7082H12.3333C14.7167 16.7082 15.875 15.5498 15.875 13.1665V6.08317C15.875 3.69984 14.7167 2.5415 12.3333 2.5415H5.66667Z"
-                                                fill="oklch(0.685 0.169 237.323)" />
-                                        </svg>
-                                        <a href="#0">Jan 26, 2024</a>
-                                    </li>
-                                </ul>
-                            </div>
+                        
+                        <div class="flex items-center gap-2">
+                            <button class="w-8 h-8 bg-sky-100 hover:bg-sky-200 text-sky-600 rounded-lg flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-download text-sm"></i>
+                            </button>
+                            <button class="w-8 h-8 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-lg flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-eye text-sm"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+            @empty
+            <!-- Empty State -->
+            <div class="col-span-full text-center py-16 bg-white rounded-2xl border border-gray-100">
+                <div class="mb-6">
+                    <div class="w-20 h-20 bg-gradient-to-br from-sky-100 to-sky-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-book-open text-3xl text-sky-500"></i>
+                    </div>
+                </div>
+                <h5 class="text-xl font-bold text-gray-800 mb-3">Bank Materi Sedang Disiapkan</h5>
+                <p class="text-gray-500 mb-6 max-w-sm mx-auto">Koleksi materi pembelajaran akan segera tersedia untuk mendukung studimu!</p>
+                <a href="#" 
+                   class="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 to-sky-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-sky-600 hover:to-sky-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <i class="fa-solid fa-bell"></i>
+                    Beritahu Saya
+                </a>
+            </div>
+            @endforelse
+        </div>
+
+        <!-- CTA Section -->
+        @if(isset($recentBankMateri) && $recentBankMateri->count() > 0)
+        <div class="text-center mt-12">
+            <div class="bg-gradient-to-r from-sky-500 to-sky-600 rounded-2xl p-8 text-white">
+                <h4 class="text-2xl text-white font-bold mb-4">Jelajahi Semua Materi</h4>
+                <p class="text-sky-100 mb-6 max-w-md mx-auto">
+                    Akses koleksi lengkap materi pembelajaran, latihan soal, dan referensi akademik untuk semua mata kuliah
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                    <a href="{{ route('bank-materi') ?? '#' }}" 
+                       class="inline-flex items-center gap-3 bg-white text-sky-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
+                        <i class="fa-solid fa-books text-lg"></i>
+                        Lihat Semua Materi
+                        <i class="fa-solid fa-arrow-right text-lg"></i>
+                    </a>
+                    <a href="#" 
+                       class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white px-6 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
+                        <i class="fa-solid fa-upload text-lg"></i>
+                        Kontribusi Materi
+                    </a>
+                </div>
+            </div>
+        </div>
+        @endif
+
+        <!-- Quick Categories -->
+        <div class="mt-16 grid md:grid-cols-6 gap-4">
+            @php
+            $categories = [
+                ['icon' => 'fa-code', 'name' => 'Programming', 'color' => 'sky'],
+                ['icon' => 'fa-database', 'name' => 'Database', 'color' => 'blue'],
+                ['icon' => 'fa-network-wired', 'name' => 'Jaringan', 'color' => 'sky'],
+                ['icon' => 'fa-chart-line', 'name' => 'Algoritma', 'color' => 'blue'],
+                ['icon' => 'fa-shield-alt', 'name' => 'Keamanan', 'color' => 'sky'],
+                ['icon' => 'fa-mobile-alt', 'name' => 'Mobile Dev', 'color' => 'blue'],
+            ];
+            @endphp
+            
+            @foreach($categories as $category)
+            <div class="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer group">
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-{{ $category['color'] }}-400 to-{{ $category['color'] }}-600 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid {{ $category['icon'] }} text-white text-lg"></i>
+                    </div>
+                    <h6 class="font-semibold text-gray-800 text-sm">{{ $category['name'] }}</h6>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+
+<!-- Team Section -->
+<section class="relative bg-gradient-to-br from-blue-50 via-white to-sky-50 pt-32 pb-32 overflow-hidden">
+    <!-- Background Decorations -->
+    <div class="absolute top-10 left-10 opacity-20">
+        <div class="w-32 h-32 bg-blue-500 rounded-full animate-pulse"></div>
+    </div>
+    <div class="absolute bottom-20 right-16 opacity-15">
+        <div class="w-24 h-24 bg-sky-400 rounded-full animate-bounce"></div>
+    </div>
+    <div class="absolute top-1/3 right-1/4 opacity-10">
+        <div class="w-40 h-40 bg-blue-300 rounded-full animate-ping"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <!-- Header Section -->
+        <div class="text-center mb-16">
+            <div class="flex items-center justify-center gap-3 mb-4 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-sky-600 rounded-full flex items-center justify-center animate-bounce">
+                    <i class="fa-solid fa-users text-white text-xl"></i>
+                </div>
+                <h5 class="text-blue-600 uppercase tracking-widest font-semibold text-sm">TIM KEREN KAMI</h5>
+                <div class="w-12 h-12 bg-gradient-to-r from-sky-500 to-blue-600 rounded-full flex items-center justify-center animate-bounce" style="animation-delay: 0.5s;">
+                    <i class="fa-solid fa-star text-white text-xl"></i>
+                </div>
+            </div>
+            
+            <h2 class="text-4xl font-bold text-gray-800 leading-tight mb-4 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                Kenal Yuk Sama <span class="text-blue-600 relative inline-block">
+                    Pengurus HMSI
+                    <img src="{{ asset('learnit/assets/images/shape/header-shape.png') }}" alt="shape" class="absolute -bottom-2 left-0 w-full">
+                </span> 
+                <div class="inline-flex items-center gap-2 ml-2">
+                    <span class="text-2xl animate-bounce">🚀</span>
+                    <span class="text-2xl animate-pulse">✨</span>
+                </div>
+            </h2>
+            
+            <p class="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                Tim solid yang siap membantu kalian berkembang di dunia teknologi! 
+                <span class="text-blue-600 font-semibold">Jangan malu buat nyapa ya!</span> 😊
+            </p>
+        </div>
+
+        <!-- Fun Stats -->
+        <div class="grid md:grid-cols-4 gap-6 mb-16">
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:rotate-1 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-sky-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🧠</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">{{ $teamMembers->count() }}+</h3>
+                    <p class="text-gray-600 text-sm font-medium">Otak Jenius</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:rotate-1 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-sky-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">☕</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">100+</h3>
+                    <p class="text-gray-600 text-sm font-medium">Cup Kopi/Hari</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:rotate-1 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-400 to-sky-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🎉</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">24/7</h3>
+                    <p class="text-gray-600 text-sm font-medium">Siap Bantu</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:rotate-1 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-sky-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">💡</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">∞</h3>
+                    <p class="text-gray-600 text-sm font-medium">Ide Kreatif</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Grid -->
+  <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-8">
+    @forelse($teamMembers as $index => $member)
+    @php
+        $roleInfo = $member->getRoleDisplayName();
+        $socialMedia = $member->getFormattedSocialMedia();
+    @endphp
+    
+    <div class="group wow fadeInUp" data-wow-delay="{{ $index * 100 }}ms" data-wow-duration="1500ms">
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:rotate-1 relative">
+            <!-- Cute Badge -->
+            <div class="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-r from-blue-500 to-sky-600 rounded-full flex items-center justify-center z-10 shadow-lg group-hover:animate-bounce">
+                <span class="text-xl">{{ $roleInfo['emoji'] }}</span>
+            </div>
+
+            <!-- Avatar Section - Full Image -->
+            <div class="relative h-full bg-gradient-to-br from-blue-100 to-sky-100 overflow-hidden">
+                @if($member->avatar_url)
+                    <img src="{{ $member->getFilamentAvatarUrl() }}" 
+                         alt="{{ $member->name }}" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                @else
+                    <!-- Fallback with initials -->
+                    <div class="w-full h-full bg-gradient-to-br from-blue-500 to-sky-600 flex items-center justify-center">
+                        <span class="text-white text-6xl font-bold">
+                            {{ substr($member->name, 0, 1) }}
+                        </span>
+                    </div>
+                @endif
+                
+                <!-- Online Status - positioned on image -->
+                <div class="absolute bottom-4 right-4 w-6 h-6 bg-green-500 rounded-full border-3 border-white flex items-center justify-center shadow-lg">
+                    <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                </div>
+                
+                <!-- Role Badge on image -->
+                <div class="absolute bottom-4 left-4">
+                    <span class="bg-gradient-to-r from-blue-500 to-sky-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase backdrop-blur-sm bg-opacity-90">
+                        {{ $roleInfo['name'] }}
+                    </span>
+                </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="p-6">
+                <!-- Name -->
+                <div class="text-center mb-4">
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">{{ $member->name }}</h4>
+                    <div class="w-12 h-1 bg-gradient-to-r from-blue-500 to-sky-600 rounded-full mx-auto"></div>
+                </div>
+
+                <!-- Fun Fact -->
+                @if($member->fun_fact)
+                <div class="mb-4">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-lg">🌟</span>
+                        <span class="text-sm font-semibold text-blue-600">Fun Fact:</span>
+                    </div>
+                    <p class="text-gray-600 text-sm">{{ $member->fun_fact }}</p>
+                </div>
+                @endif
+
+                <!-- Hobby -->
+                @if($member->hobby)
+                <div class="mb-4">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-lg">🎯</span>
+                        <span class="text-sm font-semibold text-blue-600">Hobi:</span>
+                    </div>
+                    <p class="text-gray-600 text-sm">{{ $member->hobby }}</p>
+                </div>
+                @endif
+
+                <!-- Bio -->
+                @if($member->bio)
+                <div class="mb-4">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-lg">💬</span>
+                        <span class="text-sm font-semibold text-blue-600">About:</span>
+                    </div>
+                    <p class="text-gray-600 text-sm">{{ Str::limit($member->bio, 80) }}</p>
+                </div>
+                @endif
+
+                <!-- Social Media -->
+              <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+    <div class="flex items-center gap-2">
+        <span class="text-xs text-gray-500 font-medium">Let's Connect!</span>
+        <span class="text-sm">👋</span>
+    </div>
+    
+    <div class="flex items-center gap-2">
+        @php
+            $socialMediaArray = $socialMedia instanceof \Illuminate\Support\Collection 
+                ? $socialMedia->take(3)->toArray() 
+                : array_slice($socialMedia->toArray(), 0, 3);
+        @endphp
+        
+        @forelse($socialMediaArray as $social)
+        <a href="{{ $social['url'] }}" target="_blank" 
+           class="w-8 h-8 bg-gradient-to-r from-blue-100 to-sky-100 hover:from-blue-500 hover:to-sky-600 text-blue-600 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
+            <i class="{{ $social['icon'] }} text-sm"></i>
+        </a>
+        @empty
+        <div class="flex items-center gap-1 text-gray-400">
+            <i class="fa-solid fa-heart text-sm"></i>
+            <span class="text-xs">Tim HMSI</span>
+        </div>
+        @endforelse
+    </div>
+</div>
+            </div>
+
+            <!-- Hover Effect Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-blue-500/0 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"></div>
+        </div>
+    </div>
+    @empty
+    <!-- Empty State -->
+    <div class="col-span-full text-center py-16 bg-white rounded-2xl border border-gray-100">
+        <div class="mb-6">
+            <div class="w-20 h-20 bg-gradient-to-br from-blue-100 to-sky-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fa-solid fa-users text-3xl text-blue-500"></i>
+            </div>
+        </div>
+        <h5 class="text-xl font-bold text-gray-800 mb-3">Tim Sedang Disiapkan</h5>
+        <p class="text-gray-500 mb-6 max-w-sm mx-auto">Pengurus HMSI akan segera diperkenalkan!</p>
+    </div>
+    @endforelse
+</div>
+
+        <!-- Fun CTA Section -->
+        @if($teamMembers->count() > 0)
+        <div class="text-center mt-16">
+            <div class="bg-gradient-to-r from-blue-500 to-sky-600 rounded-3xl p-8 text-white relative overflow-hidden">
+                <!-- Background Pattern -->
+                <div class="absolute inset-0 opacity-10">
+                    <div class="w-full h-full" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"60\" height=\"60\" viewBox=\"0 0 60 60\"><g fill=\"%23ffffff\" fill-opacity=\"0.4\"><circle cx=\"30\" cy=\"30\" r=\"2\"/></g></svg>')"></div>
+                </div>
+                
+                <!-- Content -->
+                <div class="relative z-10">
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <span class="text-3xl animate-bounce">🤝</span>
+                        <h4 class="text-2xl font-bold">Mau Gabung Tim Keren Ini?</h4>
+                        <span class="text-3xl animate-bounce" style="animation-delay: 0.5s;">🚀</span>
+                    </div>
+                    
+                    <p class="text-blue-100 mb-6 max-w-md mx-auto">
+                        Kami selalu terbuka untuk anggota baru yang passionate dan siap berkontribusi!
+                    </p>
+                    
+                    <div class="flex flex-wrap items-center justify-center gap-4">
+                        <a href="#" 
+                           class="inline-flex items-center gap-3 bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
+                            <span class="text-xl">📝</span>
+                            Daftar Jadi Pengurus
+                            <i class="fa-solid fa-arrow-right text-lg"></i>
+                        </a>
+                        
+                        <a href="#" 
+                           class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white px-6 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
+                            <span class="text-xl">💬</span>
+                            Chat Sama Kita
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Floating Elements -->
+                <div class="absolute top-10 left-10 w-8 h-8 bg-white/20 rounded-full animate-pulse"></div>
+                <div class="absolute bottom-10 right-10 w-6 h-6 bg-white/30 rounded-full animate-bounce"></div>
+                <div class="absolute top-1/2 right-20 w-4 h-4 bg-white/25 rounded-full animate-ping"></div>
+            </div>
+        </div>
+        @endif
+
+        <!-- Fun Quote -->
+        <div class="text-center mt-12 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+            <div class="bg-white rounded-2xl p-6 shadow-lg max-w-2xl mx-auto">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <span class="text-2xl">💭</span>
+                    <h5 class="text-lg font-bold text-gray-800">Motto Tim Kami:</h5>
+                    <span class="text-2xl">✨</span>
+                </div>
+                <p class="text-blue-600 text-xl font-semibold italic">
+                    "Coding bareng, makan bareng, sukses bareng!" 
+                </p>
+                <div class="flex items-center justify-center gap-2 mt-4">
+                    <span>🍕</span>
+                    <span>💻</span>
+                    <span>🎉</span>
+                    <span>🏆</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection
