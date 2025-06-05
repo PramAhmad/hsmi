@@ -17,7 +17,7 @@
         <div class="banner-two__content">
             <h5 class="mb-4 text-sky-500 text-sm font-semibold uppercase tracking-widest wow fadeInUp" data-wow-delay="00ms"
                 data-wow-duration="1500ms">HIMPUNAN MAHASISWA SISTEM INFORMASI</h5>
-            <h1 class="text-5xl lg:text-6xl font-bold text-white leading-tight wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+            <h1 class="text-5xl lg:text-6xl font-bold text-slate-900 leading-tight wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                 Teknologi Adalah Masa Depan
                 <span class="text-sky-500 relative inline-block">
                     Inovasi 
@@ -272,7 +272,7 @@
         </div>
         <h5 class="text-xl font-bold text-gray-800 mb-3">Belum ada menfess</h5>
         <p class="text-gray-500 mb-6 max-w-sm mx-auto">Jadilah yang pertama berbagi cerita, curhat, atau perasaan secara anonim!</p>
-        <a href="{{ route('menfess') }}" 
+        <a href="{{ route('sifess.index') }}" 
            class="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 to-sky-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-sky-600 hover:to-sky-700 transition-all duration-300 shadow-lg hover:shadow-xl">
             <i class="fa-regular fa-paper-plane"></i>
             Kirim Menfess Pertama
@@ -282,7 +282,7 @@
     
     @if(isset($recentMenfess) && $recentMenfess->count() > 0)
     <div class="text-center pt-8">
-        <a href="{{ route('menfess') }}" 
+        <a href="{{ route('sifess.index') }}" 
            class="inline-flex items-center gap-3 bg-gradient-to-r from-sky-500 to-sky-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-sky-600 hover:to-sky-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
             <i class="fa-regular fa-comments text-lg"></i>
             Lihat Semua Menfess
@@ -894,7 +894,7 @@
                 <div class="relative z-10">
                     <div class="flex items-center justify-center gap-3 mb-4">
                         <span class="text-3xl animate-bounce">🤝</span>
-                        <h4 class="text-2xl font-bold">Mau Gabung Tim Keren Ini?</h4>
+                        <h4 class="text-2xl font-bold text-white">No one nothing can?</h4>
                         <span class="text-3xl animate-bounce" style="animation-delay: 0.5s;">🚀</span>
                     </div>
                     
@@ -906,7 +906,7 @@
                         <a href="#" 
                            class="inline-flex items-center gap-3 bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
                             <span class="text-xl">📝</span>
-                            Daftar Jadi Pengurus
+                            Lihat Semua Anggota
                             <i class="fa-solid fa-arrow-right text-lg"></i>
                         </a>
                         
@@ -942,6 +942,379 @@
                     <span>💻</span>
                     <span>🎉</span>
                     <span>🏆</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Journal Section -->
+<!-- Journal Section -->
+<section class="relative bg-gradient-to-br from-blue-50 via-white to-sky-50 pt-32 pb-32 overflow-hidden">
+    <!-- Background Decorations -->
+    <div class="absolute top-20 left-16 opacity-20">
+        <div class="w-28 h-28 bg-blue-500 rounded-full animate-pulse"></div>
+    </div>
+    <div class="absolute bottom-24 right-20 opacity-15">
+        <div class="w-36 h-36 bg-sky-400 rounded-full animate-bounce"></div>
+    </div>
+    <div class="absolute top-1/2 left-1/3 opacity-10">
+        <div class="w-20 h-20 bg-blue-300 rounded-full animate-ping"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <!-- Header Section -->
+        <div class="text-center mb-16">
+            <div class="flex items-center justify-center gap-3 mb-4 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-sky-600 rounded-full flex items-center justify-center animate-bounce">
+                    <i class="fa-solid fa-heart text-white text-xl"></i>
+                </div>
+                <h5 class="text-blue-600 uppercase tracking-widest font-semibold text-sm">REKOMENDASI SPESIAL</h5>
+                <div class="w-12 h-12 bg-gradient-to-r from-sky-500 to-blue-600 rounded-full flex items-center justify-center animate-bounce" style="animation-delay: 0.5s;">
+                    <i class="fa-solid fa-star text-white text-xl"></i>
+                </div>
+            </div>
+            
+            <h2 class="text-4xl font-bold text-gray-800 leading-tight mb-4 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                Rekomendasi <span class="text-blue-600 relative inline-block">
+                    Jurnal dari Kami
+                    <img src="{{ asset('learnit/assets/images/shape/header-shape.png') }}" alt="shape" class="absolute -bottom-2 left-0 w-full">
+                </span>
+                <div class="inline-flex items-center gap-2 ml-2">
+                    <span class="text-2xl animate-bounce">📖</span>
+                    <span class="text-2xl animate-pulse">💝</span>
+                </div>
+            </h2>
+            
+            <p class="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                Tim HMSI telah kurasi jurnal-jurnal berkualitas tinggi yang cocok untuk mahasiswa Sistem Informasi
+                <span class="text-blue-600 font-semibold">Bacaan wajib untuk upgrade skill kamu!</span> 🎯
+            </p>
+        </div>
+
+        <!-- Recommendation Stats -->
+        <div class="grid md:grid-cols-3 gap-6 mb-16">
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:rotate-1 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-sky-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🏆</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">{{ $recentJournals->count() ?? '6' }}</h3>
+                    <p class="text-gray-600 text-sm font-medium">Jurnal Terpilih</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:rotate-1 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-sky-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">⭐</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">100%</h3>
+                    <p class="text-gray-600 text-sm font-medium">Berkualitas Tinggi</p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:rotate-1 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-400 to-sky-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🎯</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">SI</h3>
+                    <p class="text-gray-600 text-sm font-medium">Fokus</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Journal Grid -->
+        <div class="grid xl:grid-cols-3 md:grid-cols-2 gap-8">
+            @forelse($recentJournals ?? [] as $index => $journal)
+            <div class="group wow fadeInUp" data-wow-delay="{{ $index * 100 }}ms" data-wow-duration="1500ms">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:rotate-1 relative">
+                    <!-- Recommendation Badge -->
+                    <div class="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full flex items-center justify-center z-10 shadow-lg group-hover:animate-bounce">
+                        <span class="text-xl">⭐</span>
+                    </div>
+
+                    <!-- HMSI Recommended Badge -->
+                    <div class="absolute -top-3 -left-3 bg-gradient-to-r from-blue-500 to-sky-600 text-white px-3 py-1 rounded-full text-xs font-bold z-10 shadow-lg">
+                        HMSI PICK
+                    </div>
+
+                    <!-- Header Section -->
+                    <div class="relative bg-gradient-to-br from-blue-100 to-sky-100 p-6">
+                        <!-- DOI Badge -->
+                        @if($journal->doi)
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-gradient-to-r from-green-500 to-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase">
+                                DOI
+                            </span>
+                        </div>
+                        @endif
+                        
+                        <!-- Publication Year -->
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-white/80 backdrop-blur-sm text-blue-700 px-3 py-1 rounded-full text-sm font-bold">
+                                {{ $journal->publication_year ?? date('Y') }}
+                            </span>
+                        </div>
+
+                        <!-- Journal Icon -->
+                        <div class="flex items-center justify-center mt-8 mb-4">
+                            <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-sky-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid fa-file-alt text-white text-3xl"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Section -->
+                    <div class="p-6">
+                        <!-- Journal Name -->
+                        <div class="mb-3">
+                            <span class="bg-gradient-to-r from-blue-100 to-sky-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">
+                                {{ $journal->journal_name ?? 'Journal of Information Systems' }}
+                            </span>
+                        </div>
+
+                        <!-- Title -->
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-blue-600 transition-colors line-clamp-2">
+                            <a href="#" class="">{{ $journal->title }}</a>
+                        </h3>
+
+                        <!-- HMSI Recommendation Note -->
+                        <div class="mb-4">
+                            <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-3 border-l-4 border-amber-500">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="text-lg">💡</span>
+                                    <span class="text-sm font-semibold text-amber-700">Kenapa Kami Rekomendasikan:</span>
+                                </div>
+                                <p class="text-amber-700 text-sm leading-relaxed">
+                                    @php
+                                    $recommendations = [
+                                        "Sangat relevan dengan kurikulum SI dan mudah dipahami",
+                                        "Penelitian terbaru yang sesuai dengan trend teknologi",
+                                        "Metodologi yang solid dan bisa dijadikan referensi skripsi",
+                                        "Studi kasus yang applicable untuk project kuliah",
+                                        "Insight mendalam tentang sistem informasi modern",
+                                        "Best practice yang bisa diterapkan di industri"
+                                    ];
+                                    echo $recommendations[array_rand($recommendations)];
+                                    @endphp
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Authors -->
+                        <div class="mb-4">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="text-lg">👥</span>
+                                <span class="text-sm font-semibold text-blue-600">Penulis:</span>
+                            </div>
+                            <p class="text-gray-600 text-sm">{{ Str::limit($journal->authors, 80) }}</p>
+                        </div>
+
+                        <!-- Abstract -->
+                        <div class="mb-4">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="text-lg">📝</span>
+                                <span class="text-sm font-semibold text-blue-600">Abstract:</span>
+                            </div>
+                            <div class="bg-gradient-to-r from-gray-50 to-slate-50 rounded-xl p-3 border-l-4 border-blue-500">
+                                <p class="text-gray-600 text-sm leading-relaxed">
+                                    {{ Str::limit($journal->abstract, 120) }}
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Keywords -->
+                        @if($journal->keywords)
+                        <div class="mb-4">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="text-lg">🏷️</span>
+                                <span class="text-sm font-semibold text-blue-600">Keywords:</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                @foreach(explode(',', $journal->keywords) as $keyword)
+                                <span class="bg-gradient-to-r from-sky-400 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                                    {{ trim($keyword) }}
+                                </span>
+                                @endforeach
+                            </div>
+                        </div>
+                        @endif
+
+                        <!-- Relevance Score -->
+                        <div class="mb-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-semibold text-blue-600">Relevansi untuk Mahasiswa SI:</span>
+                                <div class="flex items-center gap-1">
+                                    @for($i = 1; $i <= 5; $i++)
+                                    <i class="fa-solid fa-star text-amber-400 text-sm"></i>
+                                    @endfor
+                                    <span class="text-sm font-bold text-gray-700 ml-1">5.0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Journal Info -->
+                        <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                            <div class="flex items-center gap-4">
+                                @if($journal->volume)
+                                <div class="flex items-center gap-1">
+                                    <i class="fa-solid fa-book text-blue-500"></i>
+                                    <span>Vol. {{ $journal->volume }}</span>
+                                </div>
+                                @endif
+                                @if($journal->issue)
+                                <div class="flex items-center gap-1">
+                                    <i class="fa-solid fa-hashtag text-blue-500"></i>
+                                    <span>Issue {{ $journal->issue }}</span>
+                                </div>
+                                @endif
+                            </div>
+                            @if($journal->pages)
+                            <span class="text-xs bg-gray-100 px-2 py-1 rounded">
+                                pp. {{ $journal->pages }}
+                            </span>
+                            @endif
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-sky-600 rounded-full flex items-center justify-center">
+                                    <span class="text-white text-xs font-bold">📚</span>
+                                </div>
+                                <div>
+                                    <span class="text-sm font-medium text-gray-700">Tim Kurasi HMSI</span>
+                                    <p class="text-xs text-gray-500">Recommended by</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center gap-2">
+                                @if($journal->file_path)
+                                <button class="w-8 h-8 bg-blue-100 hover:bg-blue-200 text-blue-600 rounded-lg flex items-center justify-center transition-colors" title="Download">
+                                    <i class="fa-solid fa-download text-sm"></i>
+                                </button>
+                                @endif
+                                @if($journal->doi)
+                                <button class="w-8 h-8 bg-green-100 hover:bg-green-200 text-green-600 rounded-lg flex items-center justify-center transition-colors" title="DOI Link">
+                                    <i class="fa-solid fa-external-link text-sm"></i>
+                                </button>
+                                @endif
+                                <button class="w-8 h-8 bg-amber-100 hover:bg-amber-200 text-amber-600 rounded-lg flex items-center justify-center transition-colors" title="Save to Reading List">
+                                    <i class="fa-solid fa-bookmark text-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hover Effect Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-500/0 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"></div>
+                </div>
+            </div>
+            @empty
+            <!-- Empty State -->
+            <div class="col-span-full text-center py-16 bg-white rounded-2xl border border-gray-100">
+                <div class="mb-6">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-100 to-sky-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-heart text-3xl text-blue-500"></i>
+                    </div>
+                </div>
+                <h5 class="text-xl font-bold text-gray-800 mb-3">Rekomendasi Sedang Disiapkan</h5>
+                <p class="text-gray-500 mb-6 max-w-sm mx-auto">Tim kurasi HMSI sedang memilih jurnal-jurnal terbaik untuk kalian!</p>
+                <a href="#" 
+                   class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-sky-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-sky-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <i class="fa-solid fa-bell"></i>
+                    Beritahu Kalau Ada Update
+                </a>
+            </div>
+            @endforelse
+        </div>
+
+        <!-- CTA Section -->
+        @if(isset($recentJournals) && $recentJournals->count() > 0)
+        <div class="text-center mt-16">
+            <div class="bg-gradient-to-r from-blue-500 to-sky-600 rounded-3xl p-8 text-white relative overflow-hidden">
+                <!-- Background Pattern -->
+                <div class="absolute inset-0 opacity-10">
+                    <div class="w-full h-full" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"60\" height=\"60\" viewBox=\"0 0 60 60\"><g fill=\"%23ffffff\" fill-opacity=\"0.4\"><circle cx=\"30\" cy=\"30\" r=\"2\"/></g></svg>')"></div>
+                </div>
+                
+                <!-- Content -->
+                <div class="relative z-10">
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <span class="text-3xl animate-bounce">📚</span>
+                        <h4 class="text-2xl font-bold text-white">Jangan Lewatkan Rekomendasi Kami!</h4>
+                        <span class="text-3xl animate-bounce" style="animation-delay: 0.5s;">💝</span>
+                    </div>
+                    
+                    <p class="text-blue-100 mb-6 max-w-md mx-auto">
+                        Setiap jurnal telah dipilih khusus oleh tim HMSI untuk mendukung perjalanan akademikmu
+                    </p>
+                    
+                    <div class="flex flex-wrap items-center justify-center gap-4">
+                        <a href="{{ route('journals') ?? '#' }}" 
+                           class="inline-flex items-center gap-3 bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
+                            <span class="text-xl">📖</span>
+                            Lihat Semua Rekomendasi
+                            <i class="fa-solid fa-arrow-right text-lg"></i>
+                        </a>
+                        
+                        <a href="#" 
+                           class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white px-6 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
+                            <span class="text-xl">🔔</span>
+                            Subscribe Update
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Floating Elements -->
+                <div class="absolute top-10 left-10 w-8 h-8 bg-white/20 rounded-full animate-pulse"></div>
+                <div class="absolute bottom-10 right-10 w-6 h-6 bg-white/30 rounded-full animate-bounce"></div>
+                <div class="absolute top-1/2 right-20 w-4 h-4 bg-white/25 rounded-full animate-ping"></div>
+            </div>
+        </div>
+        @endif
+
+        <!-- Why Our Recommendations -->
+        <div class="mt-16 grid md:grid-cols-4 gap-6">
+            @php
+            $whyRecommend = [
+                ['icon' => 'fa-graduation-cap', 'title' => 'Akademik Friendly', 'desc' => 'Mudah dipahami mahasiswa'],
+                ['icon' => 'fa-chart-line', 'title' => 'High Impact', 'desc' => 'Jurnal bereputasi tinggi'],
+                ['icon' => 'fa-lightbulb', 'title' => 'Trending Topic', 'desc' => 'Topik yang sedang hot'],
+                ['icon' => 'fa-users', 'title' => 'Community Tested', 'desc' => 'Diuji oleh senior HMSI'],
+            ];
+            @endphp
+            
+            @foreach($whyRecommend as $reason)
+            <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer group">
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-400 to-sky-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid {{ $reason['icon'] }} text-white text-lg"></i>
+                    </div>
+                    <h6 class="font-bold text-gray-800 text-sm mb-2">{{ $reason['title'] }}</h6>
+                    <p class="text-gray-600 text-xs">{{ $reason['desc'] }}</p>
+                </div>
+            </div>
+            @endforeach
+        </div>
+
+        <!-- Fun Quote for Recommendations -->
+        <div class="text-center mt-12 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+            <div class="bg-white rounded-2xl p-6 shadow-lg max-w-2xl mx-auto">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <span class="text-2xl">💝</span>
+                    <h5 class="text-lg font-bold text-gray-800">Filosofi Kurasi Kami:</h5>
+                    <span class="text-2xl">📚</span>
+                </div>
+                <p class="text-blue-600 text-xl font-semibold italic">
+                    "Bukan sekadar baca, tapi baca yang tepat untuk grow up!" 
+                </p>
+                <div class="flex items-center justify-center gap-2 mt-4">
+                    <span>📖</span>
+                    <span>🎯</span>
+                    <span>💡</span>
+                    <span>🚀</span>
                 </div>
             </div>
         </div>
