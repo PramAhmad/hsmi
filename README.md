@@ -1,4 +1,4 @@
-# Panduan Instalasi dan Menjalankan Project Laravel + Node.js (Untuk Mahasiswa Pemula)
+# Panduan Instalasi dan Menjalankan Project Laravel + Node.js (Untuk Contributor)
 
 Panduan ini membantu kamu untuk menjalankan project Laravel dan Node.js dari awal, bahkan jika kamu belum pernah pakai terminal sebelumnya. Ikuti langkah demi langkah ya!
 
