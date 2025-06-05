@@ -17,7 +17,7 @@ class Menfess extends Model
     protected $fillable = [
         'content',
         'sender_name',
-    'to_name',
+        'to_name',
         'user_id',
         'spotify_link',
         'status',
@@ -58,5 +58,30 @@ class Menfess extends Model
     public function isRejected(): bool
     {
         return $this->status === 'rejected';
+    }
+
+    // Scope for filtering
+    public function scopeApproved($query)
+    {
+        return $query->where('status', 'approved');
+    }
+
+    public function scopeWithMusic($query)
+    {
+        return $query->whereNotNull('spotify_link');
+    }
+
+    public function scopeWithoutMusic($query)
+    {
+        return $query->whereNull('spotify_link');
+    }
+
+    public function scopeSearch($query, $search)
+    {
+        return $query->where(function ($q) use ($search) {
+            $q->where('content', 'like', "%{$search}%")
+              ->orWhere('sender_name', 'like', "%{$search}%")
+              ->orWhere('to_name', 'like', "%{$search}%");
+        });
     }
 }
