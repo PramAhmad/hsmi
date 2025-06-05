@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learnit - Education & Online Courses Html Template</title>
+    <title>HMSI Unsil - Himpunan Mahasiswa Sistem Informasi</title>
     <!-- Favicon img -->
-    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <link rel="shortcut icon" href="{{ asset('images/logo_hmsi.png') }}">
     <!-- Bootstarp min css -->
     <link rel="stylesheet" href="{{ asset('learnit/assets/css/bootstrap.min.css') }}">
     <!-- Mean menu css -->
@@ -35,7 +35,7 @@
         <div id="loading-center">
             <div id="loading-center-absolute">
                 <div class="loading-icon text-center d-flex flex-column align-items-center justify-content-center">
-                    <img class="loading-logo" src="{{ asset('learnit/assets/images/preloader.svg') }}" alt="icon">
+                    <img class="loading-logo" src="{{ asset('images/logo_hmsi.png') }}" alt="HMSI Unsil">
                 </div>
             </div>
         </div>
@@ -63,7 +63,7 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        <a href="#0">6391 Elgin St. Celina, USA</a>
+                        <a href="https://maps.google.com/?q=Universitas+Siliwangi+Tasikmalaya" target="_blank">Jl. Siliwangi No.24, Tasikmalaya, Jawa Barat</a>
                     </li>
                     <li><span></span></li>
                     <li>
@@ -79,15 +79,15 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        <a href="#0">info@example.com</a>
+                        <a href="mailto:hmsi@unsil.ac.id">hmsi@unsil.ac.id</a>
                     </li>
                 </ul>
                 <ul class="socila-link">
-                    <li>Follow Us On :</li>
-                    <li><a href="#0"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="#0"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="#0"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                    <li><a href="#0"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li>Ikuti Kami :</li>
+                    <li><a href="https://facebook.com/hmsi.unsil" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="https://instagram.com/hmsi.unsil" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://linkedin.com/company/hmsi-unsil" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li><a href="https://youtube.com/@hmsi.unsil" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -98,61 +98,69 @@
     <header class="header-area header-two-area">
         <div class="container">
             <div class="header__main header-two__main">
-                <a href="index.html" class="logo">
-                    <img src="{{ asset('learnit/assets/images/logo/logo.svg') }}" alt="logo">
-                </a>
+                <!-- Logo Section with Better Styling -->
+                <div class="flex items-center gap-4">
+                    <a href="{{ route('home') }}" class="flex items-center gap-3 group">
+                        <div class="relative">
+                            <img src="{{ asset('images/logo_hmsi.png') }}" 
+                                 class="h-12 w-12 rounded-lg shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105" 
+                                 alt="Logo HMSI Unsil">
+                            <!-- Subtle glow effect -->
+                            <div class="absolute inset-0 bg-blue-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm -z-10"></div>
+                        </div>
+                        <div class="flex flex-col">
+                            <h1 class="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+                                HMSI Unsil
+                            </h1>
+                            <p class="text-sm text-gray-500 -mt-1">Sistem Informasi</p>
+                        </div>
+                    </a>
+                </div>
+                
                 <div class="main-menu">
                     <nav>
                         <ul>
                             <li>
-                                <a href="#0">Home </a>
-                             
+                                <a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">Beranda</a>
                             </li>
                             <li>
                                 <a href="#0">Akademik <i class="fa-solid fa-angle-down"></i></a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="about.html">
-                                            Bank Materi
-                                        </a>
+                                        <a href="{{ route('bank-materi') }}">Bank Materi</a>
                                     </li>
                                     <li>
-                                        <a href="about-2.html">Journal</a>
+                                        <a href="{{ route('journals') }}">Jurnal Ilmiah</a>
                                     </li>
                                     <li>
-                                        <a href="about-3.html">Matakuliah</a>
+                                        <a href="{{ route('matakuliah') }}">Mata Kuliah</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#0">About Us <i class="fa-solid fa-angle-down"></i></a>
+                                <a href="#0">Tentang Kami <i class="fa-solid fa-angle-down"></i></a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="course.html">Courses 1</a>
+                                        <a href="{{ route('about.profil') }}">Profil HMSI</a>
                                     </li>
-
                                     <li>
-                                        <a href="#0">Courses Details <i class="fa-solid fa-angle-down"></i></a>
-                                        <ul class="sub-sub-menu">
-                                            <li>
-                                                <a href="course-details.html">Courses Details 1</a>
-                                            </li>
-                                            <li>
-                                                <a href="course-details-2.html">Courses Details 2</a>
-                                            </li>
-                                        </ul>
+                                        <a href="{{ route('about.visi-misi') }}">Visi & Misi</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('about.struktur') }}">Struktur Organisasi</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('about.sejarah') }}">Sejarah</a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#0">Activity <i class="fa-solid fa-angle-down"></i></a>
-                                
+                                <a href="{{ route('activities') }}" class="{{ request()->routeIs('activities') ? 'active' : '' }}">Kegiatan</a>
                             </li>
                             <li>
-                                <a href="#0">SiFess <i class="fa-solid fa-angle-down"></i></a>
-                               
+                                <a href="{{ route('sifess.index') }}" class="{{ request()->routeIs('sifess.*') ? 'active' : '' }}">SiFess</a>
                             </li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="{{ route('contact') }}">Kontak</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -172,7 +180,7 @@
                         </svg>
                     </button>
                     <div class="menu-btns d-none d-lg-flex">
-                        <a class="active" href="pricing.html">Try For Free</a>
+                        <a class="active" href="{{ route('membership.register') }}">Gabung HMSI</a>
                     </div>
                     <button class="menubars" type="button" data-bs-toggle="offcanvas" data-bs-target="#menubar">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -193,61 +201,87 @@
     <!-- Sidebar area start here -->
     <div class="sidebar-area offcanvas offcanvas-end" id="menubar">
         <div class="offcanvas-header">
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo/logo-light.svg" alt="logo">
+            <a href="{{ route('home') }}" class="logo flex items-center gap-3">
+                <img src="{{ asset('images/logo_hmsi.png') }}" class="h-10 w-10 rounded-lg" alt="Logo HMSI">
+                <div>
+                    <h3 class="text-white font-bold">HMSI Unsil</h3>
+                    <p class="text-gray-300 text-sm">Sistem Informasi</p>
+                </div>
             </a>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"><i
                     class="fa-regular fa-xmark"></i></button>
         </div>
         <div class="offcanvas-body sidebar__body">
-            <div class="mobile-menu overflow-hidden"></div>
+            <div class="mobile-menu overflow-hidden">
+                <nav>
+                    <ul>
+                        <li><a href="{{ route('home') }}">Beranda</a></li>
+                        <li>
+                            <a href="#0">Akademik <i class="fa-solid fa-angle-down"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href="{{ route('bank-materi') }}">Bank Materi</a></li>
+                                <li><a href="{{ route('journals') }}">Jurnal Ilmiah</a></li>
+                                <li><a href="{{ route('matakuliah') }}">Mata Kuliah</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#0">Tentang Kami <i class="fa-solid fa-angle-down"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href="{{ route('about.profil') }}">Profil HMSI</a></li>
+                                <li><a href="{{ route('about.visi-misi') }}">Visi & Misi</a></li>
+                                <li><a href="{{ route('about.struktur') }}">Struktur Organisasi</a></li>
+                                <li><a href="{{ route('about.sejarah') }}">Sejarah</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{{ route('activities') }}">Kegiatan</a></li>
+                        <li><a href="{{ route('sifess.index') }}">SiFess</a></li>
+                        <li><a href="{{ route('contact') }}">Kontak</a></li>
+                    </ul>
+                </nav>
+            </div>
             <div class="d-none d-lg-block">
-                <h5 class="text-white mb-20">About Us</h5>
+                <h5 class="text-white mb-20">Tentang HMSI</h5>
                 <p class="paragraph-light fs-16">
-                    Unleash the full potential of your website and elevate its online presence with our comprehensive
-                    online courses.
+                    Himpunan Mahasiswa Sistem Informasi Universitas Siliwangi yang berkomitmen memajukan bidang teknologi informasi dan mengembangkan potensi mahasiswa.
                 </p>
             </div>
             <div class="sidebar__search d-block d-lg-none">
-                <input type="text" placeholder="Search here..">
-                <button><i class="fa-regular fa-magnifying-glass"></i></button>
+                <form action="{{ route('search') }}" method="GET">
+                    <input type="text" name="q" placeholder="Cari di HMSI...">
+                    <button type="submit"><i class="fa-regular fa-magnifying-glass"></i></button>
+                </form>
             </div>
             <div class="sidebar__contact-info mt-30">
-                <h5 class="text-white mb-20">Contact Info</h5>
+                <h5 class="text-white mb-20">Info Kontak</h5>
                 <ul>
-                    <li><i class="fa-solid fa-location-dot"></i> <a href="#0">example@example.com</a>
-                    </li>
-                    <li class="py-2"><i class="fa-solid fa-phone-volume"></i> <a href="tel:+912659302003">+91
-                            2659
-                            302 003</a>
-                    </li>
-                    <li><i class="fa-solid fa-paper-plane"></i> <a href="#0">info.company@gmail.com</a>
-                    </li>
+                    <li><i class="fa-solid fa-envelope"></i> <a href="mailto:hmsi@unsil.ac.id">hmsi@unsil.ac.id</a></li>
+                    <li class="py-2"><i class="fa-solid fa-phone-volume"></i> <a href="tel:+6285913484854">+62 859 1348 4854</a></li>
+                    <li><i class="fa-solid fa-location-dot"></i> <a href="https://maps.google.com/?q=Universitas+Siliwangi+Tasikmalaya" target="_blank">Universitas Siliwangi, Tasikmalaya</a></li>
                 </ul>
             </div>
             <div class="sidebar__btns my-4">
-                <a href="sign-up.html">Sign Up</a>
-                <a class="sign-in" href="sign-in.html">Sign In</a>
+                <a href="{{ route('membership.register') }}">Daftar Anggota</a>
+                <a class="sign-in" href="{{ route('login') }}">Masuk</a>
             </div>
             <div class="sidebar__socials">
                 <ul>
                     <li>
-                        <a href="#0">
+                        <a href="https://facebook.com/hmsi.unsil" target="_blank">
                             <i class="fa-brands text-white fa-facebook-f"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#0">
-                            <i class="fa-brands text-white fa-twitter"></i>
+                        <a href="https://instagram.com/hmsi.unsil" target="_blank">
+                            <i class="fa-brands text-white fa-instagram"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#0">
+                        <a href="https://linkedin.com/company/hmsi-unsil" target="_blank">
                             <i class="fa-brands text-white fa-linkedin-in"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#0">
+                        <a href="https://youtube.com/@hmsi.unsil" target="_blank">
                             <i class="fa-brands text-white fa-youtube"></i></a>
                     </li>
                 </ul>
@@ -261,9 +295,9 @@
         <div class="search-inner">
             <i class="fa-light fa-xmark search-close" id="search-close"></i>
             <div class="search-cell">
-                <form method="get">
+                <form method="GET" action="{{ route('search') }}">
                     <div class="search-field-holder">
-                        <input type="search" class="main-search-input" placeholder="Search...">
+                        <input type="search" name="q" class="main-search-input" placeholder="Cari materi, jurnal, kegiatan...">
                     </div>
                 </form>
             </div>
@@ -272,18 +306,23 @@
     <!-- Fullscreen search area end here -->
 
   @yield('content')
+  
     <!-- Footer area start here -->
     <footer class="footer-six-area sub-bg-two">
         <div class="footer-six__shape">
-            <img src="assets/images/shape/footer-six-shape.png" alt="shape">
+            <img src="{{ asset('learnit/assets/images/shape/footer-six-shape.png') }}" alt="shape">
         </div>
         <div class="container">
             <div class="footer__wrp pt-100 pb-100">
                 <div class="footer__item footer-about wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                    <a href="index.html" class="logo mb-30">
-                        <img src="assets/images/logo/logo.svg" alt="logo">
+                    <a href="{{ route('home') }}" class="logo mb-30 flex items-center gap-3">
+                        <img src="{{ asset('images/logo_hmsi.png') }}" class="h-12 w-12 rounded-lg" alt="Logo HMSI">
+                        <div>
+                            <h3 class="text-white font-bold text-lg">HMSI Unsil</h3>
+                            <p class="text-gray-300 text-sm">Sistem Informasi</p>
+                        </div>
                     </a>
-                    <p>HMSI Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, corrupti.</p>
+                    <p class="mt-4">Himpunan Mahasiswa Sistem Informasi Universitas Siliwangi - Membangun masa depan teknologi informasi bersama mahasiswa yang berprestasi dan berkarakter.</p>
                     <ul class="mt-25">
                         <li>
                             <svg class="me-1" width="16" height="20" viewBox="0 0 16 20" fill="none"
@@ -295,7 +334,7 @@
                                     d="M7.99972 3.47754C5.84283 3.47754 4.08838 5.23243 4.08838 7.38888C4.08838 9.54534 5.84283 11.3002 7.99972 11.3002C10.1566 11.3002 11.9111 9.54534 11.9111 7.38888C11.9111 5.23243 10.1566 3.47754 7.99972 3.47754ZM7.99972 10.431C6.32262 10.431 4.95757 9.06641 4.95757 7.38888C4.95757 5.71135 6.32262 4.34673 7.99972 4.34673C9.67682 4.34673 11.0419 5.71135 11.0419 7.38888C11.0419 9.06641 9.67682 10.431 7.99972 10.431Z"
                                     fill="oklch(0.685 0.169 237.323)" />
                             </svg>
-                            <a href="#0" class="p-0">Tasikmalaya </a>
+                            <a href="https://maps.google.com/?q=Universitas+Siliwangi+Tasikmalaya" target="_blank" class="p-0">Jl. Siliwangi No.24, Tasikmalaya, Jawa Barat</a>
                         </li>
                         <li>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -304,44 +343,39 @@
                                     d="M18.7719 14.1213C18.7388 14.0938 14.9913 11.4275 13.9794 11.5906C13.4913 11.6769 13.2125 12.01 12.6531 12.6762C12.4985 12.8617 12.3403 13.0443 12.1788 13.2238C11.8252 13.1086 11.4804 12.9682 11.1469 12.8038C9.42533 11.9656 8.03437 10.5747 7.19625 8.85312C7.03179 8.51964 6.89143 8.1748 6.77625 7.82125C6.96 7.65312 7.2175 7.43625 7.3275 7.34375C7.99062 6.7875 8.32312 6.50812 8.40938 6.01937C8.58625 5.0075 5.90625 1.26125 5.87875 1.2275C5.7567 1.05441 5.59775 0.910578 5.41336 0.806386C5.22897 0.702193 5.02374 0.640241 4.8125 0.625C3.72625 0.625 0.625 4.6475 0.625 5.32562C0.625 5.365 0.681875 9.3675 5.6175 14.3881C10.6325 19.3181 14.635 19.375 14.6744 19.375C15.3519 19.375 19.375 16.2737 19.375 15.1875C19.3596 14.9762 19.2975 14.771 19.1932 14.5866C19.0889 14.4022 18.945 14.2433 18.7719 14.1213ZM14.605 18.1213C14.0625 18.075 10.7 17.6319 6.5 13.5063C2.35437 9.28563 1.9225 5.9175 1.87937 5.39563C2.69861 4.10978 3.68799 2.94064 4.82062 1.92C4.84562 1.945 4.87875 1.9825 4.92125 2.03125C5.78989 3.21702 6.53817 4.48642 7.155 5.82062C6.95441 6.02242 6.7424 6.21253 6.52 6.39C6.17512 6.65278 5.85843 6.95063 5.575 7.27875C5.52704 7.34604 5.4929 7.42217 5.47456 7.50274C5.45621 7.5833 5.45403 7.66671 5.46812 7.74813C5.60039 8.32108 5.80297 8.87549 6.07125 9.39875C7.03243 11.3725 8.62735 12.9672 10.6012 13.9281C11.1244 14.1968 11.6788 14.3996 12.2519 14.5319C12.3333 14.5463 12.4168 14.5443 12.4974 14.5259C12.578 14.5075 12.6541 14.4732 12.7213 14.425C13.0505 14.1404 13.3494 13.8225 13.6131 13.4762C13.8094 13.2425 14.0712 12.9306 14.1706 12.8425C15.5082 13.4587 16.7805 14.2079 17.9681 15.0787C18.02 15.1225 18.0569 15.1562 18.0812 15.1781C17.0606 16.3111 15.8912 17.3007 14.605 18.12V18.1213ZM14.375 9.375H15.625C15.6235 8.04937 15.0962 6.77847 14.1589 5.84111C13.2215 4.90375 11.9506 4.37649 10.625 4.375V5.625C11.6193 5.62599 12.5725 6.0214 13.2756 6.72445C13.9786 7.42749 14.374 8.38074 14.375 9.375Z"
                                     fill="oklch(0.685 0.169 237.323)" />
                             </svg>
-                            <a href="tel:+2086660112" class="p-0">+62 859 134 848 3542</a>
+                            <a href="tel:+6285913484854" class="p-0">+62 859 1348 4854</a>
                         </li>
                     </ul>
                 </div>
                 <div class="footer__item item-sm wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                    <h3 class="footer-title">Quick Link</h3>
+                    <h3 class="footer-title">Menu Utama</h3>
                     <ul>
-                        <li><a href="about.html"><i class="fa-regular fa-angles-right me-1"></i>About Learnit</a></li>
-                        <li><a href="course.html"><i class="fa-regular fa-angles-right me-1"></i> Our Courses</a>
-                        </li>
-                        <li><a href="team.html"><i class="fa-regular fa-angles-right me-1"></i> Instructor</a>
-                        </li>
-                        <li><a href="team-details.html"><i class="fa-regular fa-angles-right me-1"></i> Instructor
-                                Details</a>
-                        </li>
-                        <li><a href="contact.html"><i class="fa-regular fa-angles-right me-1"></i> Contact Us</a></li>
+                        <li><a href="{{ route('about.profil') }}"><i class="fa-regular fa-angles-right me-1"></i>Tentang HMSI</a></li>
+                        <li><a href="{{ route('bank-materi') }}"><i class="fa-regular fa-angles-right me-1"></i>Bank Materi</a></li>
+                        <li><a href="{{ route('journals') }}"><i class="fa-regular fa-angles-right me-1"></i>Jurnal Ilmiah</a></li>
+                        <li><a href="{{ route('activities') }}"><i class="fa-regular fa-angles-right me-1"></i>Kegiatan</a></li>
+                        <li><a href="{{ route('contact') }}"><i class="fa-regular fa-angles-right me-1"></i>Kontak Kami</a></li>
                     </ul>
                 </div>
                 <div class="footer__item item-sm wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                    <h3 class="footer-title">Resources</h3>
+                    <h3 class="footer-title">Sumber Daya</h3>
                     <ul>
-                        <li><a href="faq.html"><i class="fa-regular fa-angles-right me-1"></i> FAQ’s</a></li>
-                        <li><a href="privacy.html"><i class="fa-regular fa-angles-right me-1"></i>
-                                Privacy Policy</a>
-                        </li>
-                        <li><a href="error.html"><i class="fa-regular fa-angles-right me-1"></i> Terms & Condition</a>
-                        </li>
-                        <li><a href="error.html"><i class="fa-regular fa-angles-right me-1"></i> Register/Login</a></li>
-                        <li><a href="coming-soon.html"><i class="fa-regular fa-angles-right me-1"></i> Coming Soon</a>
-                        </li>
+                        <li><a href="{{ route('faq') }}"><i class="fa-regular fa-angles-right me-1"></i>FAQ</a></li>
+                        <li><a href="{{ route('privacy') }}"><i class="fa-regular fa-angles-right me-1"></i>Kebijakan Privasi</a></li>
+                        <li><a href="{{ route('terms') }}"><i class="fa-regular fa-angles-right me-1"></i>Syarat & Ketentuan</a></li>
+                        <li><a href="{{ route('guide') }}"><i class="fa-regular fa-angles-right me-1"></i>Panduan Anggota</a></li>
+                        <li><a href="{{ route('sifess.index') }}"><i class="fa-regular fa-angles-right me-1"></i>SiFess</a></li>
                     </ul>
                 </div>
                 <div class="footer__item newsletter-six wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-                    <h3 class="footer-title">Join Our Newsletter</h3>
-                    <p class="mb-20">Lorem ipsum dolor amet o adi pisicing elit sed eiusm. </p>
+                    <h3 class="footer-title">Newsletter HMSI</h3>
+                    <p class="mb-20">Dapatkan update terbaru tentang kegiatan dan informasi penting dari HMSI Unsil.</p>
                     <div class="footer-newsletter__six">
-                        <input type="text" placeholder="Email Address">
-                        <button>Sing Up</button>
+                        <form action="{{ route('newsletter.subscribe') }}" method="POST">
+                            @csrf
+                            <input type="email" name="email" placeholder="Alamat Email Anda" required>
+                            <button type="submit">Berlangganan</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -350,19 +384,19 @@
             <div class="container">
                 <div
                     class="d-flex gap-1 flex-wrap align-items-center justify-content-md-between justify-content-center">
-                    <p class="wow fadeInDown" data-wow-delay="00ms" data-wow-duration="1500ms">&copy; All Copyright 2024
-                        by <a href="#0" class="primary-color">Learnit</a></p>
+                    <p class="wow fadeInDown" data-wow-delay="00ms" data-wow-duration="1500ms">&copy; Hak Cipta 2024
+                        oleh <a href="{{ route('home') }}" class="primary-color">HMSI Unsil</a></p>
                     <div class="social-icons wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <a href="#0"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#0"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#0"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#0"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://facebook.com/hmsi.unsil" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/hmsi.unsil" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://linkedin.com/company/hmsi-unsil" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://youtube.com/@hmsi.unsil" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                     <ul class="d-flex footer-six__info align-items-center gap-2 wow fadeInDown" data-wow-delay="400ms"
                         data-wow-duration="1500ms">
-                        <li><a href="#0">Privacy Policy</a></li>
+                        <li><a href="{{ route('privacy') }}">Kebijakan Privasi</a></li>
                         <li><span class="info-line"></span></li>
-                        <li><a href="#0">Terms & Condition</a></li>
+                        <li><a href="{{ route('terms') }}">Syarat & Ketentuan</a></li>
                     </ul>
                 </div>
             </div>
@@ -378,29 +412,29 @@
     </div>
     <!-- Back to top area end here -->
 
-    <!-- Jquery 3. 7. 1 Min Js -->
-   <!-- jQuery -->
-<script src="{{ asset('learnit/assets/js/jquery-3.7.1.min.js') }}"></script>
-<!-- Bootstrap min Js -->
-<script src="{{ asset('learnit/assets/js/bootstrap.min.js') }}"></script>
-<!-- Mean menu Js -->
-<script src="{{ asset('learnit/assets/js/meanmenu.js') }}"></script>
-<!-- Swiper bundle min Js -->
-<script src="{{ asset('learnit/assets/js/swiper-bundle.min.js') }}"></script>
-<!-- Counterup min Js -->
-<script src="{{ asset('learnit/assets/js/jquery.counterup.min.js') }}"></script>
-<!-- Wow min Js -->
-<script src="{{ asset('learnit/assets/js/wow.min.js') }}"></script>
-<!-- Magnific popup min Js -->
-<script src="{{ asset('learnit/assets/js/magnific-popup.min.js') }}"></script>
-<!-- Nice select min Js -->
-<script src="{{ asset('learnit/assets/js/nice-select.min.js') }}"></script>
-<!-- Parallax Js -->
-<script src="{{ asset('learnit/assets/js/parallax.js') }}"></script>
-<!-- Waypoints Js -->
-<script src="{{ asset('learnit/assets/js/jquery.waypoints.js') }}"></script>
-<!-- Script Js -->
-<script src="{{ asset('learnit/assets/js/script.js') }}"></script>
+    <!-- jQuery -->
+    <script src="{{ asset('learnit/assets/js/jquery-3.7.1.min.js') }}"></script>
+    <!-- Bootstrap min Js -->
+    <script src="{{ asset('learnit/assets/js/bootstrap.min.js') }}"></script>
+    <!-- Mean menu Js -->
+    <script src="{{ asset('learnit/assets/js/meanmenu.js') }}"></script>
+    <!-- Swiper bundle min Js -->
+    <script src="{{ asset('learnit/assets/js/swiper-bundle.min.js') }}"></script>
+    <!-- Counterup min Js -->
+    <script src="{{ asset('learnit/assets/js/jquery.counterup.min.js') }}"></script>
+    <!-- Wow min Js -->
+    <script src="{{ asset('learnit/assets/js/wow.min.js') }}"></script>
+    <!-- Magnific popup min Js -->
+    <script src="{{ asset('learnit/assets/js/magnific-popup.min.js') }}"></script>
+    <!-- Nice select min Js -->
+    <script src="{{ asset('learnit/assets/js/nice-select.min.js') }}"></script>
+    <!-- Parallax Js -->
+    <script src="{{ asset('learnit/assets/js/parallax.js') }}"></script>
+    <!-- Waypoints Js -->
+    <script src="{{ asset('learnit/assets/js/jquery.waypoints.js') }}"></script>
+    <!-- Script Js -->
+    <script src="{{ asset('learnit/assets/js/script.js') }}"></script>
+    @stack('scripts')
 
 </body>
 
