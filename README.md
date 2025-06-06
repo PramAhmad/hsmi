@@ -90,7 +90,7 @@ DB_PASSWORD=
 ### 5. Jalankan Migrasi
 
 ```bash
-php artisan migrate
+php artisan migrate --seed
 ```
 
 ---
