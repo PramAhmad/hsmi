@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenfessController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\BankMateriController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\MembershipController;
@@ -14,8 +15,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/activities', [HomeController::class, 'activities'])->name('activities');
 Route::get('/journals', [HomeController::class, 'journals'])->name('journals');
-Route::get('/bank-materi', [HomeController::class, 'bankMateri'])->name('bank-materi');
 Route::get('/matakuliah', [HomeController::class, 'matakuliah'])->name('matakuliah');
+
+// bank materi routes
+Route::get('/bank-materi', [BankMateriController::class, 'index'])->name('bank-materi');
+// download
+Route::get('/bank-materi/{id}/download', [BankMateriController::class, 'download'])->name('bank-materi.download');
+Route::get('/bank-materi/file/{fileId}/download', [BankMateriController::class, 'downloadFile'])->name('bank-materi.file.download');
+
+
 
 // SiFess routes
 Route::get('/sifess', [MenfessController::class, 'index'])->name('sifess.index');
@@ -54,3 +62,9 @@ Route::get('/guide', [StaticPageController::class, 'guide'])->name('guide');
 Route::get('/login', function() {
     return redirect()->route('home')->with('info', 'Fitur login akan segera tersedia!');
 })->name('login');
+
+// API routes
+Route::prefix('api')->group(function () {
+    Route::get('/bank-materi/{id}/detail', [BankMateriController::class, 'apiDetail']);
+    Route::post('/bank-materi/{id}/bookmark', [BankMateriController::class, 'bookmark']);
+});
