@@ -144,7 +144,7 @@
                 </div>
                 
                 <!-- Category Filter -->
-                <select name="category" class="w-full py-3 px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
+                <select name="category" class="w-full  px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
                     <option value="">Semua Kategori</option>
                     <option value="workshop" {{ request('category') == 'workshop' ? 'selected' : '' }}>🔧 Workshop</option>
                     <option value="seminar" {{ request('category') == 'seminar' ? 'selected' : '' }}>🎤 Seminar</option>
@@ -155,7 +155,7 @@
                 </select>
                 
                 <!-- Status Filter -->
-                <select name="status" class="w-full py-3 px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
+                <select name="status" class="w-full  px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
                     <option value="">Semua Status</option>
                     <option value="upcoming" {{ request('status') == 'upcoming' ? 'selected' : '' }}>🔜 Akan Datang</option>
                     <option value="ongoing" {{ request('status') == 'ongoing' ? 'selected' : '' }}>🔴 Sedang Berlangsung</option>
@@ -164,7 +164,7 @@
                 </select>
                 
                 <!-- Sort -->
-                <select name="sort" class="w-full py-3 px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
+                <select name="sort" class="w-full  px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
                     <option value="latest" {{ request('sort') == 'latest' ? 'selected' : '' }}>🕒 Terbaru</option>
                     <option value="oldest" {{ request('sort') == 'oldest' ? 'selected' : '' }}>⏰ Terlama</option>
                     <option value="start_date" {{ request('sort') == 'start_date' ? 'selected' : '' }}>📅 Tanggal Mulai</option>
