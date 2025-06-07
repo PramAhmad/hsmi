@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenfessController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\BankMateriController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SearchController;
@@ -17,9 +18,15 @@ Route::get('/activities', [HomeController::class, 'activities'])->name('activiti
 Route::get('/journals', [HomeController::class, 'journals'])->name('journals');
 Route::get('/matakuliah', [HomeController::class, 'matakuliah'])->name('matakuliah');
 
-// bank materi routes
+// Bank Materi routes
 Route::get('/bank-materi', [BankMateriController::class, 'index'])->name('bank-materi');
-// download
+Route::get('/bank-materi/create', [BankMateriController::class, 'create'])->name('bank-materi.create');
+Route::post('/bank-materi', [BankMateriController::class, 'store'])->name('bank-materi.store');
+
+// anggota
+Route::get('/anggota', [AnggotaController::class, 'index'])->name('anggota.index');
+
+// Download routes
 Route::get('/bank-materi/{id}/download', [BankMateriController::class, 'download'])->name('bank-materi.download');
 Route::get('/bank-materi/file/{fileId}/download', [BankMateriController::class, 'downloadFile'])->name('bank-materi.file.download');
 
