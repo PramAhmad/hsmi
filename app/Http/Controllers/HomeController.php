@@ -190,66 +190,7 @@ class HomeController extends Controller
         return view('front.journals', compact('journals','siRelevantCount', 'withDoiCount'));
     }
     
-    public function bankMateri(Request $request)
-    {
-        $query = BankMateri::where('is_draft', false)
-                           ->with('mataKuliah', 'files');
-
-        // Search filter
-        if ($request->has('search') && !empty($request->search)) {
-            $query->where(function($q) use ($request) {
-                $q->where('judul', 'like', "%{$request->search}%")
-                  ->orWhere('deskripsi', 'like', "%{$request->search}%")
-                  ->orWhere('penulis', 'like', "%{$request->search}%");
-            });
-        }
-
-        // Mata Kuliah filter
-        if ($request->has('mata_kuliah') && !empty($request->mata_kuliah)) {
-            $query->whereHas('mataKuliah', function($q) use ($request) {
-                $q->where('nama', 'like', "%{$request->mata_kuliah}%");
-            });
-        }
-
-        // Kategori filter
-        if ($request->has('kategori') && !empty($request->kategori)) {
-            $query->where('kategori', $request->kategori);
-        }
-
-        // Tingkat kesulitan filter
-        if ($request->has('tingkat') && !empty($request->tingkat)) {
-            $query->where('tingkat_kesulitan', $request->tingkat);
-        }
-
-        // Sort
-        $sort = $request->get('sort', 'latest');
-        switch ($sort) {
-            case 'oldest':
-                $query->oldest();
-                break;
-            case 'popular':
-                $query->orderBy('view_count', 'desc');
-                break;
-            case 'most_downloaded':
-                $query->orderBy('download_count', 'desc');
-                break;
-            default:
-                $query->latest();
-                break;
-        }
-
-        $materials = $query->paginate(10);
-
-        // Additional stats
-        $totalSoal = BankMateri::where('is_draft', false)->sum('total_soal');
-        $totalPdf = BankMateri::where('is_draft', false)
-            ->whereHas('files', function($query) {
-                $query->where('file_path', 'like', '%.pdf');
-            })->count();
-        $downloadCount = BankMateri::where('is_draft', false)->sum('download_count');
-
-        return view('front.bank-materi', compact('materials', 'totalSoal', 'totalPdf', 'downloadCount'));
-    }
+   
 
     public function matakuliah(Request $request)
     {
