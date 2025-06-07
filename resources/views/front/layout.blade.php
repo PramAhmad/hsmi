@@ -48,7 +48,7 @@
             <div class="header-top-two__wrp">
                 <ul class="info">
                     <li>
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="47" height="25" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_906_35)">
                                 <path
                                     d="M7.50005 0C4.44464 0 1.95898 2.48566 1.95898 5.54107C1.95898 6.54694 2.41009 7.62875 2.429 7.67438C2.57469 8.02021 2.86218 8.55737 3.06948 8.87223L6.8687 14.6287C7.02417 14.8647 7.25429 15 7.50005 15C7.74582 15 7.97593 14.8647 8.13141 14.6291L11.931 8.87223C12.1386 8.55737 12.4257 8.02021 12.5714 7.67438C12.5903 7.62907 13.0411 6.54726 13.0411 5.54107C13.0411 2.48566 10.5555 0 7.50005 0ZM11.9704 7.42145C11.8403 7.73142 11.5727 8.23109 11.3866 8.51336L7.58708 14.2702C7.51211 14.384 7.48832 14.384 7.41335 14.2702L3.61381 8.51336C3.42769 8.23109 3.16009 7.73109 3.03004 7.42112C3.0245 7.40776 2.61087 6.41199 2.61087 5.54107C2.61087 2.84518 4.80416 0.65189 7.50005 0.65189C10.1959 0.65189 12.3892 2.84518 12.3892 5.54107C12.3892 6.4133 11.9746 7.41167 11.9704 7.42145Z"
@@ -67,7 +67,7 @@
                     </li>
                     <li><span></span></li>
                     <li>
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="47" height="25" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_906_50)">
                                 <path
                                     d="M13.5937 1.875H1.40626C0.6308 1.875 0 2.5058 0 3.28126V11.7188C0 12.4942 0.6308 13.125 1.40626 13.125H13.5937C14.3692 13.125 15 12.4942 15 11.7188V3.28126C15 2.5058 14.3692 1.875 13.5937 1.875ZM13.5937 2.8125C13.6574 2.8125 13.718 2.82571 13.7734 2.84879L7.5 8.28599L1.22656 2.84879C1.28346 2.82493 1.34453 2.8126 1.40623 2.8125H13.5937ZM13.5937 12.1875H1.40626C1.14763 12.1875 0.937496 11.9774 0.937496 11.7187V3.83926L7.19283 9.26056C7.2812 9.33699 7.3906 9.375 7.5 9.375C7.6094 9.375 7.7188 9.33702 7.80717 9.26056L14.0625 3.83926V11.7188C14.0625 11.9774 13.8524 12.1875 13.5937 12.1875Z"
@@ -103,7 +103,7 @@
                     <a href="{{ route('home') }}" class="flex items-center gap-3 group">
                         <div class="relative">
                             <img src="{{ asset('images/logo_hmsi.png') }}" 
-                                 class="h-12 w-12 rounded-lg shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105" 
+                                 class="h-12 w-12 rounded-lg group-hover:shadow-lg transition-all duration-300 group-hover:scale-105" 
                                  alt="Logo HMSI Unsil">
                             <!-- Subtle glow effect -->
                             <div class="absolute inset-0 bg-blue-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm -z-10"></div>
@@ -183,7 +183,7 @@
                         <a class="active" href="{{ route('membership.register') }}">Gabung HMSI</a>
                     </div>
                     <button class="menubars" type="button" data-bs-toggle="offcanvas" data-bs-target="#menubar">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="47" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M21 12H3" stroke="black" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" />
                             <path d="M21 6H3" stroke="black" stroke-width="2" stroke-linecap="round"
@@ -201,68 +201,59 @@
     <!-- Sidebar area start here -->
     <div class="sidebar-area offcanvas offcanvas-end" id="menubar">
         <div class="offcanvas-header">
-            <a href="{{ route('home') }}" class="logo flex items-center gap-3">
+            <a href="{{ route('home') }}" class="logo d-flex align-items-center gap-3">
                 <img src="{{ asset('images/logo_hmsi.png') }}" class="h-10 w-10 rounded-lg" alt="Logo HMSI">
                 <div>
-                    <h3 class="text-white font-bold">HMSI Unsil</h3>
-                    <p class="text-gray-300 text-sm">Sistem Informasi</p>
+                    <h3 class="text-white font-bold mb-0">HMSI</h3>
+                    <p class="text-gray-300 text-sm mb-0">Unsil</p>
                 </div>
             </a>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"><i
                     class="fa-regular fa-xmark"></i></button>
         </div>
         <div class="offcanvas-body sidebar__body">
+            <!-- Mobile Menu Navigation -->
             <div class="mobile-menu overflow-hidden">
                 <nav>
                     <ul>
-                        <li><a href="{{ route('home') }}">Beranda</a></li>
-                        <li>
-                            <a href="#0">Akademik <i class="fa-solid fa-angle-down"></i></a>
-                            <ul class="sub-menu">
-                                <li><a href="{{ route('bank-materi') }}">Bank Materi</a></li>
-                                <li><a href="{{ route('journals') }}">Jurnal Ilmiah</a></li>
-                                <li><a href="{{ route('matakuliah') }}">Mata Kuliah</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#0">Tentang Kami <i class="fa-solid fa-angle-down"></i></a>
-                            <ul class="sub-menu">
-                                <li><a href="{{ route('about.profil') }}">Profil HMSI</a></li>
-                                <li><a href="{{ route('about.visi-misi') }}">Visi & Misi</a></li>
-                                <li><a href="{{ route('about.struktur') }}">Struktur Organisasi</a></li>
-                                <li><a href="{{ route('about.sejarah') }}">Sejarah</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="{{ route('activities') }}">Kegiatan</a></li>
-                        <li><a href="{{ route('sifess.index') }}">SiFess</a></li>
-                        <li><a href="{{ route('contact') }}">Kontak</a></li>
+                   
                     </ul>
                 </nav>
             </div>
+
+            <!-- About Section - Hidden on mobile -->
             <div class="d-none d-lg-block">
                 <h5 class="text-white mb-20">Tentang HMSI</h5>
                 <p class="paragraph-light fs-16">
                     Himpunan Mahasiswa Sistem Informasi Universitas Siliwangi yang berkomitmen memajukan bidang teknologi informasi dan mengembangkan potensi mahasiswa.
                 </p>
             </div>
+
+            <!-- Search Section - Mobile Only -->
             <div class="sidebar__search d-block d-lg-none">
                 <form action="{{ route('search') }}" method="GET">
                     <input type="text" name="q" placeholder="Cari di HMSI...">
                     <button type="submit"><i class="fa-regular fa-magnifying-glass"></i></button>
                 </form>
             </div>
+
+            <!-- Contact Info -->
             <div class="sidebar__contact-info mt-30">
                 <h5 class="text-white mb-20">Info Kontak</h5>
                 <ul>
-                    <li><i class="fa-solid fa-envelope"></i> <a href="mailto:hmsi@unsil.ac.id">hmsi@unsil.ac.id</a></li>
-                    <li class="py-2"><i class="fa-solid fa-phone-volume"></i> <a href="tel:+6285913484854">+62 859 1348 4854</a></li>
-                    <li><i class="fa-solid fa-location-dot"></i> <a href="https://maps.google.com/?q=Universitas+Siliwangi+Tasikmalaya" target="_blank">Universitas Siliwangi, Tasikmalaya</a></li>
+                    <li class="md:text-base text-sm"><i class="fa-solid fa-envelope"></i> <a href="mailto:hmsi@unsil.ac.id" class="md:text-base text-sm">hmsi@unsil.ac.id</a></li>
+                    <li class="md:text-base text-sm py-2"><i class="fa-solid fa-phone-volume"></i> <a href="tel:+6285913484854" class="md:text-base text-sm">+62 859 1348 4854</a></li>
+                    <li class="md:text-base text-sm"><i class="fa-solid fa-location-dot"></i> <a href="https://maps.google.com/?q=Universitas+Siliwangi+Tasikmalaya" target="_blank" class="md:text-base text-sm">Universitas Siliwangi, Tasikmalaya</a></li>
                 </ul>
             </div>
+
+            <!-- Action Buttons -->
             <div class="sidebar__btns my-4">
                 <a href="{{ route('membership.register') }}">Daftar Anggota</a>
                 <a class="sign-in" href="{{ route('login') }}">Masuk</a>
             </div>
+
+            <!-- Social Links -->
             <div class="sidebar__socials">
                 <ul>
                     <li>
@@ -318,7 +309,7 @@
                     <a href="{{ route('home') }}" class="logo mb-30 flex items-center gap-3">
                         <img src="{{ asset('images/logo_hmsi.png') }}" class="h-12 w-12 rounded-lg" alt="Logo HMSI">
                         <div>
-                            <h3 class="text-white font-bold text-lg">HMSI Unsil</h3>
+                            <h3 class="text-slate-900 font-bold text-lg">HMSI Unsil</h3>
                             <p class="text-gray-300 text-sm">Sistem Informasi</p>
                         </div>
                     </a>
@@ -334,7 +325,7 @@
                                     d="M7.99972 3.47754C5.84283 3.47754 4.08838 5.23243 4.08838 7.38888C4.08838 9.54534 5.84283 11.3002 7.99972 11.3002C10.1566 11.3002 11.9111 9.54534 11.9111 7.38888C11.9111 5.23243 10.1566 3.47754 7.99972 3.47754ZM7.99972 10.431C6.32262 10.431 4.95757 9.06641 4.95757 7.38888C4.95757 5.71135 6.32262 4.34673 7.99972 4.34673C9.67682 4.34673 11.0419 5.71135 11.0419 7.38888C11.0419 9.06641 9.67682 10.431 7.99972 10.431Z"
                                     fill="oklch(0.685 0.169 237.323)" />
                             </svg>
-                            <a href="https://maps.google.com/?q=Universitas+Siliwangi+Tasikmalaya" target="_blank" class="p-0">Jl. Siliwangi No.24, Tasikmalaya, Jawa Barat</a>
+                            <a href="https://maps.google.com/?q=Universitas+Siliwangi+Tasikmalaya" target="_blank" class="p-0 md:text-base text-sm">Jl. Siliwangi No.24, Tasikmalaya, Jawa Barat</a>
                         </li>
                         <li>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -343,7 +334,7 @@
                                     d="M18.7719 14.1213C18.7388 14.0938 14.9913 11.4275 13.9794 11.5906C13.4913 11.6769 13.2125 12.01 12.6531 12.6762C12.4985 12.8617 12.3403 13.0443 12.1788 13.2238C11.8252 13.1086 11.4804 12.9682 11.1469 12.8038C9.42533 11.9656 8.03437 10.5747 7.19625 8.85312C7.03179 8.51964 6.89143 8.1748 6.77625 7.82125C6.96 7.65312 7.2175 7.43625 7.3275 7.34375C7.99062 6.7875 8.32312 6.50812 8.40938 6.01937C8.58625 5.0075 5.90625 1.26125 5.87875 1.2275C5.7567 1.05441 5.59775 0.910578 5.41336 0.806386C5.22897 0.702193 5.02374 0.640241 4.8125 0.625C3.72625 0.625 0.625 4.6475 0.625 5.32562C0.625 5.365 0.681875 9.3675 5.6175 14.3881C10.6325 19.3181 14.635 19.375 14.6744 19.375C15.3519 19.375 19.375 16.2737 19.375 15.1875C19.3596 14.9762 19.2975 14.771 19.1932 14.5866C19.0889 14.4022 18.945 14.2433 18.7719 14.1213ZM14.605 18.1213C14.0625 18.075 10.7 17.6319 6.5 13.5063C2.35437 9.28563 1.9225 5.9175 1.87937 5.39563C2.69861 4.10978 3.68799 2.94064 4.82062 1.92C4.84562 1.945 4.87875 1.9825 4.92125 2.03125C5.78989 3.21702 6.53817 4.48642 7.155 5.82062C6.95441 6.02242 6.7424 6.21253 6.52 6.39C6.17512 6.65278 5.85843 6.95063 5.575 7.27875C5.52704 7.34604 5.4929 7.42217 5.47456 7.50274C5.45621 7.5833 5.45403 7.66671 5.46812 7.74813C5.60039 8.32108 5.80297 8.87549 6.07125 9.39875C7.03243 11.3725 8.62735 12.9672 10.6012 13.9281C11.1244 14.1968 11.6788 14.3996 12.2519 14.5319C12.3333 14.5463 12.4168 14.5443 12.4974 14.5259C12.578 14.5075 12.6541 14.4732 12.7213 14.425C13.0505 14.1404 13.3494 13.8225 13.6131 13.4762C13.8094 13.2425 14.0712 12.9306 14.1706 12.8425C15.5082 13.4587 16.7805 14.2079 17.9681 15.0787C18.02 15.1225 18.0569 15.1562 18.0812 15.1781C17.0606 16.3111 15.8912 17.3007 14.605 18.12V18.1213ZM14.375 9.375H15.625C15.6235 8.04937 15.0962 6.77847 14.1589 5.84111C13.2215 4.90375 11.9506 4.37649 10.625 4.375V5.625C11.6193 5.62599 12.5725 6.0214 13.2756 6.72445C13.9786 7.42749 14.374 8.38074 14.375 9.375Z"
                                     fill="oklch(0.685 0.169 237.323)" />
                             </svg>
-                            <a href="tel:+6285913484854" class="p-0">+62 859 1348 4854</a>
+                            <a href="tel:+6285913484854" class="p-0 md:text-base text-sm">+62 859 1348 4854</a>
                         </li>
                     </ul>
                 </div>
