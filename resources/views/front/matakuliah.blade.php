@@ -60,7 +60,7 @@
                     Lihat Semua Mata Kuliah
                 </a>
                 
-                <a href="{{ route('bank-materi') }}" class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white px-6 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
+                <a href="{{ route('bank-materi') }}" class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm text-gray-900 px-6 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
                     <i class="fa-solid fa-folder text-lg"></i>
                     Bank Materi
                 </a>
@@ -139,12 +139,12 @@
                            name="search" 
                            value="{{ request('search') }}"
                            placeholder="Cari mata kuliah..." 
-                           class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
+                           class="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
                     <i class="fa-solid fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
                 </div>
                 
                 <!-- Semester Filter -->
-                <select name="semester" class="w-full py-3 px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
+                <select name="semester" class="w-full  px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
                     <option value="">Semua Semester</option>
                     @for($i = 1; $i <= 8; $i++)
                     <option value="{{ $i }}" {{ request('semester') == $i ? 'selected' : '' }}>Semester {{ $i }}</option>
@@ -152,7 +152,7 @@
                 </select>
                 
                 <!-- SKS Filter -->
-                <select name="sks" class="w-full py-3 px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
+                <select name="sks" class="w-full  px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
                     <option value="">Semua SKS</option>
                     <option value="1" {{ request('sks') == '1' ? 'selected' : '' }}>1 SKS</option>
                     <option value="2" {{ request('sks') == '2' ? 'selected' : '' }}>2 SKS</option>
