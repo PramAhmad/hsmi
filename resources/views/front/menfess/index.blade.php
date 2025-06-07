@@ -75,44 +75,7 @@
 </section>
 
 <!-- Stats Section -->
-<section class="bg-white py-16">
-    <div class="container mx-auto px-4">
-        <!-- Update Stats Section -->
-        <div class="grid md:grid-cols-4 gap-6">
-            <div class="text-center p-6 bg-sky-50 rounded-2xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div class="w-16 h-16 bg-sky-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span class="text-2xl">💌</span>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800">{{ $totalMenfess ?? '0' }}</h3>
-                <p class="text-gray-600 font-medium">Total Menfess</p>
-            </div>
-            
-            <div class="text-center p-6 bg-blue-50 rounded-2xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span class="text-2xl">🎵</span>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800">{{ $withMusic ?? '0' }}</h3>
-                <p class="text-gray-600 font-medium">Dengan Musik</p>
-            </div>
-            
-            <div class="text-center p-6 bg-sky-50 rounded-2xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div class="w-16 h-16 bg-sky-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span class="text-2xl">❤️</span>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800">{{ $totalLikes ?? '0' }}</h3>
-                <p class="text-gray-600 font-medium">Total Suka</p>
-            </div>
-            
-            <div class="text-center p-6 bg-blue-50 rounded-2xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div class="w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span class="text-2xl">🌟</span>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800">100%</h3>
-                <p class="text-gray-600 font-medium">Anonim</p>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 <!-- Filter & Menfess List -->
 <section id="menfess-list" class="relative bg-gradient-to-br from-slate-50 via-white to-sky-50 pt-20 pb-32 overflow-hidden">
@@ -147,7 +110,7 @@
                 </div>
                 
                 <!-- Category Filter -->
-                <select name="category" class="w-full py-3 px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
+                <select name="category" class="w-full px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
                     <option value="">Semua Kategori</option>
                     <option value="curhat" {{ request('category') == 'curhat' ? 'selected' : '' }}>💭 Curhat</option>
                     <option value="cerita" {{ request('category') == 'cerita' ? 'selected' : '' }}>📖 Cerita</option>
@@ -157,14 +120,14 @@
                 </select>
                 
                 <!-- Music Filter -->
-                <select name="music" class="w-full py-3 px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
+                <select name="music" class="w-full px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
                     <option value="">Musik</option>
                     <option value="with_music" {{ request('music') == 'with_music' ? 'selected' : '' }}>🎵 Dengan Musik</option>
                     <option value="without_music" {{ request('music') == 'without_music' ? 'selected' : '' }}>🔇 Tanpa Musik</option>
                 </select>
                 
                 <!-- Sort -->
-                <select name="sort" class="w-full py-3 px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
+                <select name="sort" class="w-full px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
                     <option value="latest" {{ request('sort') == 'latest' ? 'selected' : '' }}>🕒 Terbaru</option>
                     <option value="oldest" {{ request('sort') == 'oldest' ? 'selected' : '' }}>⏰ Terlama</option>
                     <option value="popular" {{ request('sort') == 'popular' ? 'selected' : '' }}>🔥 Populer</option>
