@@ -2,15 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreContactRequest;
-use App\Http\Requests\UpdateContactRequest;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display the contact page with form
      */
     public function index()
     {
@@ -18,59 +16,38 @@ class ContactController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
+     * Store a newly created contact message
      */
     public function store(Request $request)
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|email',
+            'email' => 'required|email|max:255',
+            'phone' => 'nullable|string|max:20',
             'subject' => 'required|string|max:255',
-            'message' => 'required|string',
+            'message' => 'required|string|max:2000',
+        ], [
+            'name.required' => 'Nama wajib diisi.',
+            'email.required' => 'Email wajib diisi.',
+            'email.email' => 'Format email tidak valid.',
+            'subject.required' => 'Subjek wajib diisi.',
+            'message.required' => 'Pesan wajib diisi.',
+            'message.max' => 'Pesan maksimal 2000 karakter.',
         ]);
 
-        // Store contact message logic here
+        try {
+            Contact::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'phone' => $request->phone,
+                'subject' => $request->subject,
+                'message' => $request->message,
+                'status' => Contact::STATUS_PENDING,
+            ]);
 
-        return back()->with('success', 'Pesan Anda berhasil dikirim! Kami akan membalas segera.');
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Contact $contact)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Contact $contact)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateContactRequest $request, Contact $contact)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Contact $contact)
-    {
-        //
+            return back()->with('success', 'Pesan Anda berhasil dikirim! Kami akan membalas dalam 1x24 jam.');
+        } catch (\Exception $e) {
+            return back()->with('error', 'Terjadi kesalahan. Silakan coba lagi.')->withInput();
+        }
     }
 }
