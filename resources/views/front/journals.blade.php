@@ -29,7 +29,6 @@
                 Rekomendasi 
                 <span class="text-sky-500 relative inline-block">
                     Jurnal Akademik
-                    <img src="{{ asset('learnit/assets/images/shape/banner-span-shape.png') }}" alt="shape" class="absolute -bottom-2 left-0 w-full">
                 </span>
                 <div class="inline-flex items-center gap-3 ml-3">
                     <span class="text-4xl animate-bounce">📚</span>
@@ -60,7 +59,7 @@
                     Jelajahi Jurnal
                 </a>
                 
-                <a href="#" class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white px-6 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
+                <a href="#" class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm text-slate-900 px-6 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
                     <i class="fa-solid fa-bookmark text-lg"></i>
                     Reading List
                 </a>
@@ -144,7 +143,7 @@
                 </div>
                 
                 <!-- Category Filter -->
-                <select name="category" class="w-full py-3 px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
+                <select name="category" class="w-full px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
                     <option value="">Semua Kategori</option>
                     <option value="information_systems" {{ request('category') == 'information_systems' ? 'selected' : '' }}>🖥️ Information Systems</option>
                     <option value="software_engineering" {{ request('category') == 'software_engineering' ? 'selected' : '' }}>💻 Software Engineering</option>
@@ -155,24 +154,16 @@
                 </select>
                 
                 <!-- Publication Year -->
-                <select name="year" class="w-full py-3 px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
+                <select name="year" class="w-full px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
                     <option value="">Semua Tahun</option>
                     @for($year = date('Y'); $year >= 2020; $year--)
                     <option value="{{ $year }}" {{ request('year') == $year ? 'selected' : '' }}>{{ $year }}</option>
                     @endfor
                 </select>
                 
-                <!-- Journal Quality -->
-                <select name="quality" class="w-full py-3 px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
-                    <option value="">Semua Kualitas</option>
-                    <option value="q1" {{ request('quality') == 'q1' ? 'selected' : '' }}>🏆 Q1 (Top Tier)</option>
-                    <option value="q2" {{ request('quality') == 'q2' ? 'selected' : '' }}>⭐ Q2 (High)</option>
-                    <option value="q3" {{ request('quality') == 'q3' ? 'selected' : '' }}>✨ Q3 (Good)</option>
-                    <option value="peer_reviewed" {{ request('quality') == 'peer_reviewed' ? 'selected' : '' }}>📝 Peer Reviewed</option>
-                </select>
-                
+           
                 <!-- Sort -->
-                <select name="sort" class="w-full py-3 px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
+                <select name="sort" class="w-full  px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
                     <option value="latest" {{ request('sort') == 'latest' ? 'selected' : '' }}>🕒 Terbaru</option>
                     <option value="oldest" {{ request('sort') == 'oldest' ? 'selected' : '' }}>⏰ Terlama</option>
                     <option value="most_cited" {{ request('sort') == 'most_cited' ? 'selected' : '' }}>📈 Most Cited</option>
