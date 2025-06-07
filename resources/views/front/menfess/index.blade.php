@@ -249,7 +249,7 @@
         <div class="mb-4">
             <div class="bg-gradient-to-r from-gray-50 to-slate-50 rounded-lg p-3 border-l-4 border-sky-500">
                 <div class="text-gray-700 leading-relaxed text-sm line-clamp-4">
-                    {!! nl2br(e(Str::limit($item->content, 200))) !!}
+                    {!! Str::limit($item->content, 200) !!}
                 </div>
                 @if(strlen($item->content) > 200)
                 <div class="mt-2">
