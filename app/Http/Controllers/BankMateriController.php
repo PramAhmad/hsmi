@@ -62,7 +62,7 @@ class BankMateriController extends Controller
         $totalPdf = BankMateriFile::where('tipe_file', 'pdf')->count();
         $downloadCount = BankMateri::where('is_draft', false)->sum('download_count');
 
-        return view('front.bank-materi', compact('materials', 'totalSoal', 'totalPdf', 'downloadCount', 'mataKuliah'));
+        return view('front.bank-materi.index', compact('materials', 'totalSoal', 'totalPdf', 'downloadCount', 'mataKuliah'));
     }
     
     // Download all files as ZIP
@@ -115,7 +115,6 @@ class BankMateriController extends Controller
         $zipFileName = 'materi_' . \Str::slug($material->judul) . '_' . now()->format('Ymd_His') . '.zip';
         $zipPath = storage_path('app/temp/' . $zipFileName);
 
-        // Create temp directory if not exists
         if (!file_exists(storage_path('app/temp'))) {
             mkdir(storage_path('app/temp'), 0755, true);
         }
@@ -176,6 +175,90 @@ class BankMateriController extends Controller
                 'success' => false,
                 'message' => 'Materi tidak ditemukan.'
             ], 404);
+        }
+    }
+
+    public function create()
+    {
+        $mataKuliah = MataKuliah::orderBy('nama')->get();
+        return view('front.bank-materi.create', compact('mataKuliah'));
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'judul' => 'required|string|max:255',
+            'deskripsi' => 'required|string',
+            'mata_kuliah_id' => 'required|exists:mata_kuliahs,id',
+            'kategori' => 'required|in:teori,praktikum,tugas,ujian,quiz,lainnya',
+            'tingkat_kesulitan' => 'required|integer|min:1|max:5',
+            'total_halaman' => 'nullable|integer|min:1',
+            'total_soal' => 'nullable|integer|min:0',
+            'penulis' => 'required|string|max:255',
+            'files.*' => 'required|file|mimes:pdf,doc,docx,ppt,pptx,xls,xlsx,zip,rar,txt|max:10240',
+            'file_names.*' => 'nullable|string|max:255',
+        ], [
+            'judul.required' => 'Judul materi wajib diisi',
+            'deskripsi.required' => 'Deskripsi materi wajib diisi', 
+            'mata_kuliah_id.required' => 'Mata kuliah wajib dipilih',
+            'mata_kuliah_id.exists' => 'Mata kuliah tidak valid',
+            'kategori.required' => 'Kategori wajib dipilih',
+            'kategori.in' => 'Kategori tidak valid',
+            'tingkat_kesulitan.required' => 'Tingkat kesulitan wajib dipilih',
+            'tingkat_kesulitan.min' => 'Tingkat kesulitan minimal 1',
+            'tingkat_kesulitan.max' => 'Tingkat kesulitan maksimal 5',
+            'penulis.required' => 'Nama penulis wajib diisi',
+            'files.*.required' => 'File materi wajib diupload',
+            'files.*.mimes' => 'Format file tidak didukung',
+            'files.*.max' => 'Ukuran file maksimal 10MB',
+        ]);
+
+        try {
+            // Create bank materi
+            $bankMateri = BankMateri::create([
+                'judul' => $request->judul,
+                'deskripsi' => $request->deskripsi,
+                'mata_kuliah_id' => $request->mata_kuliah_id,
+                'kategori' => $request->kategori,
+                'tingkat_kesulitan' => $request->tingkat_kesulitan,
+                'total_halaman' => $request->total_halaman,
+                'total_soal' => $request->total_soal ?? 0,
+                'penulis' => $request->penulis,
+                'tanggal_publikasi' => now(),
+                'is_draft' => true,
+                'download_count' => 0,
+                'view_count' => 0,
+            ]);
+
+            // Handle file uploads
+            if ($request->hasFile('files')) {
+                foreach ($request->file('files') as $index => $file) {
+                    $fileName = $request->file_names[$index] ?? $file->getClientOriginalName();
+                    $fileExtension = $file->getClientOriginalExtension();
+                    $fileSize = $file->getSize();
+                    
+                    // Generate unique filename
+                    $uniqueFileName = time() . '_' . $index . '_' . \Str::slug(pathinfo($fileName, PATHINFO_FILENAME)) . '.' . $fileExtension;
+                    
+                    // Store file
+                    $filePath = $file->storeAs('bank-materi', $uniqueFileName, 'public');
+                    
+                    // Create file record
+                    BankMateriFile::create([
+                        'bank_materi_id' => $bankMateri->id,
+                        'nama_file' => $fileName,
+                        'file_path' => $filePath,
+                        'ukuran_file' => $fileSize,
+                        'tipe_file' => $fileExtension,
+                        'urutan' => $index + 1,
+                    ]);
+                }
+            }
+
+            return redirect()->route('bank-materi')->with('success', 'Materi berhasil ditambahkan! Terima kasih atas kontribusinya. 🎉');
+
+        } catch (\Exception $e) {
+            return back()->withInput()->with('error', 'Terjadi kesalahan saat menyimpan materi: ' . $e->getMessage());
         }
     }
 }
