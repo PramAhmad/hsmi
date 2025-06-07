@@ -7,13 +7,38 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contact extends Model
 {
-    /** @use HasFactory<\Database\Factories\ContactFactory> */
     use HasFactory;
 
-    // add fillable
-    protected $fillable = ['name'];
-    // add guaded
+    protected $fillable = [
+        'name',
+        'email',
+        'subject',
+        'message',
+        'phone',
+        'status'
+    ];
+
     protected $guarded = ['id'];
-    // add hidden
+
     protected $hidden = ['created_at', 'updated_at'];
+
+    protected $casts = [
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+    ];
+
+    // Status constants
+    const STATUS_PENDING = 'pending';
+    const STATUS_REPLIED = 'replied';
+    const STATUS_RESOLVED = 'resolved';
+
+    public function getStatusBadgeAttribute()
+    {
+        return match($this->status) {
+            self::STATUS_PENDING => 'warning',
+            self::STATUS_REPLIED => 'info',
+            self::STATUS_RESOLVED => 'success',
+            default => 'secondary'
+        };
+    }
 }
