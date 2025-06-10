@@ -150,7 +150,7 @@
                                         <a href="{{ route('about.struktur') }}">Struktur Organisasi</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('about.sejarah') }}">Sejarah</a>
+                                        <a href="{{ route('anggota.index') }}">Anggota</a>
                                     </li>
                                 </ul>
                             </li>
@@ -249,8 +249,7 @@
 
             <!-- Action Buttons -->
             <div class="sidebar__btns my-4">
-                <a href="{{ route('membership.register') }}">Daftar Anggota</a>
-                <a class="sign-in" href="{{ route('login') }}">Masuk</a>
+                <a href="{{ route('anggota.index') }} ">Lihat Anggota</a>
             </div>
 
             <!-- Social Links -->
