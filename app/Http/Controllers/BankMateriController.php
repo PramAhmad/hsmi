@@ -77,7 +77,7 @@ class BankMateriController extends Controller
             return back()->with('error', 'Tidak ada file yang tersedia untuk didownload.');
         }
 
-        // Jika hanya 1 file, download langsung
+    
         if ($files->count() === 1) {
             $file = $files->first();
             return $this->downloadSingleFile($file);
