@@ -4,7 +4,9 @@ namespace App\Providers;
 
 use App\Models\User;
 use App\Settings\KaidoSetting;
+use Filament\Forms\Components\Livewire;
 use Filament\Support\Facades\FilamentView;
+use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Gate;
@@ -43,6 +45,9 @@ class AppServiceProvider extends ServiceProvider
         //
         Gate::define('viewApiDocs', function (User $user) {
             return true;
+        });
+        Livewire::setScriptRoute(function ($handle) {
+            return Route::get('/vendor/livewire/livewire.js', $handle);
         });
         // Gate::policy()
         Event::listen(function (\SocialiteProviders\Manager\SocialiteWasCalled $event) {
