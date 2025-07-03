@@ -27,7 +27,7 @@
             <p class="mt-8 text-lg text-gray-200 leading-relaxed max-w-2xl wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                 Wadah kreativitas dan inovasi mahasiswa Sistem Informasi Universitas Siliwangi untuk berkembang dan berkarya dalam dunia teknologi informasi.
             </p>
-            <a href="#activities" class="inline-flex items-center gap-3 bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 mt-12 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+            <a href="activities" class="inline-flex items-center gap-3 bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 mt-12 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                 Jelajahi Kegiatan
                 <i class="fa-light fa-arrow-right-long text-xl"></i>
             </a>
@@ -61,7 +61,6 @@
                         Himpunan Mahasiswa
                         <span class="text-sky-500 relative inline-block">
                             Sistem Informasi 
-                            <img src="{{ asset('learnit/assets/images/shape/header-shape.png') }}" alt="shape" class="absolute -bottom-2 left-0 w-full">
                         </span>
                     </h2>
                     <p class="text-gray-600 text-lg leading-relaxed wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
@@ -184,7 +183,7 @@
         
             <div class="flex items-center gap-2 text-sm">
                 <span class="text-gray-500 font-medium w-12">Untuk:</span>
-                <span class="bg-gradient-to-r from-sky-100 to-blue-100 text-sky-700 px-3 py-1 rounded-full text-xs font-medium">
+                <span class="bg-gradient-to-r from-sky-100 to-sky-100 text-sky-700 px-3 py-1 rounded-full text-xs font-medium">
                     {{  $menfess->to_name ?: 'Semua' }}
                 </span>
             </div>
@@ -356,9 +355,7 @@
                     @else
                         <img src="{{ asset('learnit/assets/images/courses/courses-six-image1.png') }}" alt="{{ $activity->title }}" class="w-full h-60 object-cover">
                     @endif
-                    <div class="absolute top-4 right-4 bg-sky-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                        FREE
-                    </div>
+                   
                 </div>
                 
                 <div class="p-6">
@@ -421,7 +418,7 @@
         </div>
     </div>
 </div>
-<section class="relative bg-gradient-to-br from-sky-50 via-white to-blue-50 pt-32 pb-32 overflow-hidden">
+<section class="relative bg-gradient-to-br from-sky-50 via-white to-sky-50 pt-32 pb-32 overflow-hidden">
     <!-- Background Decorations -->
     <div class="absolute top-20 left-10 opacity-20">
         <div class="w-24 h-24 bg-sky-500 rounded-full animate-pulse"></div>
@@ -430,7 +427,7 @@
         <div class="w-32 h-32 bg-sky-400 rounded-full animate-bounce"></div>
     </div>
     <div class="absolute top-1/2 left-1/4 opacity-5">
-        <div class="w-40 h-40 bg-blue-300 rounded-full animate-ping"></div>
+        <div class="w-40 h-40 bg-sky-300 rounded-full animate-ping"></div>
     </div>
 
     <div class="container mx-auto px-4 relative z-10">
@@ -443,7 +440,6 @@
             <h2 class="text-4xl font-bold text-gray-800 leading-tight wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                 Koleksi <span class="text-sky-500 relative inline-block">
                     Materi Kuliah
-                    <img src="{{ asset('learnit/assets/images/shape/header-shape.png') }}" alt="shape" class="absolute -bottom-2 left-0 w-full">
                 </span> & Referensi
             </h2>
             <p class="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto mt-4 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
@@ -467,7 +463,7 @@
             
             <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                 <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-sky-500 to-sky-600 rounded-xl flex items-center justify-center">
                         <i class="fa-solid fa-clipboard text-white text-xl"></i>
                     </div>
                     <div>
@@ -491,7 +487,7 @@
             
             <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                 <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 bg-gradient-to-r from-blue-400 to-sky-500 rounded-xl flex items-center justify-center">
+                    <div class="w-12 h-12 bg-gradient-to-r from-sky-400 to-sky-500 rounded-xl flex items-center justify-center">
                         <i class="fa-solid fa-users text-white text-xl"></i>
                     </div>
                     <div>
@@ -535,7 +531,7 @@
 
                     <!-- Mata Kuliah -->
                     <div class="mb-3">
-                        <span class="bg-gradient-to-r from-sky-100 to-blue-100 text-sky-700 px-3 py-1 rounded-full text-sm font-medium">
+                        <span class="bg-gradient-to-r from-sky-100 to-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm font-medium">
                             {{ $materi->mataKuliah->nama ?? 'Sistem Informasi' }}
                         </span>
                     </div>
@@ -626,7 +622,7 @@
                         Lihat Semua Materi
                         <i class="fa-solid fa-arrow-right text-lg"></i>
                     </a>
-                    <a href="#" 
+                    <a href="{{ route('bank-materi.create') ?? '#' }}" 
                        class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white px-6 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
                         <i class="fa-solid fa-upload text-lg"></i>
                         Kontribusi Materi
@@ -641,11 +637,11 @@
             @php
             $categories = [
                 ['icon' => 'fa-code', 'name' => 'Programming', 'color' => 'sky'],
-                ['icon' => 'fa-database', 'name' => 'Database', 'color' => 'blue'],
+                ['icon' => 'fa-database', 'name' => 'Database', 'color' => 'sky'],
                 ['icon' => 'fa-network-wired', 'name' => 'Jaringan', 'color' => 'sky'],
-                ['icon' => 'fa-chart-line', 'name' => 'Algoritma', 'color' => 'blue'],
+                ['icon' => 'fa-chart-line', 'name' => 'Algoritma', 'color' => 'sky'],
                 ['icon' => 'fa-shield-alt', 'name' => 'Keamanan', 'color' => 'sky'],
-                ['icon' => 'fa-mobile-alt', 'name' => 'Mobile Dev', 'color' => 'blue'],
+                ['icon' => 'fa-mobile-alt', 'name' => 'Mobile Dev', 'color' => 'sky'],
             ];
             @endphp
             
@@ -665,35 +661,34 @@
 
 
 <!-- Team Section -->
-<section class="relative bg-gradient-to-br from-blue-50 via-white to-sky-50 pt-32 pb-32 overflow-hidden">
+<section class="relative bg-gradient-to-br from-sky-50 via-white to-sky-50 pt-32 pb-32 overflow-hidden">
     <!-- Background Decorations -->
     <div class="absolute top-10 left-10 opacity-20">
-        <div class="w-32 h-32 bg-blue-500 rounded-full animate-pulse"></div>
+        <div class="w-32 h-32 bg-sky-500 rounded-full animate-pulse"></div>
     </div>
     <div class="absolute bottom-20 right-16 opacity-15">
         <div class="w-24 h-24 bg-sky-400 rounded-full animate-bounce"></div>
     </div>
     <div class="absolute top-1/3 right-1/4 opacity-10">
-        <div class="w-40 h-40 bg-blue-300 rounded-full animate-ping"></div>
+        <div class="w-40 h-40 bg-sky-300 rounded-full animate-ping"></div>
     </div>
 
     <div class="container mx-auto px-4 relative z-10">
         <!-- Header Section -->
         <div class="text-center mb-16">
             <div class="flex items-center justify-center gap-3 mb-4 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-sky-600 rounded-full flex items-center justify-center animate-bounce">
+                <div class="w-12 h-12 bg-gradient-to-r from-sky-500 to-sky-600 rounded-full flex items-center justify-center animate-bounce">
                     <i class="fa-solid fa-users text-white text-xl"></i>
                 </div>
-                <h5 class="text-blue-600 uppercase tracking-widest font-semibold text-sm">TIM KEREN KAMI</h5>
-                <div class="w-12 h-12 bg-gradient-to-r from-sky-500 to-blue-600 rounded-full flex items-center justify-center animate-bounce" style="animation-delay: 0.5s;">
+                <h5 class="text-sky-600 uppercase tracking-widest font-semibold text-sm">TIM KEREN KAMI</h5>
+                <div class="w-12 h-12 bg-gradient-to-r from-sky-500 to-sky-600 rounded-full flex items-center justify-center animate-bounce" style="animation-delay: 0.5s;">
                     <i class="fa-solid fa-star text-white text-xl"></i>
                 </div>
             </div>
             
             <h2 class="text-4xl font-bold text-gray-800 leading-tight mb-4 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                Kenal Yuk Sama <span class="text-blue-600 relative inline-block">
+                Kenal Yuk Sama <span class="text-sky-600 relative inline-block">
                     Pengurus HMSI
-                    <img src="{{ asset('learnit/assets/images/shape/header-shape.png') }}" alt="shape" class="absolute -bottom-2 left-0 w-full">
                 </span> 
                 <div class="inline-flex items-center gap-2 ml-2">
                     <span class="text-2xl animate-bounce">🚀</span>
@@ -703,7 +698,7 @@
             
             <p class="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                 Tim solid yang siap membantu kalian berkembang di dunia teknologi! 
-                <span class="text-blue-600 font-semibold">Jangan malu buat nyapa ya!</span> 😊
+                <span class="text-sky-600 font-semibold">Jangan malu buat nyapa ya!</span> 😊
             </p>
         </div>
 
@@ -711,7 +706,7 @@
         <div class="grid md:grid-cols-4 gap-6 mb-16">
             <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:rotate-1 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-sky-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="w-16 h-16 bg-gradient-to-r from-sky-500 to-sky-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl">🧠</span>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-800">{{ $teamMembers->count() }}+</h3>
@@ -721,7 +716,7 @@
             
             <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:rotate-1 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-gradient-to-r from-sky-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="w-16 h-16 bg-gradient-to-r from-sky-500 to-sky-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl">☕</span>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-800">100+</h3>
@@ -731,7 +726,7 @@
             
             <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:rotate-1 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-gradient-to-r from-blue-400 to-sky-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="w-16 h-16 bg-gradient-to-r from-sky-400 to-sky-500 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl">🎉</span>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-800">24/7</h3>
@@ -741,7 +736,7 @@
             
             <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:rotate-1 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-gradient-to-r from-sky-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="w-16 h-16 bg-gradient-to-r from-sky-400 to-sky-500 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl">💡</span>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-800">∞</h3>
@@ -761,19 +756,19 @@
     <div class="group wow fadeInUp" data-wow-delay="{{ $index * 100 }}ms" data-wow-duration="1500ms">
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:rotate-1 relative">
             <!-- Cute Badge -->
-            <div class="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-r from-blue-500 to-sky-600 rounded-full flex items-center justify-center z-10 shadow-lg group-hover:animate-bounce">
+            <div class="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-r from-sky-500 to-sky-600 rounded-full flex items-center justify-center z-10 shadow-lg group-hover:animate-bounce">
                 <span class="text-xl">{{ $roleInfo['emoji'] }}</span>
             </div>
 
             <!-- Avatar Section - Full Image -->
-            <div class="relative h-full bg-gradient-to-br from-blue-100 to-sky-100 overflow-hidden">
+            <div class="relative h-full bg-gradient-to-br from-sky-100 to-sky-100 overflow-hidden">
                 @if($member->avatar_url)
                     <img src="{{ $member->getFilamentAvatarUrl() }}" 
                          alt="{{ $member->name }}" 
                          class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
                 @else
                     <!-- Fallback with initials -->
-                    <div class="w-full h-full bg-gradient-to-br from-blue-500 to-sky-600 flex items-center justify-center">
+                    <div class="w-full h-full bg-gradient-to-br from-sky-500 to-sky-600 flex items-center justify-center">
                         <span class="text-white text-6xl font-bold">
                             {{ substr($member->name, 0, 1) }}
                         </span>
@@ -787,7 +782,7 @@
                 
                 <!-- Role Badge on image -->
                 <div class="absolute bottom-4 left-4">
-                    <span class="bg-gradient-to-r from-blue-500 to-sky-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase backdrop-blur-sm bg-opacity-90">
+                    <span class="bg-gradient-to-r from-sky-500 to-sky-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase backdrop-blur-sm bg-opacity-90">
                         {{ $roleInfo['name'] }}
                     </span>
                 </div>
@@ -798,7 +793,7 @@
                 <!-- Name -->
                 <div class="text-center mb-4">
                     <h4 class="text-xl font-bold text-gray-800 mb-2">{{ $member->name }}</h4>
-                    <div class="w-12 h-1 bg-gradient-to-r from-blue-500 to-sky-600 rounded-full mx-auto"></div>
+                    <div class="w-12 h-1 bg-gradient-to-r from-sky-500 to-sky-600 rounded-full mx-auto"></div>
                 </div>
 
                 <!-- Fun Fact -->
@@ -806,7 +801,7 @@
                 <div class="mb-4">
                     <div class="flex items-center gap-2 mb-2">
                         <span class="text-lg">🌟</span>
-                        <span class="text-sm font-semibold text-blue-600">Fun Fact:</span>
+                        <span class="text-sm font-semibold text-sky-600">Fun Fact:</span>
                     </div>
                     <p class="text-gray-600 text-sm">{{ $member->fun_fact }}</p>
                 </div>
@@ -817,7 +812,7 @@
                 <div class="mb-4">
                     <div class="flex items-center gap-2 mb-2">
                         <span class="text-lg">🎯</span>
-                        <span class="text-sm font-semibold text-blue-600">Hobi:</span>
+                        <span class="text-sm font-semibold text-sky-600">Hobi:</span>
                     </div>
                     <p class="text-gray-600 text-sm">{{ $member->hobby }}</p>
                 </div>
@@ -828,7 +823,7 @@
                 <div class="mb-4">
                     <div class="flex items-center gap-2 mb-2">
                         <span class="text-lg">💬</span>
-                        <span class="text-sm font-semibold text-blue-600">About:</span>
+                        <span class="text-sm font-semibold text-sky-600">About:</span>
                     </div>
                     <p class="text-gray-600 text-sm">{{ Str::limit($member->bio, 80) }}</p>
                 </div>
@@ -850,7 +845,7 @@
         
         @forelse($socialMediaArray as $social)
         <a href="{{ $social['url'] }}" target="_blank" 
-           class="w-8 h-8 bg-gradient-to-r from-blue-100 to-sky-100 hover:from-blue-500 hover:to-sky-600 text-blue-600 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
+           class="w-8 h-8 bg-gradient-to-r from-sky-100 to-sky-100 hover:from-sky-500 hover:to-sky-600 text-sky-600 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
             <i class="{{ $social['icon'] }} text-sm"></i>
         </a>
         @empty
@@ -864,15 +859,15 @@
             </div>
 
             <!-- Hover Effect Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-t from-blue-500/0 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-sky-500/0 to-sky-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"></div>
         </div>
     </div>
     @empty
     <!-- Empty State -->
     <div class="col-span-full text-center py-16 bg-white rounded-2xl border border-gray-100">
         <div class="mb-6">
-            <div class="w-20 h-20 bg-gradient-to-br from-blue-100 to-sky-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i class="fa-solid fa-users text-3xl text-blue-500"></i>
+            <div class="w-20 h-20 bg-gradient-to-br from-sky-100 to-sky-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="fa-solid fa-users text-3xl text-sky-500"></i>
             </div>
         </div>
         <h5 class="text-xl font-bold text-gray-800 mb-3">Tim Sedang Disiapkan</h5>
@@ -884,7 +879,7 @@
         <!-- Fun CTA Section -->
         @if($teamMembers->count() > 0)
         <div class="text-center mt-16">
-            <div class="bg-gradient-to-r from-blue-500 to-sky-600 rounded-3xl p-8 text-white relative overflow-hidden">
+            <div class="bg-gradient-to-r from-sky-500 to-sky-600 rounded-3xl p-8 text-white relative overflow-hidden">
                 <!-- Background Pattern -->
                 <div class="absolute inset-0 opacity-10">
                     <div class="w-full h-full" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"60\" height=\"60\" viewBox=\"0 0 60 60\"><g fill=\"%23ffffff\" fill-opacity=\"0.4\"><circle cx=\"30\" cy=\"30\" r=\"2\"/></g></svg>')"></div>
@@ -898,19 +893,19 @@
                         <span class="text-3xl animate-bounce" style="animation-delay: 0.5s;">🚀</span>
                     </div>
                     
-                    <p class="text-blue-100 mb-6 max-w-md mx-auto">
+                    <p class="text-sky-100 mb-6 max-w-md mx-auto">
                         Kami selalu terbuka untuk anggota baru yang passionate dan siap berkontribusi!
                     </p>
                     
                     <div class="flex flex-wrap items-center justify-center gap-4">
-                        <a href="#" 
-                           class="inline-flex items-center gap-3 bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
+                        <a href="{{ route('anggota.index') ?? '#' }}   " 
+                           class="inline-flex items-center gap-3 bg-white text-sky-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
                             <span class="text-xl">📝</span>
                             Lihat Semua Anggota
                             <i class="fa-solid fa-arrow-right text-lg"></i>
                         </a>
                         
-                        <a href="#" 
+                        <a href="" 
                            class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white px-6 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
                             <span class="text-xl">💬</span>
                             Chat Sama Kita
@@ -934,7 +929,7 @@
                     <h5 class="text-lg font-bold text-gray-800">Motto Tim Kami:</h5>
                     <span class="text-2xl">✨</span>
                 </div>
-                <p class="text-blue-600 text-xl font-semibold italic">
+                <p class="text-sky-600 text-xl font-semibold italic">
                     "Coding bareng, makan bareng, sukses bareng!" 
                 </p>
                 <div class="flex items-center justify-center gap-2 mt-4">
@@ -949,33 +944,33 @@
 </section>
 <!-- Journal Section -->
 <!-- Journal Section -->
-<section class="relative bg-gradient-to-br from-blue-50 via-white to-sky-50 pt-32 pb-32 overflow-hidden">
+<section class="relative bg-gradient-to-br from-sky-50 via-white to-sky-50 pt-32 pb-32 overflow-hidden">
     <!-- Background Decorations -->
     <div class="absolute top-20 left-16 opacity-20">
-        <div class="w-28 h-28 bg-blue-500 rounded-full animate-pulse"></div>
+        <div class="w-28 h-28 bg-sky-500 rounded-full animate-pulse"></div>
     </div>
     <div class="absolute bottom-24 right-20 opacity-15">
         <div class="w-36 h-36 bg-sky-400 rounded-full animate-bounce"></div>
     </div>
     <div class="absolute top-1/2 left-1/3 opacity-10">
-        <div class="w-20 h-20 bg-blue-300 rounded-full animate-ping"></div>
+        <div class="w-20 h-20 bg-sky-300 rounded-full animate-ping"></div>
     </div>
 
     <div class="container mx-auto px-4 relative z-10">
         <!-- Header Section -->
         <div class="text-center mb-16">
             <div class="flex items-center justify-center gap-3 mb-4 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
-                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-sky-600 rounded-full flex items-center justify-center animate-bounce">
+                <div class="w-12 h-12 bg-gradient-to-r from-sky-500 to-sky-600 rounded-full flex items-center justify-center animate-bounce">
                     <i class="fa-solid fa-heart text-white text-xl"></i>
                 </div>
-                <h5 class="text-blue-600 uppercase tracking-widest font-semibold text-sm">REKOMENDASI SPESIAL</h5>
-                <div class="w-12 h-12 bg-gradient-to-r from-sky-500 to-blue-600 rounded-full flex items-center justify-center animate-bounce" style="animation-delay: 0.5s;">
+                <h5 class="text-sky-600 uppercase tracking-widest font-semibold text-sm">REKOMENDASI SPESIAL</h5>
+                <div class="w-12 h-12 bg-gradient-to-r from-sky-500 to-sky-600 rounded-full flex items-center justify-center animate-bounce" style="animation-delay: 0.5s;">
                     <i class="fa-solid fa-star text-white text-xl"></i>
                 </div>
             </div>
             
             <h2 class="text-4xl font-bold text-gray-800 leading-tight mb-4 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                Rekomendasi <span class="text-blue-600 relative inline-block">
+                Rekomendasi <span class="text-sky-600 relative inline-block">
                     Jurnal dari Kami
                     <img src="{{ asset('learnit/assets/images/shape/header-shape.png') }}" alt="shape" class="absolute -bottom-2 left-0 w-full">
                 </span>
@@ -987,7 +982,7 @@
             
             <p class="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                 Tim HMSI telah kurasi jurnal-jurnal berkualitas tinggi yang cocok untuk mahasiswa Sistem Informasi
-                <span class="text-blue-600 font-semibold">Bacaan wajib untuk upgrade skill kamu!</span> 🎯
+                <span class="text-sky-600 font-semibold">Bacaan wajib untuk upgrade skill kamu!</span> 🎯
             </p>
         </div>
 
@@ -995,7 +990,7 @@
         <div class="grid md:grid-cols-3 gap-6 mb-16">
             <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:rotate-1 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-sky-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="w-16 h-16 bg-gradient-to-r from-sky-500 to-sky-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl">🏆</span>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-800">{{ $recentJournals->count() ?? '6' }}</h3>
@@ -1005,7 +1000,7 @@
             
             <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:rotate-1 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-gradient-to-r from-sky-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="w-16 h-16 bg-gradient-to-r from-sky-500 to-sky-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl">⭐</span>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-800">100%</h3>
@@ -1015,7 +1010,7 @@
             
             <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:rotate-1 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-gradient-to-r from-blue-400 to-sky-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div class="w-16 h-16 bg-gradient-to-r from-sky-400 to-sky-500 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl">🎯</span>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-800">SI</h3>
@@ -1035,12 +1030,12 @@
                     </div>
 
                     <!-- HMSI Recommended Badge -->
-                    <div class="absolute -top-3 -left-3 bg-gradient-to-r from-blue-500 to-sky-600 text-white px-3 py-1 rounded-full text-xs font-bold z-10 shadow-lg">
+                    <div class="absolute -top-3 -left-3 bg-gradient-to-r from-sky-500 to-sky-600 text-white px-3 py-1 rounded-full text-xs font-bold z-10 shadow-lg">
                         HMSI PICK
                     </div>
 
                     <!-- Header Section -->
-                    <div class="relative bg-gradient-to-br from-blue-100 to-sky-100 p-6">
+                    <div class="relative bg-gradient-to-br from-sky-100 to-sky-100 p-6">
                         <!-- DOI Badge -->
                         @if($journal->doi)
                         <div class="absolute top-4 left-4">
@@ -1052,14 +1047,14 @@
                         
                         <!-- Publication Year -->
                         <div class="absolute top-4 right-4">
-                            <span class="bg-white/80 backdrop-blur-sm text-blue-700 px-3 py-1 rounded-full text-sm font-bold">
+                            <span class="bg-white/80 backdrop-blur-sm text-sky-700 px-3 py-1 rounded-full text-sm font-bold">
                                 {{ $journal->publication_year ?? date('Y') }}
                             </span>
                         </div>
 
                         <!-- Journal Icon -->
                         <div class="flex items-center justify-center mt-8 mb-4">
-                            <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-sky-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <div class="w-20 h-20 bg-gradient-to-br from-sky-500 to-sky-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                                 <i class="fa-solid fa-file-alt text-white text-3xl"></i>
                             </div>
                         </div>
@@ -1069,13 +1064,13 @@
                     <div class="p-6">
                         <!-- Journal Name -->
                         <div class="mb-3">
-                            <span class="bg-gradient-to-r from-blue-100 to-sky-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">
+                            <span class="bg-gradient-to-r from-sky-100 to-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm font-medium">
                                 {{ $journal->journal_name ?? 'Journal of Information Systems' }}
                             </span>
                         </div>
 
                         <!-- Title -->
-                        <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-blue-600 transition-colors line-clamp-2">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-sky-600 transition-colors line-clamp-2">
                             <a href="#" class="">{{ $journal->title }}</a>
                         </h3>
 
@@ -1106,7 +1101,7 @@
                         <div class="mb-4">
                             <div class="flex items-center gap-2 mb-2">
                                 <span class="text-lg">👥</span>
-                                <span class="text-sm font-semibold text-blue-600">Penulis:</span>
+                                <span class="text-sm font-semibold text-sky-600">Penulis:</span>
                             </div>
                             <p class="text-gray-600 text-sm">{{ Str::limit($journal->authors, 80) }}</p>
                         </div>
@@ -1115,9 +1110,9 @@
                         <div class="mb-4">
                             <div class="flex items-center gap-2 mb-2">
                                 <span class="text-lg">📝</span>
-                                <span class="text-sm font-semibold text-blue-600">Abstract:</span>
+                                <span class="text-sm font-semibold text-sky-600">Abstract:</span>
                             </div>
-                            <div class="bg-gradient-to-r from-gray-50 to-slate-50 rounded-xl p-3 border-l-4 border-blue-500">
+                            <div class="bg-gradient-to-r from-gray-50 to-slate-50 rounded-xl p-3 border-l-4 border-sky-500">
                                 <p class="text-gray-600 text-sm leading-relaxed">
                                     {{ Str::limit($journal->abstract, 120) }}
                                 </p>
@@ -1129,11 +1124,11 @@
                         <div class="mb-4">
                             <div class="flex items-center gap-2 mb-2">
                                 <span class="text-lg">🏷️</span>
-                                <span class="text-sm font-semibold text-blue-600">Keywords:</span>
+                                <span class="text-sm font-semibold text-sky-600">Keywords:</span>
                             </div>
                             <div class="flex flex-wrap gap-2">
                                 @foreach(explode(',', $journal->keywords) as $keyword)
-                                <span class="bg-gradient-to-r from-sky-400 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                                <span class="bg-gradient-to-r from-sky-400 to-sky-500 text-white px-2 py-1 rounded-full text-xs font-medium">
                                     {{ trim($keyword) }}
                                 </span>
                                 @endforeach
@@ -1144,7 +1139,7 @@
                         <!-- Relevance Score -->
                         <div class="mb-4">
                             <div class="flex items-center justify-between">
-                                <span class="text-sm font-semibold text-blue-600">Relevansi untuk Mahasiswa SI:</span>
+                                <span class="text-sm font-semibold text-sky-600">Relevansi untuk Mahasiswa SI:</span>
                                 <div class="flex items-center gap-1">
                                     @for($i = 1; $i <= 5; $i++)
                                     <i class="fa-solid fa-star text-amber-400 text-sm"></i>
@@ -1159,13 +1154,13 @@
                             <div class="flex items-center gap-4">
                                 @if($journal->volume)
                                 <div class="flex items-center gap-1">
-                                    <i class="fa-solid fa-book text-blue-500"></i>
+                                    <i class="fa-solid fa-book text-sky-500"></i>
                                     <span>Vol. {{ $journal->volume }}</span>
                                 </div>
                                 @endif
                                 @if($journal->issue)
                                 <div class="flex items-center gap-1">
-                                    <i class="fa-solid fa-hashtag text-blue-500"></i>
+                                    <i class="fa-solid fa-hashtag text-sky-500"></i>
                                     <span>Issue {{ $journal->issue }}</span>
                                 </div>
                                 @endif
@@ -1180,7 +1175,7 @@
                         <!-- Footer -->
                         <div class="flex items-center justify-between pt-4 border-t border-gray-100">
                             <div class="flex items-center gap-2">
-                                <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-sky-600 rounded-full flex items-center justify-center">
+                                <div class="w-8 h-8 bg-gradient-to-r from-sky-500 to-sky-600 rounded-full flex items-center justify-center">
                                     <span class="text-white text-xs font-bold">📚</span>
                                 </div>
                                 <div>
@@ -1191,7 +1186,7 @@
                             
                             <div class="flex items-center gap-2">
                                 @if($journal->file_path)
-                                <button class="w-8 h-8 bg-blue-100 hover:bg-blue-200 text-blue-600 rounded-lg flex items-center justify-center transition-colors" title="Download">
+                                <button class="w-8 h-8 bg-sky-100 hover:bg-sky-200 text-sky-600 rounded-lg flex items-center justify-center transition-colors" title="Download">
                                     <i class="fa-solid fa-download text-sm"></i>
                                 </button>
                                 @endif
@@ -1208,21 +1203,21 @@
                     </div>
 
                     <!-- Hover Effect Overlay -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-blue-500/0 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-sky-500/0 to-sky-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"></div>
                 </div>
             </div>
             @empty
             <!-- Empty State -->
             <div class="col-span-full text-center py-16 bg-white rounded-2xl border border-gray-100">
                 <div class="mb-6">
-                    <div class="w-20 h-20 bg-gradient-to-br from-blue-100 to-sky-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fa-solid fa-heart text-3xl text-blue-500"></i>
+                    <div class="w-20 h-20 bg-gradient-to-br from-sky-100 to-sky-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-heart text-3xl text-sky-500"></i>
                     </div>
                 </div>
                 <h5 class="text-xl font-bold text-gray-800 mb-3">Rekomendasi Sedang Disiapkan</h5>
                 <p class="text-gray-500 mb-6 max-w-sm mx-auto">Tim kurasi HMSI sedang memilih jurnal-jurnal terbaik untuk kalian!</p>
                 <a href="#" 
-                   class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-sky-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-sky-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                   class="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 to-sky-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-sky-600 hover:to-sky-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                     <i class="fa-solid fa-bell"></i>
                     Beritahu Kalau Ada Update
                 </a>
@@ -1233,7 +1228,7 @@
         <!-- CTA Section -->
         @if(isset($recentJournals) && $recentJournals->count() > 0)
         <div class="text-center mt-16">
-            <div class="bg-gradient-to-r from-blue-500 to-sky-600 rounded-3xl p-8 text-white relative overflow-hidden">
+            <div class="bg-gradient-to-r from-sky-500 to-sky-600 rounded-3xl p-8 text-white relative overflow-hidden">
                 <!-- Background Pattern -->
                 <div class="absolute inset-0 opacity-10">
                     <div class="w-full h-full" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"60\" height=\"60\" viewBox=\"0 0 60 60\"><g fill=\"%23ffffff\" fill-opacity=\"0.4\"><circle cx=\"30\" cy=\"30\" r=\"2\"/></g></svg>')"></div>
@@ -1247,13 +1242,13 @@
                         <span class="text-3xl animate-bounce" style="animation-delay: 0.5s;">💝</span>
                     </div>
                     
-                    <p class="text-blue-100 mb-6 max-w-md mx-auto">
+                    <p class="text-sky-100 mb-6 max-w-md mx-auto">
                         Setiap jurnal telah dipilih khusus oleh tim HMSI untuk mendukung perjalanan akademikmu
                     </p>
                     
                     <div class="flex flex-wrap items-center justify-center gap-4">
                         <a href="{{ route('journals') ?? '#' }}" 
-                           class="inline-flex items-center gap-3 bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
+                           class="inline-flex items-center gap-3 bg-white text-sky-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
                             <span class="text-xl">📖</span>
                             Lihat Semua Rekomendasi
                             <i class="fa-solid fa-arrow-right text-lg"></i>
@@ -1289,7 +1284,7 @@
             @foreach($whyRecommend as $reason)
             <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer group">
                 <div class="text-center">
-                    <div class="w-12 h-12 bg-gradient-to-r from-blue-400 to-sky-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <div class="w-12 h-12 bg-gradient-to-r from-sky-400 to-sky-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                         <i class="fa-solid {{ $reason['icon'] }} text-white text-lg"></i>
                     </div>
                     <h6 class="font-bold text-gray-800 text-sm mb-2">{{ $reason['title'] }}</h6>
@@ -1307,7 +1302,7 @@
                     <h5 class="text-lg font-bold text-gray-800">Filosofi Kurasi Kami:</h5>
                     <span class="text-2xl">📚</span>
                 </div>
-                <p class="text-blue-600 text-xl font-semibold italic">
+                <p class="text-sky-600 text-xl font-semibold italic">
                     "Bukan sekadar baca, tapi baca yang tepat untuk grow up!" 
                 </p>
                 <div class="flex items-center justify-center gap-2 mt-4">
