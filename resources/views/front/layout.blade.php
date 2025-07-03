@@ -147,7 +147,6 @@
                                         <a href="{{ route('about.visi-misi') }}">Visi & Misi</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('about.struktur') }}">Struktur Organisasi</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('anggota.index') }}">Anggota</a>
