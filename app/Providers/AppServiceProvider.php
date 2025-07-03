@@ -3,8 +3,6 @@
 namespace App\Providers;
 
 use App\Models\User;
-use App\Settings\KaidoSetting;
-use Devrabiul\LivewireDoctor\LivewireDoctor;
 use Filament\Support\Facades\FilamentView;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Event;
@@ -31,27 +29,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        LivewireDoctor::initCustomAsset();
-        if (!app()->runningInConsole() && Schema::hasTable('settings')) {
-            try {
-                $settingsExist = \DB::table('settings')->where('group', 'KaidoSetting')->exists();
-                
-                if ($settingsExist) {
-                    $settings = app(KaidoSetting::class);
-                }
-            } catch (\Exception $e) {
-                logger()->warning('Settings belum tersedia: ' . $e->getMessage());
-            }
-        }
-        
-        //
         Gate::define('viewApiDocs', function (User $user) {
             return true;
         });
-        Livewire::setScriptRoute(function ($handle) {
-            return Route::get('/vendor/livewire/livewire.js', $handle);
-        });
-        // Gate::policy()
+        
         Event::listen(function (\SocialiteProviders\Manager\SocialiteWasCalled $event) {
             $event->extendSocialite('discord', \SocialiteProviders\Google\Provider::class);
         });

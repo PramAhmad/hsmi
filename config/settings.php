@@ -1,7 +1,5 @@
 <?php
 
-use App\Settings\KaidoSetting;
-
 return [
 
     /*
@@ -9,7 +7,7 @@ return [
      * put them (manually) here.
      */
     'settings' => [
-        KaidoSetting::class,
+        // Settings classes will be registered here if needed
     ],
 
     /*
