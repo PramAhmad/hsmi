@@ -1,0 +1,37 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        // Drop existing table if exists and recreate with correct structure
+        Schema::dropIfExists('settings');
+        
+        Schema::create('settings', function (Blueprint $table) {
+            $table->id();
+            $table->string('group');
+            $table->string('name');
+            $table->boolean('locked')->default(false);
+            $table->json('payload'); // Gunakan json untuk PostgreSQL compatibility
+            $table->timestamps();
+
+            $table->unique(['group', 'name']);
+            $table->index('group');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('settings');
+    }
+};
