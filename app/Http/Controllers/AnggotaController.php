@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
 
 class AnggotaController extends Controller
 {
@@ -56,17 +57,11 @@ class AnggotaController extends Controller
                 return [$roleInfo['name'] => $item->total];
             });
         
-        $divisiList = [
-            'ketua' => 'Ketua HMSI',
-            'wakil_ketua' => 'Wakil Ketua', 
-            'sekretaris' => 'Sekretaris',
-            'bendahara' => 'Bendahara',
-            'koordinator_acara' => 'Koordinator Acara',
-            'koordinator_humas' => 'Koordinator Humas',
-            'koordinator_it' => 'Koordinator IT',
-            'koordinator_kreatif' => 'Koordinator Kreatif',
-            'pengurus' => 'Pengurus'
-        ];
+        // Ambil divisi list dari database roles
+        $divisiList = Role::all()->mapWithKeys(function ($role) {
+            $roleInfo = $this->getRoleDisplayName($role->name);
+            return [$role->name => $roleInfo['name']];
+        })->toArray();
         
         return view('front.anggota.index', compact(
             'members',
@@ -87,6 +82,10 @@ class AnggotaController extends Controller
             'wakil_ketua' => ['name' => 'Wakil Ketua', 'emoji' => '👸'],
             'sekretaris' => ['name' => 'Sekretaris', 'emoji' => '📝'],
             'bendahara' => ['name' => 'Bendahara', 'emoji' => '💰'],
+            'kepala_department_pendidikan' => ['name' => 'Kepala Department Pendidikan', 'emoji' => '🎓'],
+            'kepala_department_rumah_tangga' => ['name' => 'Kepala Department Rumah Tangga', 'emoji' => '🏠'],
+            'kepala_department_kaderisasi' => ['name' => 'Kepala Department Kaderisasi', 'emoji' => '👥'],
+            'kepala_department_psdm' => ['name' => 'Kepala Department PSDM', 'emoji' => '💼'],
             'koordinator_acara' => ['name' => 'Koordinator Acara', 'emoji' => '🎪'],
             'koordinator_humas' => ['name' => 'Koordinator Humas', 'emoji' => '📢'],
             'koordinator_it' => ['name' => 'Koordinator IT', 'emoji' => '💻'],
