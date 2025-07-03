@@ -29,7 +29,6 @@
                 Program & 
                 <span class="text-sky-500 relative inline-block">
                     Kegiatan
-                    <img src="{{ asset('learnit/assets/images/shape/banner-span-shape.png') }}" alt="shape" class="absolute -bottom-2 left-0 w-full">
                 </span>
                 <div class="inline-flex items-center gap-3 ml-3">
                     <span class="text-4xl animate-bounce">🎯</span>
@@ -60,7 +59,7 @@
                     Lihat Kegiatan
                 </a>
                 
-                <a href="#" class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white px-6 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
+                <a href="#" class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm text-black px-6 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
                     <i class="fa-solid fa-plus text-lg"></i>
                     Daftar Event
                 </a>
@@ -287,9 +286,7 @@
                     </div>
                     
                     <!-- Free Badge -->
-                    <div class="absolute top-4 right-4 bg-sky-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                        FREE
-                    </div>
+                 
                     
                     <!-- Category Badge -->
                     @if($activity->category)
@@ -363,17 +360,7 @@
                             <span class="text-sm font-medium text-gray-700">Tim HMSI</span>
                         </div>
                         
-                        <div class="flex items-center gap-2">
-                            @if($status === 'open_registration')
-                            <button class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
-                                Daftar
-                            </button>
-                            @else
-                            <button class="bg-sky-100 hover:bg-sky-200 text-sky-600 px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
-                                Detail
-                            </button>
-                            @endif
-                        </div>
+                        
                     </div>
                 </div>
             </div>
