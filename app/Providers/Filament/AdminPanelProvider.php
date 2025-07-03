@@ -42,17 +42,73 @@ use Illuminate\Support\Facades\Schema;
 class AdminPanelProvider extends PanelProvider
 {
     private ?KaidoSetting $settings = null;
-    //constructor
+    
     public function __construct()
     {
-        //this is feels bad but this is the solution that i can think for now :D
-        // Check if settings table exists first
+        // Safely load settings with multiple checks
+        $this->settings = $this->loadSettingsSafely();
+    }
+
+    /**
+     * Safely load settings with proper error handling
+     */
+    private function loadSettingsSafely(): ?KaidoSetting
+    {
         try {
-            if (\Illuminate\Support\Facades\Schema::hasTable('settings')) {
-                $this->settings = app(KaidoSetting::class);
+            // Skip loading settings during console commands that don't need them
+            if (app()->runningInConsole()) {
+                $command = $_SERVER['argv'][1] ?? '';
+                $skipCommands = ['optimize', 'config:cache', 'route:cache', 'view:cache', 'migrate', 'db:seed'];
+                
+                if (in_array($command, $skipCommands)) {
+                    return null;
+                }
             }
+
+            // Check if settings table exists
+            if (!Schema::hasTable('settings')) {
+                return null;
+            }
+
+            // Check if settings table has correct structure
+            if (!Schema::hasColumn('settings', 'name') || !Schema::hasColumn('settings', 'payload')) {
+                return null;
+            }
+
+            // Check if KaidoSetting data exists
+            $settingsExist = \DB::table('settings')
+                ->where('group', 'KaidoSetting')
+                ->exists();
+
+            if (!$settingsExist) {
+                return null;
+            }
+
+            // Only now try to load the actual settings
+            return app(KaidoSetting::class);
+
         } catch (\Exception $e) {
-            $this->settings = null;
+            // Log the error but don't break the application
+            if (!app()->runningInConsole()) {
+                logger()->warning('Failed to load KaidoSetting in AdminPanelProvider: ' . $e->getMessage());
+            }
+            return null;
+        }
+    }
+
+    /**
+     * Get setting value with fallback
+     */
+    private function getSetting(string $key, $default = null)
+    {
+        if ($this->settings === null) {
+            return $default;
+        }
+
+        try {
+            return $this->settings->$key ?? $default;
+        } catch (\Exception $e) {
+            return $default;
         }
     }
 
@@ -62,9 +118,9 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
-            ->when($this->settings->login_enabled ?? true, fn($panel) => $panel->login(Login::class))
-            ->when($this->settings->registration_enabled ?? true, fn($panel) => $panel->registration())
-            ->when($this->settings->password_reset_enabled ?? true, fn($panel) => $panel->passwordReset())
+            ->when($this->getSetting('login_enabled', true), fn($panel) => $panel->login(Login::class))
+            ->when($this->getSetting('registration_enabled', false), fn($panel) => $panel->registration())
+            ->when($this->getSetting('password_reset_enabled', true), fn($panel) => $panel->passwordReset())
             ->emailVerification()
             ->colors([
                 'primary' => Color::Amber,
@@ -78,12 +134,13 @@ class AdminPanelProvider extends PanelProvider
                 'Akademik',
                 'Make Fun',
                 'User & Permissions',
+                'Komunikasi',
+                'Pengaturan',
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
                 Widgets\AccountWidget::class,
                 Widgets\FilamentInfoWidget::class,
-               
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -117,17 +174,16 @@ class AdminPanelProvider extends PanelProvider
             ApiServicePlugin::make(),
             BreezyCore::make()
                 ->myProfile(
-                    shouldRegisterUserMenu: true, // Sets the 'account' link in the panel User Menu (default = true)
-                    shouldRegisterNavigation: true, // Adds a main navigation item for the My Profile page (default = false)
-                    navigationGroup: 'Settings', // Sets the navigation group for the My Profile page (default = null)
-                    hasAvatars: true, // Enables the avatar upload form component (default = false)
+                    shouldRegisterUserMenu: true,
+                    shouldRegisterNavigation: true,
+                    navigationGroup: 'Pengaturan',
+                    hasAvatars: true,
                     slug: 'my-profile',
                 )
                 ->myProfileComponents([
                      LivewireMySocial::class,
                 ])
                 ->avatarUploadComponent(fn($fileUpload) => $fileUpload->disableLabel())
-                // OR, replace with your own component
                 ->avatarUploadComponent(
                     fn() => FileUpload::make('avatar_url')
                         ->image()
@@ -136,28 +192,30 @@ class AdminPanelProvider extends PanelProvider
                 ->enableTwoFactorAuthentication(),
         ];
         
-        if ($this->settings->sso_enabled ?? true) {
-            $plugins[] =
-                FilamentSocialitePlugin::make()
-                    ->providers([
-                        Provider::make('google')
-                            ->label('Google')
-                            ->icon('fab-google')
-                            ->color(Color::hex('#2f2a6b'))
-                            ->outlined(true)
-                            ->stateless(false)
-                    ])->registration(true)
-                    ->createUserUsing(function (string $provider, SocialiteUserContract $oauthUser, FilamentSocialitePlugin $plugin) {
-                        $user = User::firstOrNew([
-                            'email' => $oauthUser->getEmail(),
-                        ]);
-                        $user->name = $oauthUser->getName();
-                        $user->email = $oauthUser->getEmail();
-                        $user->email_verified_at = now();
-                        $user->save();
-                        return $user;
-                    });
+        // Only add SSO if settings allow it and settings are available
+        if ($this->getSetting('sso_enabled', false)) {
+            $plugins[] = FilamentSocialitePlugin::make()
+                ->providers([
+                    Provider::make('google')
+                        ->label('Google')
+                        ->icon('fab-google')
+                        ->color(Color::hex('#2f2a6b'))
+                        ->outlined(true)
+                        ->stateless(false)
+                ])
+                ->registration(true)
+                ->createUserUsing(function (string $provider, SocialiteUserContract $oauthUser, FilamentSocialitePlugin $plugin) {
+                    $user = User::firstOrNew([
+                        'email' => $oauthUser->getEmail(),
+                    ]);
+                    $user->name = $oauthUser->getName();
+                    $user->email = $oauthUser->getEmail();
+                    $user->email_verified_at = now();
+                    $user->save();
+                    return $user;
+                });
         }
+        
         return $plugins;
     }
 }
