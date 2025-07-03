@@ -10,7 +10,6 @@ use Filament\Panel;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Storage;
 use Jeffgreco13\FilamentBreezy\Traits\TwoFactorAuthenticatable;
 use Laravel\Sanctum\HasApiTokens;
@@ -19,7 +18,7 @@ use Spatie\Permission\Traits\HasRoles;
 class User extends Authenticatable implements  HasAvatar, MustVerifyEmail,FilamentUser
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable, HasRoles, TwoFactorAuthenticatable, HasApiTokens;
+    use HasFactory, HasRoles, TwoFactorAuthenticatable, HasApiTokens;
 
     /**
      * The attributes that are mass assignable.
