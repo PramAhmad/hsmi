@@ -75,3 +75,12 @@ Route::prefix('api')->group(function () {
     Route::get('/bank-materi/{id}/detail', [BankMateriController::class, 'apiDetail']);
     Route::post('/bank-materi/{id}/bookmark', [BankMateriController::class, 'bookmark']);
 });
+
+// Fallback route untuk mengatasi 405 error
+Route::fallback(function () {
+    if (request()->is('admin/*')) {
+        return redirect('/admin');
+    }
+    
+    return redirect('/');
+});
