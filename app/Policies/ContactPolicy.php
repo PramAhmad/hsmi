@@ -63,7 +63,7 @@ class ContactPolicy
      */
     public function forceDelete(User $user, Contact $contact): bool
     {
-        return $user->can('force_delete_contact');
+        return $user->can('{{ ForceDelete }}');
     }
 
     /**
@@ -71,7 +71,7 @@ class ContactPolicy
      */
     public function forceDeleteAny(User $user): bool
     {
-        return $user->can('force_delete_any_contact');
+        return $user->can('{{ ForceDeleteAny }}');
     }
 
     /**
