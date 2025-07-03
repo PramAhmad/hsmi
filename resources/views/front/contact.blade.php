@@ -29,7 +29,6 @@
                 Kontak 
                 <span class="text-sky-500 relative inline-block">
                     HMSI Unsil
-                    <img src="{{ asset('learnit/assets/images/shape/banner-span-shape.png') }}" alt="shape" class="absolute -bottom-2 left-0 w-full">
                 </span>
                 <div class="inline-flex items-center gap-3 ml-3">
                     <span class="text-4xl animate-bounce">📞</span>
