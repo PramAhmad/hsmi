@@ -1,0 +1,32 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::table('contacts', function (Blueprint $table) {
+            $table->string('email')->nullable()->after('name');
+            $table->string('subject')->nullable()->after('email');
+            $table->text('message')->nullable()->after('subject');
+            $table->string('phone')->nullable()->after('message');
+            $table->enum('status', ['pending', 'replied', 'resolved'])->default('pending')->after('phone');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::table('contacts', function (Blueprint $table) {
+            //
+        });
+    }
+};
