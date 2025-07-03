@@ -82,9 +82,8 @@ class AdminPanelProvider extends PanelProvider
             ->middleware([
                 SetTheme::class
             ])
-            ->plugins($this->getPlugins())
-            ->databaseNotifications();
-    }
+            ->plugins($this->getPlugins());
+        }
 
     private function getPlugins(): array
     {

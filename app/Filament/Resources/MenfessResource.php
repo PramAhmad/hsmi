@@ -9,7 +9,6 @@ use BezhanSalleh\FilamentShield\Support\Utils;
 use Filament\Forms;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Form;
-use Filament\Notifications\Collection;
 use Filament\Resources\Resource;
 use Filament\Tables\Table;
 

@@ -3,7 +3,6 @@ namespace App\Livewire;
 use Jeffgreco13\FilamentBreezy\Livewire\MyProfileComponent;
 use Filament\Forms;
 use Filament\Forms\Form;
-use Filament\Notifications\Notification;
 use Illuminate\Support\Facades\Auth;
 
 class MySocial extends MyProfileComponent
