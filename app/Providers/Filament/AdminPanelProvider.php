@@ -47,7 +47,7 @@ class AdminPanelProvider extends PanelProvider
     }
 
     /**
-     * Safely load settings with comprehensive checks
+     * Safely load settings with comprehensive error handling
      */
     private function loadSettingsSafely(): ?KaidoSetting
     {
@@ -55,36 +55,41 @@ class AdminPanelProvider extends PanelProvider
             // Skip loading during console commands that don't need settings
             if (app()->runningInConsole()) {
                 $command = $_SERVER['argv'][1] ?? '';
-                $skipCommands = ['migrate', 'migrate:fresh', 'migrate:rollback', 'db:seed', 'optimize', 'config:cache'];
+                $skipCommands = ['migrate', 'migrate:fresh', 'migrate:rollback', 'db:seed', 'optimize', 'config:cache', 'settings:migrate'];
                 
                 if (in_array($command, $skipCommands)) {
                     return null;
                 }
             }
 
-            // Check if settings table exists
-            if (!Schema::hasTable('settings')) {
+            // Use database connection directly to avoid Schema facade issues
+            $connection = app('db')->connection();
+            
+            // Check if settings table exists using raw query
+            $tableExists = $connection->select("SELECT to_regclass('public.settings') as table_exists")[0]->table_exists ?? null;
+            
+            if (!$tableExists) {
                 return null;
             }
 
-            // Check if all required KaidoSetting properties exist in database
+            // Check if KaidoSetting data exists
+            $settingsCount = $connection->table('settings')
+                ->where('group', 'KaidoSetting')
+                ->count();
+
+            if ($settingsCount === 0) {
+                return null;
+            }
+
+            // Check if all required properties exist
             $requiredSettings = [
-                'site_name',
-                'site_description', 
-                'site_active',
-                'registration_enabled',
-                'login_enabled',
-                'password_reset_enabled',
-                'sso_enabled',
-                'maintenance_mode',
-                'contact_email',
-                'instagram_url',
-                'facebook_url', 
-                'twitter_url',
-                'linkedin_url'
+                'site_name', 'site_description', 'site_active',
+                'registration_enabled', 'login_enabled', 'password_reset_enabled',
+                'sso_enabled', 'maintenance_mode', 'contact_email',
+                'instagram_url', 'facebook_url', 'twitter_url', 'linkedin_url'
             ];
 
-            $existingSettings = \DB::table('settings')
+            $existingSettings = $connection->table('settings')
                 ->where('group', 'KaidoSetting')
                 ->pluck('name')
                 ->toArray();
@@ -92,7 +97,9 @@ class AdminPanelProvider extends PanelProvider
             $missingSettings = array_diff($requiredSettings, $existingSettings);
             
             if (!empty($missingSettings)) {
-                logger()->warning('Missing KaidoSetting properties: ' . implode(', ', $missingSettings));
+                if (!app()->runningInConsole()) {
+                    logger()->warning('Missing KaidoSetting properties: ' . implode(', ', $missingSettings));
+                }
                 return null;
             }
 
@@ -100,7 +107,9 @@ class AdminPanelProvider extends PanelProvider
             return app(KaidoSetting::class);
 
         } catch (\Exception $e) {
-            logger()->warning('Failed to load KaidoSetting: ' . $e->getMessage());
+            if (!app()->runningInConsole()) {
+                logger()->warning('Failed to load KaidoSetting: ' . $e->getMessage());
+            }
             return null;
         }
     }
@@ -182,11 +191,15 @@ class AdminPanelProvider extends PanelProvider
 
         // Add Shield Plugin with safe loading
         try {
-            if (Schema::hasTable('permissions') && Schema::hasTable('roles')) {
+            $connection = app('db')->connection();
+            $permissionsExists = $connection->select("SELECT to_regclass('public.permissions') as table_exists")[0]->table_exists ?? null;
+            $rolesExists = $connection->select("SELECT to_regclass('public.roles') as table_exists")[0]->table_exists ?? null;
+            
+            if ($permissionsExists && $rolesExists) {
                 $plugins[] = FilamentShieldPlugin::make();
             }
         } catch (\Exception $e) {
-            logger()->warning('Failed to load FilamentShield: ' . $e->getMessage());
+            // Skip shield if tables don't exist yet
         }
 
         // Add Breezy Plugin
@@ -251,18 +264,6 @@ class AdminPanelProvider extends PanelProvider
         $user->email = $oauthUser->getEmail();
         $user->email_verified_at = now();
         $user->save();
-
-        // Assign default role untuk user baru dari SSO
-        try {
-            if (Schema::hasTable('roles')) {
-                $defaultRole = \Spatie\Permission\Models\Role::where('name', 'pengurus')->first();
-                if ($defaultRole) {
-                    $user->assignRole($defaultRole);
-                }
-            }
-        } catch (\Exception $e) {
-            logger()->warning('Failed to assign default role: ' . $e->getMessage());
-        }
 
         return $user;
     }
