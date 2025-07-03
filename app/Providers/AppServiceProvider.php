@@ -4,7 +4,6 @@ namespace App\Providers;
 
 use App\Models\User;
 use App\Settings\KaidoSetting;
-use Filament\Forms\Components\Livewire;
 use Filament\Support\Facades\FilamentView;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Blade;
@@ -12,6 +11,7 @@ use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
+use Livewire\Livewire;
 
 class AppServiceProvider extends ServiceProvider
 {
