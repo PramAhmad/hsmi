@@ -128,7 +128,7 @@
             <!-- Image Column with Interactive Elements -->
             <div class="relative wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                 <div class="relative z-10 group perspective">
-                    <img src="{{ asset('images/hmsi-team.jpg') }}" alt="Tim HMSI Unsil" 
+                    <img src="{{ asset('images/profile.jpg') }}" alt="Tim HMSI Unsil" 
                          class="w-full rounded-2xl shadow-xl transform transition-transform duration-500 group-hover:rotate-y-6" 
                          onerror="this.src='https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'">
                     
@@ -542,7 +542,7 @@
             <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                 <div class="flex items-center gap-6 mb-8 relative">
                     <div class="relative">
-                        <img src="{{ asset('images/ketua-jurusan.jpg') }}" alt="Ketua Jurusan Sistem Informasi" 
+                        <img src="{{ asset('images/bu_rahmi.png') }}" alt="Ketua Jurusan Sistem Informasi" 
                              class="w-24 h-24 rounded-full object-cover border-4 border-sky-500 group-hover:scale-105 transition-transform duration-300"
                              onerror="this.src='https://randomuser.me/api/portraits/men/32.jpg'">
                         <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-sky-500 rounded-full flex items-center justify-center text-white text-sm">
@@ -550,8 +550,8 @@
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-1 group-hover:text-sky-500 transition-colors">Dr. Adi Suryadi, M.Kom</h3>
-                        <p class="text-sky-500 font-medium">Ketua Jurusan Sistem Informasi</p>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1 group-hover:text-sky-500 transition-colors">Ir. Rahmi Nur Shofa S.t., M.T.</h3>
+                        <p class="text-sky-500 font-medium">Kepala Jurusan Sistem Informasi</p>
                     </div>
                 </div>
                 
@@ -572,7 +572,7 @@
             <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group wow fadeInRight" data-wow-delay="400ms" data-wow-duration="1500ms">
                 <div class="flex items-center gap-6 mb-8 relative">
                     <div class="relative">
-                        <img src="{{ asset('images/ketua-hmsi.jpg') }}" alt="Ketua HMSI" 
+                        <img src="{{ asset('images/heru.png ') }}" alt="Ketua HMSI" 
                              class="w-24 h-24 rounded-full object-cover border-4 border-sky-500 group-hover:scale-105 transition-transform duration-300"
                              onerror="this.src='https://randomuser.me/api/portraits/men/47.jpg'">
                         <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-sky-500 rounded-full flex items-center justify-center text-white text-sm">
@@ -580,8 +580,8 @@
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-1 group-hover:text-sky-500 transition-colors">Fajar Sidik</h3>
-                        <p class="text-sky-500 font-medium">Ketua HMSI Periode 2024-2025</p>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-1 group-hover:text-sky-500 transition-colors">Heru Iskandar</h3>
+                        <p class="text-sky-500 font-medium">Ketua Himpunan Mahasiswa Sistem Informasi <br> Periode 2024-2025</p>
                     </div>
                 </div>
                 
@@ -685,15 +685,15 @@
                         </div>
                     </div>
                     
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
-                             alt="Pengembangan Keilmuan" 
-                             class="w-full h-auto rounded-2xl shadow-lg">
-                        <div class="absolute -bottom-4 -right-4 bg-white rounded-lg shadow-lg p-3 flex items-center gap-2">
-                            <span class="text-2xl">💡</span>
-                            <span class="font-semibold text-sky-500">Upgrade Your Skills!</span>
-                        </div>
-                    </div>
+                    {{-- <div class="relative"> --}}
+                        {{-- <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"  --}}
+                             {{-- alt="Pengembangan Keilmuan"  --}}
+                             {{-- class="w-full h-auto rounded-2xl shadow-lg"> --}}
+                        {{-- <div class="absolute -bottom-4 -right-4 bg-white rounded-lg shadow-lg p-3 flex items-center gap-2"> --}}
+                            {{-- <span class="text-2xl">💡</span> --}}
+                            {{-- <span class="font-semibold text-sky-500">Upgrade Your Skills!</span> --}}
+                        {{-- </div> --}}
+                    {{-- </div> --}}
                 </div>
             </div>
             
@@ -746,7 +746,7 @@
                         </div>
                     </div>
                     
-                    <div class="relative">
+                    {{-- <div class="relative">
                         <img src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" 
                              alt="Pengembangan Karir" 
                              class="w-full h-auto rounded-2xl shadow-lg">
@@ -754,7 +754,7 @@
                             <span class="text-2xl">🚀</span>
                             <span class="font-semibold text-sky-500">Boost Your Career!</span>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             
@@ -1038,7 +1038,7 @@
             
             <div class="lg:w-1/2 wow fadeInRight" data-wow-delay="400ms" data-wow-duration="1500ms">
                 <div class="relative group perspective">
-                    <img src="{{ asset('images/hmsi-team-fun.jpg') }}" alt="Tim HMSI Bersama" 
+                    <img src="{{ asset('images/ruang.jpg') }}" alt="Tim HMSI Bersama" 
                          class="w-full h-auto rounded-2xl shadow-xl border-4 border-white/20 transform transition-transform duration-500 group-hover:rotate-y-6"
                          onerror="this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'">
                     

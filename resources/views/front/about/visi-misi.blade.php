@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- Hero Section -->
-<section class="relative bg-gradient-to-br from-blue-50 via-white to-sky-50 pt-32 pb-20 overflow-hidden">
+<section class="relative mt-20 bg-gradient-to-br from-blue-50 via-white to-sky-50 pt-32 pb-20 overflow-hidden">
     <!-- Background Decorations -->
     <div class="absolute top-10 left-10 opacity-20">
         <div class="w-40 h-40 bg-sky-500 rounded-full animate-pulse-slow"></div>
@@ -141,7 +141,7 @@
             <!-- Vision Illustration Column -->
             <div class="relative wow fadeInRight" data-wow-delay="400ms" data-wow-duration="1500ms">
                 <div class="relative z-10 group perspective">
-                    <img src="{{ asset('images/vision-illustration.jpg') }}" alt="Visi HMSI Unsil" 
+                    <img src="{{ asset('images/poscast.jpg') }}" alt="Visi HMSI Unsil" 
                          class="w-full rounded-2xl shadow-xl transform transition-transform duration-500 group-hover:rotate-y-6" 
                          onerror="this.src='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80'">
                     
