@@ -305,7 +305,8 @@
             <div class="footer__wrp pt-100 pb-100">
                 <div class="footer__item footer-about wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                     <a href="{{ route('home') }}" class="logo mb-30 flex items-center gap-3">
-                        <img src="{{ asset('images/logo_hmsi.png') }}" class="h-12 w-12 rounded-lg" alt="Logo HMSI">
+                    <img  src="{{ asset('images/logo_hmsi.png') }}" alt="HMSI Unsil" class="w-5 h-20"> 
+
                         <div>
                             <h3 class="text-slate-900 font-bold text-lg">HMSI Unsil</h3>
                             <p class="text-gray-300 text-sm">Sistem Informasi</p>

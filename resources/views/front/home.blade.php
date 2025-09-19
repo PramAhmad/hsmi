@@ -34,7 +34,7 @@
         </div>
     </div>
     <div class="banner-six__image">
-        <img class="w-100 animation__arryLeftRight" src="{{ asset('images/hmsi.jpg') }}" alt="HMSI Unsil">
+        <img class="w-100 animation__arryLeftRight" src="{{ asset('images/hmsi.png') }}" alt="HMSI Unsil">
         <img class="shape1 animation__arryUpDown" src="{{ asset('learnit/assets/images/shape/banner-six-image-shape1.png') }}" alt="image">
         <img class="shape3" src="{{ asset('learnit/assets/images/shape/banner-six-image-shape3.png') }}" alt="image">
     </div>
@@ -50,7 +50,7 @@
             <div class="col-lg-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
                 <div class="about-five__image">
                     <img class="shape slide-up-down" src="{{ asset('learnit/assets/images/shape/about-five-shape.png') }}" alt="image">
-                    <img class="w-100" src="{{ asset('learnit/assets/images/about/about-five-image.png') }}" alt="image">
+                    <img class="w-100" src="{{ asset('images/SC.png') }}" alt="image">
                     <img class="w-100 bg-shape" src="{{ asset('learnit/assets/images/bg/about-five-image-bg.png') }}" alt="shape">
                 </div>
             </div>
@@ -407,17 +407,7 @@
     </div>
 </section>
 
-<!-- Video Section -->
-<div class="banner-video-four-area bg-image relative" data-background="{{ asset('learnit/assets/images/video/video-six-image.jpg') }}">
-    <div class="absolute inset-0 bg-black/40"></div>
-    <div class="banner-video__video-btn relative z-10">
-        <div class="video-btn video-pulse">
-            <a class="video-popup w-20 h-20 bg-white rounded-full flex items-center justify-center text-sky-500 hover:text-sky-600 transition-colors" href="https://www.youtube.com/watch?v=fR-37iygzsY">
-                <i class="fa-solid fa-play text-2xl ml-1"></i>
-            </a>
-        </div>
-    </div>
-</div>
+
 <section class="relative bg-gradient-to-br from-sky-50 via-white to-sky-50 pt-32 pb-32 overflow-hidden">
     <!-- Background Decorations -->
     <div class="absolute top-20 left-10 opacity-20">
