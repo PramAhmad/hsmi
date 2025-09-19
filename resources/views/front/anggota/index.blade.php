@@ -129,7 +129,7 @@
                         <i class="fa-solid fa-chevron-down text-xs"></i>
                     </button>
                     <div id="divisionDropdown" class="hidden absolute top-full mt-2 bg-white rounded-xl shadow-lg border border-gray-200 z-20 min-w-48">
-                        @foreach(['koordinator_acara', 'koordinator_humas', 'koordinator_it', 'koordinator_kreatif', 'pengurus'] as $role)
+                        @foreach([ 'pengurus'] as $role)
                         <a href="{{ route('anggota.index', ['divisi' => $role] + request()->only('search')) }}" 
                            class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 {{ request('divisi') == $role ? 'bg-blue-50 text-blue-600' : '' }}">
                             {{ $divisiList[$role] }}
