@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>HMSI Unsil - Himpunan Mahasiswa Sistem Informasi</title>
     <!-- Favicon img -->
     <link rel="shortcut icon" href="{{ asset('images/logo_hmsi.png') }}">
@@ -164,20 +165,7 @@
                     </nav>
                 </div>
                 <div class="header-two__info">
-                    <button class="search-trigger d-none d-lg-block mr-30">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_1460_4184)">
-                                <path
-                                    d="M15.8178 14.9381L11.913 11.0334C12.8836 9.86621 13.4683 8.36744 13.4683 6.73438C13.4683 3.02103 10.4474 0 6.73421 0C3.02094 0 0 3.02103 0 6.73438C0 10.4475 3.02094 13.4683 6.73421 13.4683C8.36719 13.4683 9.86605 12.8836 11.0332 11.913L14.9381 15.8178C15.0595 15.9393 15.2188 16 15.3779 16C15.5371 16 15.6963 15.9393 15.8179 15.8178C16.0608 15.5748 16.0608 15.181 15.8178 14.9381ZM1.24414 6.73438C1.24414 3.70705 3.70696 1.24414 6.73421 1.24414C9.76137 1.24414 12.2241 3.70705 12.2241 6.73438C12.2241 9.76146 9.76137 12.2241 6.73421 12.2241C3.70696 12.2241 1.24414 9.76146 1.24414 6.73438Z"
-                                    fill="#0F0D1D" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_1460_4184">
-                                    <rect width="16" height="16" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </button>
+                 
                     <div class="menu-btns d-none d-lg-flex">
                         <a class="active" href="{{ route('membership.register') }}">Gabung HMSI</a>
                     </div>
@@ -201,7 +189,6 @@
     <div class="sidebar-area offcanvas offcanvas-end" id="menubar">
         <div class="offcanvas-header">
             <a href="{{ route('home') }}" class="logo d-flex align-items-center gap-3">
-                <img src="{{ asset('images/logo_hmsi.png') }}" class="h-10 w-10 rounded-lg" alt="Logo HMSI">
                 <div>
                     <h3 class="text-white font-bold mb-0">HMSI</h3>
                     <p class="text-gray-300 text-sm mb-0">Unsil</p>
@@ -229,19 +216,14 @@
             </div>
 
             <!-- Search Section - Mobile Only -->
-            <div class="sidebar__search d-block d-lg-none">
-                <form action="{{ route('search') }}" method="GET">
-                    <input type="text" name="q" placeholder="Cari di HMSI...">
-                    <button type="submit"><i class="fa-regular fa-magnifying-glass"></i></button>
-                </form>
-            </div>
+        
 
             <!-- Contact Info -->
             <div class="sidebar__contact-info mt-30">
                 <h5 class="text-white mb-20">Info Kontak</h5>
                 <ul>
                     <li class="md:text-base text-sm"><i class="fa-solid fa-envelope"></i> <a href="mailto:hmsi@unsil.ac.id" class="md:text-base text-sm">hmsi@unsil.ac.id</a></li>
-                    <li class="md:text-base text-sm py-2"><i class="fa-solid fa-phone-volume"></i> <a href="tel:+6285913484854" class="md:text-base text-sm">+62 859 1348 4854</a></li>
+                    <li class="md:text-base text-sm py-2"><i class="fa-solid fa-phone-volume"></i> <a href="https://wa.me/6287719904732" class="md:text-base text-sm">+62 877 1990 4732</a></li>
                     <li class="md:text-base text-sm"><i class="fa-solid fa-location-dot"></i> <a href="https://maps.google.com/?q=Universitas+Siliwangi+Tasikmalaya" target="_blank" class="md:text-base text-sm">Universitas Siliwangi, Tasikmalaya</a></li>
                 </ul>
             </div>
@@ -361,11 +343,7 @@
                     <h3 class="footer-title">Newsletter HMSI</h3>
                     <p class="mb-20">Dapatkan update terbaru tentang kegiatan dan informasi penting dari HMSI Unsil.</p>
                     <div class="footer-newsletter__six">
-                        <form action="{{ route('newsletter.subscribe') }}" method="POST">
-                            @csrf
-                            <input type="email" name="email" placeholder="Alamat Email Anda" required>
-                            <button type="submit">Berlangganan</button>
-                        </form>
+                       
                     </div>
                 </div>
             </div>
