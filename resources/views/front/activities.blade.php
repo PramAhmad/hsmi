@@ -73,43 +73,7 @@
 </section>
 
 <!-- Stats Section -->
-<!-- <section class="bg-white py-16">
-    <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-4 gap-6">
-            <div class="text-center p-6 bg-sky-50 rounded-2xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div class="w-16 h-16 bg-sky-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span class="text-2xl">📅</span>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800">{{ $activities->total() ?? '0' }}</h3>
-                <p class="text-gray-600 font-medium">Total Kegiatan</p>
-            </div>
-            
-            <div class="text-center p-6 bg-blue-50 rounded-2xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span class="text-2xl">🎯</span>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800">{{ $upcomingCount ?? '5' }}</h3>
-                <p class="text-gray-600 font-medium">Akan Datang</p>
-            </div>
-            
-            <div class="text-center p-6 bg-sky-50 rounded-2xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div class="w-16 h-16 bg-sky-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span class="text-2xl">👥</span>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800">{{ $participantsCount ?? '500+' }}</h3>
-                <p class="text-gray-600 font-medium">Peserta Total</p>
-            </div>
-            
-            <div class="text-center p-6 bg-blue-50 rounded-2xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div class="w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span class="text-2xl">⭐</span>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-800">4.8</h3>
-                <p class="text-gray-600 font-medium">Rating Event</p>
-            </div>
-        </div>
-    </div>
-</section> -->
+<!--  -->
 
 <!-- Filter & Activities List -->
 <section id="activities-list" class="relative bg-gradient-to-br from-slate-50 via-white to-sky-50 pt-20 pb-32 overflow-hidden">
@@ -431,16 +395,16 @@
             </p>
             
             <div class="flex flex-wrap items-center justify-center gap-4">
-                <a href="#" 
+                <a href="https://whatsapp.com/channel/0029VbANFa4CMY0AhvOBVI1K" 
                    class="inline-flex items-center gap-3 bg-white text-sky-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
                     <i class="fa-brands fa-whatsapp text-lg"></i>
-                    Join Grup WhatsApp
+                    Masuk Saluran WhatsApp
                 </a>
                 
-                <a href="#" 
+                <a href="https://www.instagram.com/hmsiunsil?igsh=cGdjb3Uya3pheGU5" 
                    class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white px-6 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
                     <i class="fa-brands fa-instagram text-lg"></i>
-                    Follow Instagram
+                    Ikuti Instagram
                 </a>
             </div>
         </div>
