@@ -73,7 +73,7 @@
 </section>
 
 <!-- Stats Section -->
-<section class="bg-white py-16">
+<!-- <section class="bg-white py-16">
     <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-4 gap-6">
             <div class="text-center p-6 bg-sky-50 rounded-2xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
@@ -109,7 +109,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- Filter & Activities List -->
 <section id="activities-list" class="relative bg-gradient-to-br from-slate-50 via-white to-sky-50 pt-20 pb-32 overflow-hidden">
