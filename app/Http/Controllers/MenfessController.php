@@ -74,6 +74,7 @@ class MenfessController extends Controller
         ], [
             'sender_name.required' => 'Nama pengirim wajib diisi',
             'sender_name.max' => 'Nama pengirim maksimal 100 karakter',
+            'to_name.max' => 'Nama tujuan maksimal 100 karakter',
             'content.required' => 'Pesan wajib diisi',
             'content.min' => 'Pesan minimal 10 karakter',
             'content.max' => 'Pesan maksimal 1000 karakter',
@@ -109,6 +110,8 @@ class MenfessController extends Controller
             ]);
 
         } catch (\Exception $e) {
+            \Log::error('Menfess creation failed: ' . $e->getMessage());
+            
             return response()->json([
                 'success' => false,
                 'message' => 'Terjadi kesalahan saat mengirim menfess. Silakan coba lagi.'
