@@ -71,8 +71,7 @@ class HomeController extends Controller
         if ($request->has('search') && !empty($request->search)) {
             $query->where(function($q) use ($request) {
                 $q->where('title', 'like', "%{$request->search}%")
-                  ->orWhere('description', 'like', "%{$request->search}%")
-                  ->orWhere('location', 'like', "%{$request->search}%");
+                  ->orWhere('description', 'like', "%{$request->search}%");
             });
         }
 
