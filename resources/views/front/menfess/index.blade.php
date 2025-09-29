@@ -29,7 +29,6 @@
                 Cerita & Curhat 
                 <span class="text-sky-500 relative inline-block">
                     Anonim
-                    <img src="{{ asset('learnit/assets/images/shape/banner-span-shape.png') }}" alt="shape" class="absolute -bottom-2 left-0 w-full">
                 </span>
                 <div class="inline-flex items-center gap-3 ml-3">
                     <span class="text-4xl animate-bounce">💭</span>
@@ -370,7 +369,7 @@
 </section>
 
 <!-- Menfess Modal - Adjusted for Desktop -->
-<div id="menfessModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden">
+<div id="menfessModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden ">
     <div class="flex items-center justify-center min-h-screen p-4">
         <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[85vh] overflow-hidden flex flex-col">
             <!-- Modal Header -->
@@ -403,7 +402,7 @@
                             </label>
                             <input type="text" name="sender_name" placeholder="Anonim / Nama samaran" 
                                    class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all"
-                                   required>
+                                   required maxlength="100">
                         </div>
                         
                         <!-- To -->
@@ -413,7 +412,8 @@
                                 Untuk Siapa?
                             </label>
                             <input type="text" name="to_name" placeholder="Teman, crush, semua, dll..." 
-                                   class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
+                                   class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all"
+                                   maxlength="100">
                         </div>
                     </div>
                     
@@ -425,8 +425,11 @@
                         </label>
                         <textarea name="content" rows="5" placeholder="Tulis pesan, cerita, atau curhatmu di sini..." 
                                   class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all resize-none" 
-                                  required></textarea>
-                        <p class="text-xs text-gray-500 mt-2">Minimal 10 karakter, maksimal 1000 karakter</p>
+                                  required maxlength="1000" oninput="updateCharCount(this)"></textarea>
+                        <div class="flex justify-between items-center text-xs text-gray-500 mt-2">
+                            <span>Minimal 10 karakter, maksimal 1000 karakter</span>
+                            <span id="charCount" class="font-medium">0/1000</span>
+                        </div>
                     </div>
                     
                     <!-- Spotify Link -->
@@ -439,22 +442,28 @@
                                class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
                         <p class="text-xs text-gray-500 mt-2">Bagikan lagu yang menggambarkan perasaanmu</p>
                     </div>
+                    
+                    <!-- Submit Button Inside Form -->
+                    <div class="flex gap-3">
+                        <button type="button" onclick="closeMenfessModal()" 
+                                class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 px-4 rounded-lg font-semibold transition-all duration-300">
+                            Batal
+                        </button>
+                        <button type="submit"
+                                class="flex-1 bg-sky-500 hover:bg-sky-600 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg">
+                            <i class="fa-solid fa-paper-plane mr-2"></i>
+                            Kirim Menfess
+                        </button>
+                    </div>
                 </form>
             </div>
             
             <!-- Modal Footer - Fixed -->
             <div class="p-6 border-t border-gray-100 bg-gray-50 rounded-b-2xl flex-shrink-0">
-                <!-- Update Modal Footer -->
-                <div class="flex gap-3">
-                    <button type="button" onclick="closeMenfessModal()" 
-                            class="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 px-4 rounded-lg font-semibold transition-all duration-300">
-                        Batal
-                    </button>
-                    <button type="submit" form="menfessForm"
-                            class="flex-1 bg-sky-500 hover:bg-sky-600 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg">
-                        <i class="fa-solid fa-paper-plane mr-2"></i>
-                        Kirim Menfess
-                    </button>
+                <!-- Footer content removed since buttons are now in form -->
+                <div class="text-center text-gray-500 text-sm">
+                    <i class="fa-solid fa-shield-check mr-2"></i>
+                    Semua menfess akan direview sebelum dipublikasi
                 </div>
             </div>
         </div>
@@ -528,6 +537,13 @@ function closeMenfessModal() {
         form.reset();
     }
     clearFormErrors();
+    
+    // Reset character counter
+    const charCount = document.getElementById('charCount');
+    if (charCount) {
+        charCount.textContent = '0/1000';
+        charCount.className = 'font-medium text-gray-500';
+    }
 }
 
 function clearFormErrors() {
@@ -537,6 +553,17 @@ function clearFormErrors() {
         el.classList.remove('border-red-500');
         el.classList.add('border-gray-200');
     });
+}
+
+function updateCharCount(textarea) {
+    const charCount = document.getElementById('charCount');
+    if (charCount) {
+        const length = textarea.value.length;
+        charCount.textContent = `${length}/1000`;
+        charCount.className = length > 1000 ? 'font-medium text-red-500' : 
+                             length > 900 ? 'font-medium text-yellow-500' : 
+                             'font-medium text-gray-500';
+    }
 }
 
 function showFormError(field, message) {
@@ -705,7 +732,7 @@ function showMenfessDetail(id) {
                 }
                 const likeCount = document.getElementById('likeCount');
                 if (likeCount) {
-                    likeCount.textContent = Math.floor(Math.random() * 50); // Random for demo
+                    likeCount.textContent = Math.floor(Math.random() * 50);
                 }
             }, 500);
         }
@@ -728,7 +755,6 @@ function shareMenfess(id) {
             url: window.location.origin + '/sifess#' + id
         });
     } else {
-        // Fallback: copy to clipboard
         navigator.clipboard.writeText(window.location.origin + '/sifess#' + id);
         showToast('Link berhasil disalin!', 'success');
     }
@@ -736,7 +762,6 @@ function shareMenfess(id) {
 
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function() {
-    // Handle form submission
     const menfessForm = document.getElementById('menfessForm');
     if (menfessForm) {
         menfessForm.addEventListener('submit', function(e) {
@@ -745,9 +770,30 @@ document.addEventListener('DOMContentLoaded', function() {
             // Clear previous errors
             clearFormErrors();
             
+            // Basic client-side validation
+            const content = this.querySelector('textarea[name="content"]').value.trim();
+            const senderName = this.querySelector('input[name="sender_name"]').value.trim();
+            
+            if (!senderName) {
+                showFormError('sender_name', 'Nama pengirim wajib diisi');
+                return;
+            }
+            
+            if (content.length < 10) {
+                showFormError('content', 'Pesan minimal 10 karakter');
+                return;
+            }
+            
+            if (content.length > 1000) {
+                showFormError('content', 'Pesan maksimal 1000 karakter');
+                return;
+            }
+            
             // Add loading state
             const submitBtn = this.querySelector('button[type="submit"]');
-            if (!submitBtn) return;
+            if (!submitBtn) {
+                return;
+            }
             
             const originalText = submitBtn.innerHTML;
             submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i>Mengirim...';
@@ -759,19 +805,28 @@ document.addEventListener('DOMContentLoaded', function() {
             // Send AJAX request
             fetch('{{ route("sifess.store") }}', {
                 method: 'POST',
-                body: formData,
-                headers: {
-                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-                }
+                body: formData
             })
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
                 if (data.success) {
                     showToast(data.message, 'success');
                     closeMenfessModal();
+                    
+                    setTimeout(() => {
+                        if (data.message.includes('disetujui')) {
+                            // The menfess will appear after admin approval
+                        } else {
+                            window.location.reload();
+                        }
+                    }, 2000);
                 } else {
                     if (data.errors) {
-                        // Show validation errors
                         Object.keys(data.errors).forEach(field => {
                             showFormError(field, data.errors[field][0]);
                         });
@@ -781,18 +836,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             })
             .catch(error => {
-                console.error('Error:', error);
-                showToast('Terjadi kesalahan jaringan', 'error');
+                if (error.name === 'TypeError' && error.message.includes('fetch')) {
+                    showToast('Tidak dapat terhubung ke server. Periksa koneksi internet Anda.', 'error');
+                } else if (error.message.includes('HTTP error')) {
+                    showToast('Server error: ' + error.message, 'error');
+                } else {
+                    showToast('Terjadi kesalahan jaringan. Silakan coba lagi.', 'error');
+                }
             })
             .finally(() => {
-                // Reset button
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
             });
         });
     }
     
-    // Close modals when clicking outside
     const modals = ['menfessModal', 'detailMenfessModal'];
     modals.forEach(modalId => {
         const modal = document.getElementById(modalId);
@@ -828,14 +886,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 const currentCount = parseInt(count.textContent);
                 
                 if (heart.classList.contains('fa-regular')) {
-                    // Like
                     heart.classList.remove('fa-regular');
                     heart.classList.add('fa-solid');
                     likeBtn.classList.remove('text-gray-500');
                     likeBtn.classList.add('text-red-500');
                     count.textContent = currentCount + 1;
                 } else {
-                    // Unlike
                     heart.classList.remove('fa-solid');
                     heart.classList.add('fa-regular');
                     likeBtn.classList.remove('text-red-500');
