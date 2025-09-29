@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="relative bg-gradient-to-br from-blue-50 via-white to-sky-50 pt-32 pb-16 overflow-hidden">
+<section class="relative bg-gradient-to-br from-blue-50 via-white to-sky-50 pt-32 mt-20 pb-16 overflow-hidden">
     <!-- Background Decorations -->
     <div class="absolute top-10 left-10 opacity-20">
         <div class="w-32 h-32 bg-blue-500 rounded-full animate-pulse"></div>
@@ -123,7 +123,7 @@
                 @endforeach
                 
                 <!-- Dropdown for other divisions -->
-                <div class="relative">
+                <!-- <div class="relative">
                     <button type="button" class="px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all flex items-center gap-2" onclick="toggleDropdown()">
                         Divisi Lain
                         <i class="fa-solid fa-chevron-down text-xs"></i>
@@ -136,7 +136,7 @@
                         </a>
                         @endforeach
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
