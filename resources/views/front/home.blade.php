@@ -34,7 +34,7 @@
         </div>
     </div>
     <div class="banner-six__image">
-        <img class="w-100 animation__arryLeftRight" src="{{ asset('images/hmsi.png') }}" alt="HMSI Unsil">
+        <img class="w-100 rounded-3xl animation__arryLeftRight" src="{{ asset('images/hmsi.png') }}" alt="HMSI Unsil">
         <img class="shape1 animation__arryUpDown" src="{{ asset('learnit/assets/images/shape/banner-six-image-shape1.png') }}" alt="image">
         <img class="shape3" src="{{ asset('learnit/assets/images/shape/banner-six-image-shape3.png') }}" alt="image">
     </div>
