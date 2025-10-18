@@ -27,7 +27,7 @@
             <p class="mt-8 text-lg text-gray-200 leading-relaxed max-w-2xl wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
                 Wadah kreativitas dan inovasi mahasiswa Sistem Informasi Universitas Siliwangi untuk berkembang dan berkarya dalam dunia teknologi informasi.
             </p>
-            <a href="activities" class="inline-flex items-center gap-3 bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 mt-12 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+            <a href="activities" class="inline-flex items-center gap-3 bg-sky-500 hover:bg-sky-600 text-white md:px-8 md:py-4 px-4 py-2 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 mt-12 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                 Jelajahi Kegiatan
                 <i class="fa-light fa-arrow-right-long text-xl"></i>
             </a>
