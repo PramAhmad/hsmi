@@ -49,21 +49,21 @@
             <!-- Action Buttons -->
             <div class="flex flex-wrap items-center justify-center gap-4 mb-12 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
                 <a href="#about-section" onclick="scrollToNextSection()" class="group inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 to-blue-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
-                    <span>Kenali Kami</span>
+                    <span class="text-white">Kenali Kami</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                     </svg>
                 </a>
                 
-                <a href="#" class="inline-flex items-center gap-2 bg-white text-sky-600 border border-sky-100 px-6 py-3 rounded-xl font-semibold hover:bg-sky-50 transition-all duration-300 shadow-md hover:shadow-lg">
+                <!-- <a href="#" class="inline-flex items-center gap-2 bg-white text-sky-600 border border-sky-100 px-6 py-3 rounded-xl font-semibold hover:bg-sky-50 transition-all duration-300 shadow-md hover:shadow-lg">
                     <span class="text-xl">🔍</span>
                     <span>Lihat Kegiatan</span>
-                </a>
+                </a> -->
             </div>
         </div>
 
         <!-- Stats Cards -->
-        <div class="grid md:grid-cols-4 gap-6 wow fadeInUp" data-wow-delay="800ms" data-wow-duration="1500ms">
+        <!-- <div class="grid md:grid-cols-4 gap-6 wow fadeInUp" data-wow-delay="800ms" data-wow-duration="1500ms">
             <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 hover:rotate-1 relative overflow-hidden group">
                 <div class="absolute inset-0 bg-gradient-to-r from-sky-500/10 to-blue-500/10 transform scale-0 group-hover:scale-100 transition-transform origin-bottom-left rounded-2xl"></div>
                 <div class="text-center relative z-10">
@@ -107,7 +107,7 @@
                     <p class="text-gray-600 text-sm font-medium">Program Unggulan</p>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <!-- Wave Shape Divider -->
@@ -167,7 +167,7 @@
                 </p>
                 
                 <p class="text-gray-600 text-lg mb-8 leading-relaxed">
-                    Didirikan pada tahun 2010, HMSI telah berperan aktif dalam membangun ekosistem teknologi informasi di lingkungan kampus dan masyarakat sekitar melalui berbagai kegiatan pengembangan keilmuan, pengabdian masyarakat, dan kewirausahaan.
+                    Didirikan pada tahun 2022, HMSI telah berperan aktif dalam membangun ekosistem teknologi informasi di lingkungan kampus dan masyarakat sekitar melalui berbagai kegiatan pengembangan keilmuan, pengabdian masyarakat, dan kewirausahaan.
                 </p>
                 
                 <!-- Interactive Card Grid -->

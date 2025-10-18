@@ -14,13 +14,9 @@ class MenfessController extends Controller
     public function index(Request $request)
     {
         $query = Menfess::approved()->with('tags');
-
-        // Search filter
         if ($request->has('search') && !empty($request->search)) {
             $query->search($request->search);
         }
-
-        // Music filter
         if ($request->has('music') && !empty($request->music)) {
             if ($request->music === 'with_music') {
                 $query->withMusic();
@@ -28,27 +24,22 @@ class MenfessController extends Controller
                 $query->withoutMusic();
             }
         }
-
-        // Sort
         $sort = $request->get('sort', 'latest');
         switch ($sort) {
             case 'oldest':
                 $query->oldest();
                 break;
             case 'popular':
-                $query->orderBy('created_at', 'desc'); // Placeholder for actual like count
+                $query->orderBy('created_at', 'desc'); 
                 break;
             default:
                 $query->latest();
                 break;
         }
-
         $menfess = $query->paginate(12);
-
-        // Stats for dashboard
         $totalMenfess = Menfess::approved()->count();
         $withMusic = Menfess::approved()->withMusic()->count();
-        $totalLikes = 0; // Placeholder - implement when like system is ready
+        $totalLikes = 0; 
 
         return view('front.menfess.index', compact('menfess', 'totalMenfess', 'withMusic', 'totalLikes'));
     }
@@ -96,7 +87,7 @@ class MenfessController extends Controller
                 'content' => $request->content,
                 'spotify_link' => $request->spotify_link,
                 'status' => 'pending',
-                'user_id' => auth()->id(), // If user is logged in
+                'user_id' => auth()->id(),
             ]);
 
             return response()->json([

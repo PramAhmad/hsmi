@@ -3161,8 +3161,14 @@ img {
   overflow: hidden;
   position: relative;
   z-index: 1;
-  padding-top: 360px;
+ padding-top: 360px; 
   padding-bottom: 175px;
+}
+/* in phone no padding top */
+@media (max-width: 575px) {
+  .banner-six-area {
+    padding-top: 185px;
+  }
 }
 .banner-six__shape1 {
   position: absolute;

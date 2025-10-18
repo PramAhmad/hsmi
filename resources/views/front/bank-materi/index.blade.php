@@ -435,7 +435,7 @@
 </section>
 
 <!-- Quick Categories -->
-<section class="bg-white py-16">
+<!-- <section class="bg-white py-16">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
             <h3 class="text-2xl font-bold text-gray-800 mb-4">Kategori Populer</h3>
@@ -468,7 +468,7 @@
             @endforeach
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- CTA Section -->
 <section class="relative bg-sky-500 pt-20 pb-20 overflow-hidden">
@@ -496,11 +496,11 @@
                     Upload Materi
                 </a>
                 
-                <a href="#" 
+                <!-- <a href="#" 
                    class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white px-6 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
                     <i class="fa-brands fa-discord text-lg"></i>
                     Join Discord
-                </a>
+                </a> -->
             </div>
         </div>
     </div>

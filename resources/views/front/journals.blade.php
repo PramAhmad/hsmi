@@ -59,10 +59,10 @@
                     Jelajahi Jurnal
                 </a>
                 
-                <a href="#" class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm text-slate-900 px-6 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
+                <!-- <a href="#" class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm text-slate-900 px-6 py-4 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
                     <i class="fa-solid fa-bookmark text-lg"></i>
                     Reading List
-                </a>
+                </a> -->
             </div>
         </div>
     </div>
@@ -520,7 +520,7 @@
 </section>
 
 <!-- Quick Categories -->
-<section class="bg-white py-16">
+<!-- <section class="bg-white py-16">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
             <h3 class="text-2xl font-bold text-gray-800 mb-4">Kategori Populer</h3>
@@ -553,7 +553,7 @@
             @endforeach
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- CTA Section -->
 <section class="relative bg-sky-500 pt-20 pb-20 overflow-hidden">
@@ -574,7 +574,7 @@
                 Punya jurnal berkualitas yang layak dibaca teman-teman? Sharing is caring - rekomendasikan sekarang!
             </p>
             
-            <div class="flex flex-wrap items-center justify-center gap-4">
+            <!-- <div class="flex flex-wrap items-center justify-center gap-4">
                 <a href="#" 
                    class="inline-flex items-center gap-3 bg-white text-sky-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
                     <i class="fa-solid fa-heart text-lg"></i>
@@ -586,7 +586,7 @@
                     <i class="fa-brands fa-whatsapp text-lg"></i>
                     Share di Grup
                 </a>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>

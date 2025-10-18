@@ -100,7 +100,8 @@
                     <div class="wow fadeInUp" data-wow-delay="300ms">
                         <div class="bg-white rounded-xl shadow-lg p-2 border border-sky-100">
                             <div class="rounded-lg overflow-hidden border border-sky-200">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.3!2d108.2194!3d-7.3267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f50c3cccc5c35%3A0x5c6e3b79f3a8e12f!2sUniversitas%20Siliwangi!5e0!3m2!1sid!2sid!4v1699520000000!5m2!1sid!2sid" 
+                         
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.7551967858185!2d108.24878187407859!3d-7.381308872653564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f5817bf80530b%3A0x170d075986c8ed42!2sSiliwangi%20University%20-%20Campus%202!5e0!3m2!1sen!2sid!4v1760781229432!5m2!1sen!2sid" 
                                         width="100%" 
                                         height="200" 
                                         style="border:0;" 
@@ -165,13 +166,8 @@
                                     <h4 class="text-lg font-semibold text-gray-800 mb-2">Telepon</h4>
                                     <div class="space-y-1">
                                         <p class="text-sm">
-                                            <a href="tel:+6285913484854" class="text-sky-600 hover:text-sky-700 transition-colors">
-                                                +62 859 1348 4854
-                                            </a>
-                                        </p>
-                                        <p class="text-sm">
-                                            <a href="tel:+6285913484855" class="text-sky-600 hover:text-sky-700 transition-colors">
-                                                +62 859 1348 4855
+                                            <a href="https://wa.me/6287719904732" class="text-sky-600 hover:text-sky-700 transition-colors">
+                                                +62 877 1990 4732
                                             </a>
                                         </p>
                                     </div>

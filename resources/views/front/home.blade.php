@@ -880,7 +880,7 @@
                     <div class="flex items-center justify-center gap-3 mb-4">
                         <span class="text-3xl animate-bounce">🤝</span>
                         <h4 class="text-2xl font-bold text-white">No one nothing can?</h4>
-                        <span class="text-3xl animate-bounce" style="animation-delay: 0.5s;">🚀</span>
+                        <span class="text-3xl animate-bounce">🚀</span>
                     </div>
                     
                     <p class="text-sky-100 mb-6 max-w-md mx-auto">
@@ -895,11 +895,7 @@
                             <i class="fa-solid fa-arrow-right text-lg"></i>
                         </a>
                         
-                        <a href="" 
-                           class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white px-6 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
-                            <span class="text-xl">💬</span>
-                            Chat Sama Kita
-                        </a>
+                      
                     </div>
                 </div>
 
@@ -1244,11 +1240,7 @@
                             <i class="fa-solid fa-arrow-right text-lg"></i>
                         </a>
                         
-                        <a href="#" 
-                           class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white px-6 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
-                            <span class="text-xl">🔔</span>
-                            Subscribe Update
-                        </a>
+                    
                     </div>
                 </div>
 

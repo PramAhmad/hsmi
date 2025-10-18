@@ -474,15 +474,10 @@
             </p>
             
             <div class="flex flex-wrap gap-4 justify-center wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-                <a href="#" class="group px-8 py-4 bg-white text-sky-500 font-bold rounded-xl hover:bg-sky-50 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2">
-                    <span>Bergabung Sekarang</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                </a>
+            
                 
-                <a href="#" class="group px-8 py-4 border-2 border-white text-white font-bold rounded-xl hover:bg-white/10 transition-all duration-300 flex items-center gap-2">
-                    <span>Kontak Kami</span>
+                <a href="https://wa.me/6287719904732" class="group px-8 py-4 border-2 border-white text-white font-bold rounded-xl hover:bg-white/10 transition-all duration-300 flex items-center gap-2">
+                    <span class="text-white">Kontak Kami</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                     </svg>
