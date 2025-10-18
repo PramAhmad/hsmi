@@ -49,9 +49,9 @@
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
                 <div class="about-five__image">
-                    <img class="shape slide-up-down" src="{{ asset('learnit/assets/images/shape/about-five-shape.png') }}" alt="image">
-                    <img class="w-100" src="{{ asset('images/SC.png') }}" alt="image">
-                    <img class="w-100 bg-shape" src="{{ asset('learnit/assets/images/bg/about-five-image-bg.png') }}" alt="shape">
+                    <img class="shape slide-up-down rounded-3xl" src="{{ asset('learnit/assets/images/shape/about-five-shape.png') }}" alt="image">
+                    <img class="w-100 rounded-3xl" src="{{ asset('images/SC.png') }}" alt="image">
+                    <img class="w-100 bg-shape rounded-3xl" src="{{ asset('learnit/assets/images/bg/about-five-image-bg.png') }}" alt="shape">
                 </div>
             </div>
             <div class="col-lg-6">

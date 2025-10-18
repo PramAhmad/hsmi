@@ -167,7 +167,7 @@
                 </p>
                 
                 <p class="text-gray-600 text-lg mb-8 leading-relaxed">
-                    Didirikan pada tahun 2022, HMSI telah berperan aktif dalam membangun ekosistem teknologi informasi di lingkungan kampus dan masyarakat sekitar melalui berbagai kegiatan pengembangan keilmuan, pengabdian masyarakat, dan kewirausahaan.
+                    Didirikan pada tahun 2021, HMSI telah berperan aktif dalam membangun ekosistem teknologi informasi di lingkungan kampus dan masyarakat sekitar melalui berbagai kegiatan pengembangan keilmuan, pengabdian masyarakat, dan kewirausahaan.
                 </p>
                 
                 <!-- Interactive Card Grid -->
@@ -343,7 +343,7 @@
                 <p class="text-sky-100 text-lg mb-6 max-w-lg mx-auto lg:mx-0 wow fadeInLeft" data-wow-delay="400ms" data-wow-duration="1500ms">
                     Mari jadikan masa perkuliahan lebih bermakna dengan mengembangkan potensi, membangun jaringan, dan memberikan kontribusi positif bersama HMSI Unsil!
                 </p>
-                <div class="flex flex-wrap gap-4 justify-center lg:justify-start wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
+               <div class="flex flex-wrap gap-4 justify-center wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
                     <a href="/membership/register" class="group px-8 py-4 bg-white text-sky-500 font-bold rounded-xl hover:bg-sky-50 transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden">
                         <span class="relative z-10 text-black">Daftar Sekarang</span>
                         <span class="absolute inset-0 w-0 bg-gradient-to-r from-sky-100 to-white transition-all duration-300 group-hover:w-full -z-0"></span>
