@@ -39,7 +39,7 @@
             
             <!-- Message -->
             <p class="text-gray-600 text-lg mb-6">
-                Mohon maaf, pendaftaran anggota baru HMSI Unsil belum dibuka saat ini. 
+                Mohon maaf, pendaftaran anggota baru HMSI UNSIL belum dibuka saat ini. 
                 Kami akan segera membuka pendaftaran pada periode selanjutnya. 
                 Pantau terus informasi terbaru dari kami!
             </p>

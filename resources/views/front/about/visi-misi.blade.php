@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- Hero Section -->
-<section class="relative mt-20 bg-gradient-to-br from-blue-50 via-white to-sky-50 pt-32 pb-20 overflow-hidden">
+<section class="relative bg-gradient-to-br from-blue-50 via-white to-sky-50 md:pt-48 pt-36 pb-28 overflow-hidden">
     <!-- Background Decorations -->
     <div class="absolute top-10 left-10 opacity-20">
         <div class="w-40 h-40 bg-sky-500 rounded-full animate-pulse-slow"></div>
@@ -15,7 +15,7 @@
         <div class="w-48 h-48 bg-sky-300 rounded-full animate-blob"></div>
     </div>
 
-    <div class="container mx-auto px-4 relative z-10">
+    <div class="container mx-auto px-4 relative z-10" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <!-- Header Section -->
         <div class="text-center mb-16">
             <div class="flex items-center justify-center gap-3 mb-4 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
@@ -33,7 +33,7 @@
                     Visi & Misi
                     <img src="{{ asset('learnit/assets/images/shape/header-shape.png') }}" alt="shape" class="absolute -bottom-2 left-0 w-full" onerror="this.style.display='none'">
                 </span> 
-                HMSI Unsil
+                HMSI UNSIL
                 <div class="inline-flex items-center gap-2 ml-2">
                     <span class="text-3xl animate-bounce">🧭</span>
                     <span class="text-3xl animate-pulse">🌟</span>
@@ -56,79 +56,75 @@
 </section>
 
 <!-- Vision Section -->
-<section class="py-20 bg-white relative">
+<section class="pt-16 md:pb-16 bg-white relative">
     <!-- Fun background pattern -->
     <div class="absolute inset-0 opacity-5 pattern-dots"></div>
     
-    <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <div class="container mx-auto px-4" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <!-- Vision Content Column -->
-            <div class="wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+            <div class="order-2 lg:order-1 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                 <div class="flex items-center gap-3 mb-6">
                     <div class="w-16 h-1 bg-sky-500 rounded-full"></div>
                     <h6 class="text-sky-500 font-semibold uppercase tracking-wider">Visi Kami</h6>
                 </div>
-                
+
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
                     Menjadi <span class="text-sky-500">Penggerak Utama</span> Ekosistem Teknologi Informasi
                 </h2>
-                
+
                 <div class="bg-gradient-to-r from-sky-500 to-blue-500 p-6 rounded-xl text-white mb-8 shadow-lg relative overflow-hidden group">
-                    <!-- Background Pattern -->
                     <div class="absolute inset-0 bg-white opacity-10 pattern-zigzag"></div>
-                    
-                    <!-- Decorative Elements -->
                     <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-white/10 rounded-full"></div>
                     <div class="absolute top-4 right-8 text-white/30 text-6xl opacity-50 group-hover:opacity-100 transition-opacity duration-300">
                         <i class="fa-solid fa-lightbulb"></i>
                     </div>
-                    
+
                     <div class="relative z-10">
                         <p class="text-lg font-medium leading-relaxed mb-4">
                             "Menjadi himpunan mahasiswa terdepan yang menghasilkan insan sistem informasi unggul yang berjiwa teknologi, berwawasan global, serta berkontribusi aktif dalam membangun ekosistem teknologi informasi di Indonesia."
                         </p>
-                        
                         <div class="text-right">
-                            <span class="italic text-white/80">— HMSI Unsil</span>
+                            <span class="italic text-white/80">— HMSI UNSIL</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Key Vision Points -->
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="bg-sky-50 p-4 rounded-xl hover:bg-sky-100 transition-all duration-300 hover:shadow-md group">
                         <div class="w-12 h-12 bg-white rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:bg-sky-500 transition-colors duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-500 group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-500 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                             </svg>
                         </div>
                         <h4 class="text-gray-800 font-semibold mb-1">Unggul</h4>
                         <p class="text-gray-600 text-sm">Menjadi yang terdepan dalam pengembangan teknologi dan inovasi</p>
                     </div>
-                    
+
                     <div class="bg-sky-50 p-4 rounded-xl hover:bg-sky-100 transition-all duration-300 hover:shadow-md group">
                         <div class="w-12 h-12 bg-white rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:bg-sky-500 transition-colors duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-500 group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-500 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                             </svg>
                         </div>
                         <h4 class="text-gray-800 font-semibold mb-1">Global</h4>
                         <p class="text-gray-600 text-sm">Berwawasan internasional dengan standar kualitas dunia</p>
                     </div>
-                    
+
                     <div class="bg-sky-50 p-4 rounded-xl hover:bg-sky-100 transition-all duration-300 hover:shadow-md group">
                         <div class="w-12 h-12 bg-white rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:bg-sky-500 transition-colors duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-500 group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-500 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                             </svg>
                         </div>
                         <h4 class="text-gray-800 font-semibold mb-1">Kolaboratif</h4>
                         <p class="text-gray-600 text-sm">Membangun kerjasama yang luas dengan berbagai pihak</p>
                     </div>
-                    
+
                     <div class="bg-sky-50 p-4 rounded-xl hover:bg-sky-100 transition-all duration-300 hover:shadow-md group">
                         <div class="w-12 h-12 bg-white rounded-lg shadow-md flex items-center justify-center mb-3 group-hover:bg-sky-500 transition-colors duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-500 group-hover:text-white transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-500 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                             </svg>
                         </div>
@@ -137,15 +133,14 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Vision Illustration Column -->
-            <div class="relative wow fadeInRight" data-wow-delay="400ms" data-wow-duration="1500ms">
+            <div class="order-1 lg:order-2 relative wow fadeInRight" data-wow-delay="400ms" data-wow-duration="1500ms">
                 <div class="relative z-10 group perspective">
-                    <img src="{{ asset('images/poscast.jpg') }}" alt="Visi HMSI Unsil" 
-                         class="w-full rounded-2xl shadow-xl transform transition-transform duration-500 group-hover:rotate-y-6" 
-                         onerror="this.src='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80'">
-                    
-                    <!-- Hover Overlay -->
+                    <img src="{{ asset('images/poscast.jpg') }}" alt="Visi HMSI Unsil"
+                        class="w-full rounded-2xl shadow-xl transform transition-transform duration-500 group-hover:rotate-y-6"
+                        onerror="this.src='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1471&q=80'">
+
                     <div class="absolute inset-0 bg-gradient-to-r from-sky-500/70 to-blue-500/70 flex items-center justify-center rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div class="text-white text-center p-6">
                             <h4 class="text-xl font-bold mb-3">Terinspirasi dari Visi Kami</h4>
@@ -153,10 +148,11 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Decorative Elements -->
                 <div class="absolute -bottom-6 -right-6 w-40 h-40 bg-sky-500 rounded-2xl -z-10 animate-pulse-slow"></div>
                 <div class="absolute -top-6 -left-6 w-40 h-40 bg-blue-500 rounded-2xl -z-10 animate-pulse-slow animation-delay-2"></div>
-                
-                <!-- Decorative Elements -->
+
                 <div class="absolute top-1/2 -right-8 animate-float">
                     <div class="bg-white rounded-full shadow-xl p-3">
                         <div class="bg-gradient-to-r from-sky-500 to-blue-500 rounded-full w-12 h-12 flex items-center justify-center">
@@ -164,7 +160,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="absolute -bottom-4 left-1/4 animate-float animation-delay-4">
                     <div class="bg-white rounded-full shadow-xl p-3">
                         <div class="bg-gradient-to-r from-sky-500 to-blue-500 rounded-full w-12 h-12 flex items-center justify-center">
@@ -178,12 +174,12 @@
 </section>
 
 <!-- Mission Section -->
-<section class="py-20 bg-gradient-to-br from-sky-50 via-white to-blue-50 relative overflow-hidden">
+<section class="pt-16 pb-16 bg-gradient-to-br from-sky-50 via-white to-blue-50 relative overflow-hidden">
     <!-- Fun Background Elements -->
     <div class="absolute top-0 right-0 w-64 h-64 bg-sky-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
     <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
     
-    <div class="container mx-auto px-4 relative z-10">
+    <div class="container mx-auto px-4 relative z-10 max-w-7xl">
         <div class="text-center max-w-3xl mx-auto mb-16 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
             <div class="flex items-center justify-center gap-3 mb-4">
                 <div class="w-8 h-1 bg-sky-500 rounded-full"></div>
@@ -456,14 +452,14 @@
 </section>
 
 <!-- Call to Action -->
-<section class="py-16 bg-gradient-to-r from-sky-500 to-blue-600 relative overflow-hidden">
+<section class="pt-16 pb-16 bg-gradient-to-r from-sky-500 to-blue-600 relative overflow-hidden">
     <!-- Decorative Elements -->
     <div class="absolute inset-0">
         <div class="absolute top-10 left-10 w-40 h-40 bg-white/10 rounded-full mix-blend-overlay blur-3xl animate-blob"></div>
         <div class="absolute bottom-10 right-10 w-60 h-60 bg-white/10 rounded-full mix-blend-overlay blur-3xl animate-blob animation-delay-3"></div>
     </div>
     
-    <div class="container mx-auto px-4 relative z-10">
+    <div class="container mx-auto px-4 relative z-10" style="transform: scale(0.95); transform-origin: center; width: 100%; margin: 0 auto;">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                 Jadilah Bagian dari Visi & Misi Kami

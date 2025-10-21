@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="banner-six-area bg-image paralax__animation" data-background="{{ asset('learnit/assets/images/bg/banner-six-bg.jpg') }}">
+<section class="banner-six-area bg-image paralax__animation md:pt-48 pt-36 pb-28" data-background="{{ asset('learnit/assets/images/bg/banner-six-bg.jpg') }}">
     <div class="banner-six__shape1" data-depth="0.03">
         <img class="animation__sunMove" src="{{ asset('learnit/assets/images/shape/banner-six-shape1.png') }}" alt="image">
     </div>
@@ -13,7 +13,7 @@
         <img class="animation__arryUpDown" src="{{ asset('learnit/assets/images/shape/banner-six-shape3.png') }}" alt="image">
     </div>
     
-    <div class="container">
+    <div class="container" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <div class="text-center">
             <div class="flex items-center justify-center gap-3 mb-6 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                 <div class="w-12 h-12 bg-sky-500 rounded-full flex items-center justify-center animate-bounce">
@@ -70,8 +70,8 @@
 </section>
 
 <!-- Stats Section -->
-<section class="bg-white py-16">
-    <div class="container mx-auto px-4">
+<section class="bg-white pt-16 md:pb-16">
+    <div class="container mx-auto px-4" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div class="text-center p-6 bg-sky-50 rounded-2xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <div class="w-16 h-16 bg-sky-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -118,7 +118,7 @@
         <div class="w-32 h-32 bg-blue-400 rounded-full animate-bounce"></div>
     </div>
     
-    <div class="container mx-auto px-4 relative z-10">
+    <div class="container mx-auto px-4 relative z-10" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <!-- Filter Section -->
         <div class="bg-white rounded-2xl shadow-lg p-6 mb-12 wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
             <div class="flex items-center gap-4 mb-6">
@@ -435,7 +435,7 @@
 </section>
 
 <!-- Quick Categories -->
-<!-- <section class="bg-white py-16">
+<!-- <section class="bg-white pt-16 md:pb-16">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
             <h3 class="text-2xl font-bold text-gray-800 mb-4">Kategori Populer</h3>
@@ -471,17 +471,17 @@
 </section> -->
 
 <!-- CTA Section -->
-<section class="relative bg-sky-500 pt-20 pb-20 overflow-hidden">
+<section class="relative bg-sky-500 pt-16 md:pb-16 overflow-hidden">
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-10">
         <div class="w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"60\" height=\"60\" viewBox=\"0 0 60 60\"><g fill=\"%23ffffff\" fill-opacity=\"0.4\"><circle cx=\"30\" cy=\"30\" r=\"2\"/></g></svg>')"></div>
     </div>
     
-    <div class="container mx-auto px-4 relative z-10">
-        <div class="text-center text-white">
+    <div class="container mx-auto px-4 relative z-10" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
+        <div class="text-center">
             <div class="flex items-center justify-center gap-3 mb-6">
                 <span class="text-3xl animate-bounce">🚀</span>
-                <h3 class="text-3xl font-bold">Bergabung dengan Komunitas Belajar!</h3>
+                <h3 class="text-3xl font-bold text-white">Bergabung dengan Komunitas Belajar!</h3>
                 <span class="text-3xl animate-bounce" style="animation-delay: 0.5s;">📚</span>
             </div>
             

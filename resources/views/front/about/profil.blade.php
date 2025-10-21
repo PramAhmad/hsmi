@@ -4,7 +4,7 @@
 
 
 <!-- Hero Section -->
-<section class="relative bg-gradient-to-br from-blue-50 via-white to-sky-50 pt-48 pb-28 overflow-hidden">
+<section class="relative bg-gradient-to-br from-blue-50 via-white to-sky-50 md:pt-48 pt-36 pb-28  overflow-hidden">
     <!-- Background Decorations -->
     <div class="absolute top-10 left-10 opacity-20">
         <div class="w-40 h-40 bg-sky-500 rounded-full animate-pulse-slow"></div>
@@ -16,7 +16,7 @@
         <div class="w-48 h-48 bg-sky-300 rounded-full animate-blob"></div>
     </div>
 
-    <div class="container mx-auto px-4 relative z-10">
+    <div class="container mx-auto px-4 relative z-10" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <!-- Header Section -->
         <div class="text-center mb-16">
             <div class="flex items-center justify-center gap-3 mb-4 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
@@ -31,7 +31,7 @@
             
             <h1 class="text-5xl font-bold text-gray-800 leading-tight mb-6 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                 <span class="text-sky-500 relative inline-block">
-                    HMSI Unsil
+                    HMSI UNSIL
                     <img src="{{ asset('learnit/assets/images/shape/header-shape.png') }}" alt="shape" class="absolute -bottom-2 left-0 w-full" onerror="this.style.display='none'">
                 </span> 
                 Tasikmalaya
@@ -119,11 +119,11 @@
 </section>
 
 <!-- About HMSI Section -->
-<section id="about-section" class="py-20 bg-white relative">
+<section id="about-section" class="pt-16 md:pb-16 bg-white relative">
     <!-- Fun background pattern -->
     <div class="absolute inset-0 opacity-5 pattern-dots"></div>
     
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <!-- Image Column with Interactive Elements -->
             <div class="relative wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -159,7 +159,7 @@
                 </div>
                 
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                    HMSI Unsil <span class="text-sky-500">Mengembangkan Teknologi</span> dan Membangun Komunitas
+                    HMSI UNSIL <span class="text-sky-500">Mengembangkan Teknologi</span> dan Membangun Komunitas
                 </h2>
                 
                 <p class="text-gray-600 text-lg mb-6 leading-relaxed">
@@ -170,9 +170,10 @@
                     Didirikan pada tahun 2021, HMSI telah berperan aktif dalam membangun ekosistem teknologi informasi di lingkungan kampus dan masyarakat sekitar melalui berbagai kegiatan pengembangan keilmuan, pengabdian masyarakat, dan kewirausahaan.
                 </p>
                 
-                <!-- Interactive Card Grid -->
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="flex items-start gap-3 hover:bg-sky-50 p-3 rounded-xl transition-colors group">
+                <!-- Interactive Card Grid (Responsive 1→2 columns) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Card Item -->
+                    <div class="flex items-start gap-3 hover:bg-sky-50 p-4 rounded-xl transition-colors group">
                         <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-sky-500 group-hover:text-white transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-500 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -180,11 +181,12 @@
                         </div>
                         <div>
                             <h4 class="text-gray-800 font-semibold text-lg mb-1 group-hover:text-sky-500 transition-colors">Profesionalitas</h4>
-                            <p class="text-gray-600">Bekerja dengan standar tinggi dan akuntabilitas</p>
+                            <p class="text-gray-600 leading-relaxed">Bekerja dengan standar tinggi dan akuntabilitas</p>
                         </div>
                     </div>
-                    
-                    <div class="flex items-start gap-3 hover:bg-sky-50 p-3 rounded-xl transition-colors group">
+
+                    <!-- Card Item -->
+                    <div class="flex items-start gap-3 hover:bg-sky-50 p-4 rounded-xl transition-colors group">
                         <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-sky-500 group-hover:text-white transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-500 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -192,11 +194,12 @@
                         </div>
                         <div>
                             <h4 class="text-gray-800 font-semibold text-lg mb-1 group-hover:text-sky-500 transition-colors">Kolaboratif</h4>
-                            <p class="text-gray-600">Membangun sinergi untuk mencapai tujuan bersama</p>
+                            <p class="text-gray-600 leading-relaxed">Membangun sinergi untuk mencapai tujuan bersama</p>
                         </div>
                     </div>
-                    
-                    <div class="flex items-start gap-3 hover:bg-sky-50 p-3 rounded-xl transition-colors group">
+
+                    <!-- Card Item -->
+                    <div class="flex items-start gap-3 hover:bg-sky-50 p-4 rounded-xl transition-colors group">
                         <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-sky-500 group-hover:text-white transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-500 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -204,11 +207,12 @@
                         </div>
                         <div>
                             <h4 class="text-gray-800 font-semibold text-lg mb-1 group-hover:text-sky-500 transition-colors">Inovatif</h4>
-                            <p class="text-gray-600">Selalu mengembangkan solusi baru yang bermanfaat</p>
+                            <p class="text-gray-600 leading-relaxed">Selalu mengembangkan solusi baru yang bermanfaat</p>
                         </div>
                     </div>
-                    
-                    <div class="flex items-start gap-3 hover:bg-sky-50 p-3 rounded-xl transition-colors group">
+
+                    <!-- Card Item -->
+                    <div class="flex items-start gap-3 hover:bg-sky-50 p-4 rounded-xl transition-colors group">
                         <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-sky-500 group-hover:text-white transition-colors">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sky-500 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -216,7 +220,7 @@
                         </div>
                         <div>
                             <h4 class="text-gray-800 font-semibold text-lg mb-1 group-hover:text-sky-500 transition-colors">Adaptif</h4>
-                            <p class="text-gray-600">Cepat beradaptasi dengan perubahan teknologi</p>
+                            <p class="text-gray-600 leading-relaxed">Cepat beradaptasi dengan perubahan teknologi</p>
                         </div>
                     </div>
                 </div>
@@ -228,11 +232,11 @@
 <!-- Statistics Section -->
 
 <!-- Welcome Messages Section -->
-<section class="py-16 bg-white relative">
+<section class="pt-16 md:pb-16 bg-white relative">
     <!-- Fun Pattern Background -->
     <div class="absolute inset-0 opacity-5 pattern-zigzag"></div>
     
-    <div class="container mx-auto px-4 relative z-10">
+    <div class="container mx-auto px-4 relative z-10" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <div class="text-center max-w-3xl mx-auto mb-16 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
             <div class="flex items-center justify-center gap-3 mb-4">
                 <div class="w-8 h-1 bg-sky-500 rounded-full"></div>
@@ -243,7 +247,7 @@
                 Sambutan <span class="text-sky-500">Pimpinan</span>
             </h2>
             <p class="text-gray-600 text-lg">
-                Pesan dan harapan dari para pemimpin yang mendukung perkembangan HMSI Unsil
+                Pesan dan harapan dari para pemimpin yang mendukung perkembangan HMSI UNSIL
             </p>
         </div>
         
@@ -299,7 +303,7 @@
                 <blockquote class="text-gray-600 text-lg italic mb-6 leading-relaxed relative">
                     <span class="text-6xl absolute -top-8 -left-2 text-sky-100">"</span>
                     <div class="relative z-10">
-                        Menjadi bagian dari HMSI Unsil adalah sebuah kehormatan dan tanggung jawab besar. Kami berkomitmen untuk terus menciptakan program-program yang bermanfaat bagi anggota dan masyarakat luas, khususnya dalam bidang teknologi informasi.
+                        Menjadi bagian dari HMSI UNSIL adalah sebuah kehormatan dan tanggung jawab besar. Kami berkomitmen untuk terus menciptakan program-program yang bermanfaat bagi anggota dan masyarakat luas, khususnya dalam bidang teknologi informasi.
                         <br><br>
                         <span class="text-sky-500 font-semibold">Di era transformasi digital yang begitu cepat, kami mengajak seluruh mahasiswa Sistem Informasi untuk aktif mengembangkan diri, membangun jaringan, dan memberikan kontribusi positif. Bersama kita wujudkan HMSI yang profesional, kolaboratif, dan inovatif!</span>
                     </div>
@@ -316,7 +320,7 @@
 
 
 <!-- Join Us CTA Section -->
-<section class="py-20 bg-gradient-to-r from-sky-500 to-blue-600 relative overflow-hidden">
+<section class="pt-16 md:pb-16 bg-gradient-to-r from-sky-500 to-blue-600 relative overflow-hidden">
     <!-- Decorative Elements -->
     <div class="absolute inset-0">
         <div class="absolute top-10 left-10 w-40 h-40 bg-white/10 rounded-full mix-blend-overlay blur-3xl animate-blob"></div>
@@ -331,17 +335,17 @@
         </div>
     </div>
     
-    <div class="container mx-auto px-4 relative z-10">
+    <div class="container mx-auto px-4 relative z-10" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div class="lg:w-1/2 text-center lg:text-left">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                     Bergabunglah dengan <span class="relative inline-block">
-                        <span class="relative z-10 text-black ">HMSI Unsil</span>
+                        <span class="relative z-10 text-slate-100 ">HMSI UNSIL</span>
                         <span class="absolute bottom-1 left-0 w-full h-3 bg-sky-300/30 -z-10 rounded-lg"></span>
                     </span>
                 </h2>
                 <p class="text-sky-100 text-lg mb-6 max-w-lg mx-auto lg:mx-0 wow fadeInLeft" data-wow-delay="400ms" data-wow-duration="1500ms">
-                    Mari jadikan masa perkuliahan lebih bermakna dengan mengembangkan potensi, membangun jaringan, dan memberikan kontribusi positif bersama HMSI Unsil!
+                    Mari jadikan masa perkuliahan lebih bermakna dengan mengembangkan potensi, membangun jaringan, dan memberikan kontribusi positif bersama HMSI UNSIL!
                 </p>
                <div class="flex flex-wrap gap-4 justify-center wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
                     <a href="/membership/register" class="group px-8 py-4 bg-white text-sky-500 font-bold rounded-xl hover:bg-sky-50 transition-all duration-300 shadow-lg hover:shadow-xl relative overflow-hidden">
@@ -349,7 +353,7 @@
                         <span class="absolute inset-0 w-0 bg-gradient-to-r from-sky-100 to-white transition-all duration-300 group-hover:w-full -z-0"></span>
                     </a>
                     <a href="https://wa.me/6287719904732" class="group px-8 py-4 border-2 border-white text-white font-bold rounded-xl transition-all duration-300 relative overflow-hidden">
-                        <span class="relative z-10 text-black">Hubungi Kami</span>
+                        <span class="relative z-10 text-white">Hubungi Kami</span>
                         <span class="absolute inset-0 w-0 bg-white/10 transition-all duration-300 group-hover:w-full -z-0"></span>
                     </a>
                 </div>

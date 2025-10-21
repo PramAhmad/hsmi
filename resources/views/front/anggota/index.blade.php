@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="relative bg-gradient-to-br from-blue-50 via-white to-sky-50 pt-32 mt-20 pb-16 overflow-hidden">
+<section class="relative bg-gradient-to-br from-blue-50 via-white to-sky-50 md:pt-48 pt-36 pb-28 overflow-hidden">
     <!-- Background Decorations -->
     <div class="absolute top-10 left-10 opacity-20">
         <div class="w-32 h-32 bg-blue-500 rounded-full animate-pulse"></div>
@@ -14,7 +14,7 @@
         <div class="w-40 h-40 bg-blue-300 rounded-full animate-ping"></div>
     </div>
 
-    <div class="container mx-auto px-4 relative z-10">
+    <div class="container mx-auto px-4 relative z-10" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <!-- Header Section -->
         <div class="text-center mb-16">
             <div class="flex items-center justify-center gap-3 mb-4 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
@@ -91,7 +91,7 @@
 
 <!-- Search & Filter Section -->
 <section class="bg-white py-8 border-b border-gray-100">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
             <!-- Search Bar -->
             <div class="flex-1 max-w-md">
@@ -143,8 +143,8 @@
 </section>
 
 <!-- Members Grid Section -->
-<section class="relative bg-gradient-to-br from-blue-50 via-white to-sky-50 py-16 overflow-hidden">
-    <div class="container mx-auto px-4 relative z-10">
+<section class="relative bg-gradient-to-br from-blue-50 via-white to-sky-50 pt-16 md:pb-16 overflow-hidden">
+    <div class="container mx-auto px-4 relative z-10" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         @if($members->count() > 0)
         <!-- Members Grid -->
         <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-8">
@@ -315,8 +315,8 @@
 
 <!-- Fun CTA Section -->
 @if($members->count() > 0)
-<section class="bg-gradient-to-br from-blue-50 via-white to-sky-50 py-16">
-    <div class="container mx-auto px-4">
+<section class="bg-gradient-to-br from-blue-50 via-white to-sky-50 pt-16 pb-16">
+    <div class="container mx-auto px-4" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <div class="text-center">
             <div class="bg-gradient-to-r from-blue-500 to-sky-600 rounded-3xl p-8 text-white relative overflow-hidden">
                 <!-- Background Pattern -->

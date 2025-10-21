@@ -2,50 +2,50 @@
 
 @section('content')
 <!-- Home Section -->
-<section class="banner-six-area bg-image paralax__animation"
+<section class="banner-six-area bg-image paralax__animation md:pt-96 pt-36 md:pb-28 pb-12"
     data-background="{{ asset('learnit/assets/images/bg/banner-six-bg.jpg') }}">
-    <div class="banner-six__shape1" data-depth="0.03">
-        <img class="animation__sunMove" src="{{ asset('learnit/assets/images/shape/banner-six-shape1.png') }}" alt="image">
-    </div>
-    <div class="banner-six__shape2" data-depth="0.03">
-        <img class="animation__arryLeftRight" src="{{ asset('learnit/assets/images/shape/banner-six-shape2.png') }}" alt="image">
-    </div>
-    <div class="banner-six__shape3" data-depth="0.03">
-        <img class="animation__arryUpDown" src="{{ asset('learnit/assets/images/shape/banner-six-shape3.png') }}" alt="image">
-    </div>
-    <div class="container">
-        <div class="banner-two__content">
-            <h5 class="mb-4 text-sky-500 text-sm font-semibold uppercase tracking-widest wow fadeInUp" data-wow-delay="00ms"
-                data-wow-duration="1500ms">HIMPUNAN MAHASISWA SISTEM INFORMASI</h5>
-            <h1 class="text-5xl lg:text-6xl font-bold text-slate-900 leading-tight wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                Teknologi Adalah Masa Depan
-                <span class="text-sky-500 relative inline-block">
-                    Inovasi 
-                    <img src="{{ asset('learnit/assets/images/shape/banner-span-shape.png') }}" alt="shape" class="absolute -bottom-2 left-0 w-full">
-                </span>
-            </h1>
-            <p class="mt-8 text-lg text-gray-200 leading-relaxed max-w-2xl wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
-                Wadah kreativitas dan inovasi mahasiswa Sistem Informasi Universitas Siliwangi untuk berkembang dan berkarya dalam dunia teknologi informasi.
-            </p>
-            <a href="activities" class="inline-flex items-center gap-3 bg-sky-500 hover:bg-sky-600 text-white md:px-8 md:py-4 px-4 py-2 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 mt-12 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-                Jelajahi Kegiatan
-                <i class="fa-light fa-arrow-right-long text-xl"></i>
-            </a>
+        <div class="banner-six__shape1" data-depth="0.03">
+            <img class="animation__sunMove" src="{{ asset('learnit/assets/images/shape/banner-six-shape1.png') }}" alt="image">
         </div>
-    </div>
-    <div class="banner-six__image">
-        <img class="w-100 rounded-3xl animation__arryLeftRight" src="{{ asset('images/hmsi.png') }}" alt="HMSI Unsil">
-        <img class="shape1 animation__arryUpDown" src="{{ asset('learnit/assets/images/shape/banner-six-image-shape1.png') }}" alt="image">
-        <img class="shape3" src="{{ asset('learnit/assets/images/shape/banner-six-image-shape3.png') }}" alt="image">
-    </div>
-    <div class="banner-five__cloud-shape image">
-        <img src="{{ asset('learnit/assets/images/bg/cloud-bottom.png') }}" alt="shape">
-    </div>
+        <div class="banner-six__shape2" data-depth="0.03">
+            <img class="animation__arryLeftRight" src="{{ asset('learnit/assets/images/shape/banner-six-shape2.png') }}" alt="image">
+        </div>
+        <div class="banner-six__shape3" data-depth="0.03">
+            <img class="animation__arryUpDown" src="{{ asset('learnit/assets/images/shape/banner-six-shape3.png') }}" alt="image">
+        </div>
+        <div class="container" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
+            <div class="banner-two__content">
+                <h5 class="mb-4 text-sky-500 text-sm font-semibold uppercase tracking-widest wow fadeInUp" data-wow-delay="00ms"
+                    data-wow-duration="1500ms">HIMPUNAN MAHASISWA SISTEM INFORMASI</h5>
+                <h1 class="text-5xl lg:text-6xl font-bold text-slate-900 leading-tight wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                    Teknologi Adalah Masa Depan
+                    <span class="text-sky-500 relative inline-block">
+                        Inovasi 
+                        <img src="{{ asset('learnit/assets/images/shape/banner-span-shape.png') }}" alt="shape" class="absolute -bottom-2 left-0 w-full">
+                    </span>
+                </h1>
+                <p class="mt-8 text-lg text-gray-200 leading-relaxed max-w-2xl wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                    Wadah kreativitas dan inovasi mahasiswa Sistem Informasi Universitas Siliwangi untuk berkembang dan berkarya dalam dunia teknologi informasi.
+                </p>
+                <a href="activities" class="inline-flex items-center gap-3 bg-sky-500 hover:bg-sky-600 text-white md:px-8 md:py-4 px-4 py-2 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:-translate-y-1 mt-12 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                    Jelajahi Kegiatan
+                    <i class="fa-light fa-arrow-right-long text-xl"></i>
+                </a>
+            </div>
+        </div>
+        <div class="banner-six__image">
+            <img class="w-100 rounded-3xl animation__arryLeftRight" src="{{ asset('images/hmsi.png') }}" alt="HMSI Unsil">
+            <img class="shape1 animation__arryUpDown" src="{{ asset('learnit/assets/images/shape/banner-six-image-shape1.png') }}" alt="image">
+            <img class="shape3" src="{{ asset('learnit/assets/images/shape/banner-six-image-shape3.png') }}" alt="image">
+        </div>
+        <div class="banner-five__cloud-shape image">
+            <img src="{{ asset('learnit/assets/images/bg/cloud-bottom.png') }}" alt="shape">
+        </div>
 </section>
 
 <!-- About Section -->
-<section class="about-five-area pt-32 pb-32">
-    <div class="container">
+<section class="about-five-area pt-32 md:pb-32">
+    <div class="container" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
                 <div class="about-five__image">
@@ -141,7 +141,7 @@
 </section>
 
 <!-- Menfess Section -->
-<section class="relative bg-slate-50 pt-32 pb-32">
+<section class="relative bg-slate-50 pt-32 ">
     <!-- Background Shapes -->
     <div class="absolute top-10 left-10 opacity-20">
         <div class="w-20 h-20 bg-sky-500 rounded-full animate-pulse"></div>
@@ -150,7 +150,7 @@
         <div class="w-32 h-32 bg-sky-400 rounded-full animate-bounce"></div>
     </div>
     
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             <!-- Content -->
             <div class="order-2 lg:order-1">
@@ -289,7 +289,7 @@
         </a>
     </div>
     @endif
-</div>
+        </div>
             </div>
             
             <!-- Illustration -->
@@ -334,8 +334,8 @@
 </section>
 
 <!-- Activities Section -->
-<section class="courses-six-area pt-32 pb-32">
-    <div class="container mx-auto px-4">
+<section class="courses-six-area pt-32 md:pb-32">
+    <div class="container mx-auto px-4" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <div class="text-center mb-16">
             <h5 class="text-sky-500 uppercase tracking-widest font-semibold text-sm mb-3 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">Kegiatan Terbaru</h5>
             <h2 class="text-4xl font-bold text-gray-800 leading-tight wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
@@ -407,8 +407,7 @@
     </div>
 </section>
 
-
-<section class="relative bg-gradient-to-br from-sky-50 via-white to-sky-50 pt-32 pb-32 overflow-hidden">
+<section class="relative bg-gradient-to-br from-sky-50 via-white to-sky-50 pt-32 md:pb-32 overflow-hidden">
     <!-- Background Decorations -->
     <div class="absolute top-20 left-10 opacity-20">
         <div class="w-24 h-24 bg-sky-500 rounded-full animate-pulse"></div>
@@ -420,7 +419,7 @@
         <div class="w-40 h-40 bg-sky-300 rounded-full animate-ping"></div>
     </div>
 
-    <div class="container mx-auto px-4 relative z-10">
+    <div class="container mx-auto px-4 relative z-10" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <!-- Header Section -->
         <div class="text-center mb-16">
             <h5 class="text-sky-500 uppercase tracking-widest font-semibold text-sm mb-3 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
@@ -649,9 +648,8 @@
     </div>
 </section>
 
-
 <!-- Team Section -->
-<section class="relative bg-gradient-to-br from-sky-50 via-white to-sky-50 pt-32 pb-32 overflow-hidden">
+<section class="relative bg-gradient-to-br from-sky-50 via-white to-sky-50 pt-32 md:pb-32 overflow-hidden">
     <!-- Background Decorations -->
     <div class="absolute top-10 left-10 opacity-20">
         <div class="w-32 h-32 bg-sky-500 rounded-full animate-pulse"></div>
@@ -663,7 +661,7 @@
         <div class="w-40 h-40 bg-sky-300 rounded-full animate-ping"></div>
     </div>
 
-    <div class="container mx-auto px-4 relative z-10">
+    <div class="container mx-auto px-4 relative z-10" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <!-- Header Section -->
         <div class="text-center mb-16">
             <div class="flex items-center justify-center gap-3 mb-4 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
@@ -736,135 +734,135 @@
         </div>
 
         <!-- Team Grid -->
-  <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-8">
-    @forelse($teamMembers as $index => $member)
-    @php
-        $roleInfo = $member->getRoleDisplayName();
-        $socialMedia = $member->getFormattedSocialMedia();
-    @endphp
-    
-    <div class="group wow fadeInUp" data-wow-delay="{{ $index * 100 }}ms" data-wow-duration="1500ms">
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:rotate-1 relative">
-            <!-- Cute Badge -->
-            <div class="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-r from-sky-500 to-sky-600 rounded-full flex items-center justify-center z-10 shadow-lg group-hover:animate-bounce">
-                <span class="text-xl">{{ $roleInfo['emoji'] }}</span>
-            </div>
-
-            <!-- Avatar Section - Full Image -->
-            <div class="relative h-full bg-gradient-to-br from-sky-100 to-sky-100 overflow-hidden">
-                @if($member->avatar_url)
-                    <img src="{{ $member->getFilamentAvatarUrl() }}" 
-                         alt="{{ $member->name }}" 
-                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                @else
-                    <!-- Fallback with initials -->
-                    <div class="w-full h-full bg-gradient-to-br from-sky-500 to-sky-600 flex items-center justify-center">
-                        <span class="text-white text-6xl font-bold">
-                            {{ substr($member->name, 0, 1) }}
-                        </span>
+        <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-8">
+            @forelse($teamMembers as $index => $member)
+            @php
+                $roleInfo = $member->getRoleDisplayName();
+                $socialMedia = $member->getFormattedSocialMedia();
+            @endphp
+            
+            <div class="group wow fadeInUp" data-wow-delay="{{ $index * 100 }}ms" data-wow-duration="1500ms">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:rotate-1 relative">
+                    <!-- Cute Badge -->
+                    <div class="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-r from-sky-500 to-sky-600 rounded-full flex items-center justify-center z-10 shadow-lg group-hover:animate-bounce">
+                        <span class="text-xl">{{ $roleInfo['emoji'] }}</span>
                     </div>
-                @endif
+
+                    <!-- Avatar Section - Full Image -->
+                    <div class="relative h-full bg-gradient-to-br from-sky-100 to-sky-100 overflow-hidden">
+                        @if($member->avatar_url)
+                            <img src="{{ $member->getFilamentAvatarUrl() }}" 
+                                alt="{{ $member->name }}" 
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        @else
+                            <!-- Fallback with initials -->
+                            <div class="w-full h-full bg-gradient-to-br from-sky-500 to-sky-600 flex items-center justify-center">
+                                <span class="text-white text-6xl font-bold">
+                                    {{ substr($member->name, 0, 1) }}
+                                </span>
+                            </div>
+                        @endif
+                        
+                        <!-- Online Status - positioned on image -->
+                        <div class="absolute bottom-4 right-4 w-6 h-6 bg-green-500 rounded-full border-3 border-white flex items-center justify-center shadow-lg">
+                            <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                        </div>
+                        
+                        <!-- Role Badge on image -->
+                        <div class="absolute bottom-4 left-4">
+                            <span class="bg-gradient-to-r from-sky-500 to-sky-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase backdrop-blur-sm bg-opacity-90">
+                                {{ $roleInfo['name'] }}
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Content Section -->
+                    <div class="p-6">
+                        <!-- Name -->
+                        <div class="text-center mb-4">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">{{ $member->name }}</h4>
+                            <div class="w-12 h-1 bg-gradient-to-r from-sky-500 to-sky-600 rounded-full mx-auto"></div>
+                        </div>
+
+                        <!-- Fun Fact -->
+                        @if($member->fun_fact)
+                        <div class="mb-4">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="text-lg">🌟</span>
+                                <span class="text-sm font-semibold text-sky-600">Fun Fact:</span>
+                            </div>
+                            <p class="text-gray-600 text-sm">{{ $member->fun_fact }}</p>
+                        </div>
+                        @endif
+
+                        <!-- Hobby -->
+                        @if($member->hobby)
+                        <div class="mb-4">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="text-lg">🎯</span>
+                                <span class="text-sm font-semibold text-sky-600">Hobi:</span>
+                            </div>
+                            <p class="text-gray-600 text-sm">{{ $member->hobby }}</p>
+                        </div>
+                        @endif
+
+                        <!-- Bio -->
+                        @if($member->bio)
+                        <div class="mb-4">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="text-lg">💬</span>
+                                <span class="text-sm font-semibold text-sky-600">About:</span>
+                            </div>
+                            <p class="text-gray-600 text-sm">{{ Str::limit($member->bio, 80) }}</p>
+                        </div>
+                        @endif
+
+                        <!-- Social Media -->
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+            <div class="flex items-center gap-2">
+                <span class="text-xs text-gray-500 font-medium">Let's Connect!</span>
+                <span class="text-sm">👋</span>
+            </div>
+            
+            <div class="flex items-center gap-2">
+                @php
+                    $socialMediaArray = $socialMedia instanceof \Illuminate\Support\Collection 
+                        ? $socialMedia->take(3)->toArray() 
+                        : array_slice($socialMedia->toArray(), 0, 3);
+                @endphp
                 
-                <!-- Online Status - positioned on image -->
-                <div class="absolute bottom-4 right-4 w-6 h-6 bg-green-500 rounded-full border-3 border-white flex items-center justify-center shadow-lg">
-                    <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                @forelse($socialMediaArray as $social)
+                <a href="{{ $social['url'] }}" target="_blank" 
+                class="w-8 h-8 bg-gradient-to-r from-sky-100 to-sky-100 hover:from-sky-500 hover:to-sky-600 text-sky-600 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
+                    <i class="{{ $social['icon'] }} text-sm"></i>
+                </a>
+                @empty
+                <div class="flex items-center gap-1 text-gray-400">
+                    <i class="fa-solid fa-heart text-sm"></i>
+                    <span class="text-xs">Tim HMSI</span>
                 </div>
-                
-                <!-- Role Badge on image -->
-                <div class="absolute bottom-4 left-4">
-                    <span class="bg-gradient-to-r from-sky-500 to-sky-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase backdrop-blur-sm bg-opacity-90">
-                        {{ $roleInfo['name'] }}
-                    </span>
+                @endforelse
+            </div>
+                </div>
+                    </div>
+
+                    <!-- Hover Effect Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-sky-500/0 to-sky-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"></div>
                 </div>
             </div>
-
-            <!-- Content Section -->
-            <div class="p-6">
-                <!-- Name -->
-                <div class="text-center mb-4">
-                    <h4 class="text-xl font-bold text-gray-800 mb-2">{{ $member->name }}</h4>
-                    <div class="w-12 h-1 bg-gradient-to-r from-sky-500 to-sky-600 rounded-full mx-auto"></div>
-                </div>
-
-                <!-- Fun Fact -->
-                @if($member->fun_fact)
-                <div class="mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="text-lg">🌟</span>
-                        <span class="text-sm font-semibold text-sky-600">Fun Fact:</span>
+            @empty
+            <!-- Empty State -->
+            <div class="col-span-full text-center py-16 bg-white rounded-2xl border border-gray-100">
+                <div class="mb-6">
+                    <div class="w-20 h-20 bg-gradient-to-br from-sky-100 to-sky-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-users text-3xl text-sky-500"></i>
                     </div>
-                    <p class="text-gray-600 text-sm">{{ $member->fun_fact }}</p>
                 </div>
-                @endif
-
-                <!-- Hobby -->
-                @if($member->hobby)
-                <div class="mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="text-lg">🎯</span>
-                        <span class="text-sm font-semibold text-sky-600">Hobi:</span>
-                    </div>
-                    <p class="text-gray-600 text-sm">{{ $member->hobby }}</p>
-                </div>
-                @endif
-
-                <!-- Bio -->
-                @if($member->bio)
-                <div class="mb-4">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="text-lg">💬</span>
-                        <span class="text-sm font-semibold text-sky-600">About:</span>
-                    </div>
-                    <p class="text-gray-600 text-sm">{{ Str::limit($member->bio, 80) }}</p>
-                </div>
-                @endif
-
-                <!-- Social Media -->
-              <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-    <div class="flex items-center gap-2">
-        <span class="text-xs text-gray-500 font-medium">Let's Connect!</span>
-        <span class="text-sm">👋</span>
-    </div>
-    
-    <div class="flex items-center gap-2">
-        @php
-            $socialMediaArray = $socialMedia instanceof \Illuminate\Support\Collection 
-                ? $socialMedia->take(3)->toArray() 
-                : array_slice($socialMedia->toArray(), 0, 3);
-        @endphp
-        
-        @forelse($socialMediaArray as $social)
-        <a href="{{ $social['url'] }}" target="_blank" 
-           class="w-8 h-8 bg-gradient-to-r from-sky-100 to-sky-100 hover:from-sky-500 hover:to-sky-600 text-sky-600 hover:text-white rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110">
-            <i class="{{ $social['icon'] }} text-sm"></i>
-        </a>
-        @empty
-        <div class="flex items-center gap-1 text-gray-400">
-            <i class="fa-solid fa-heart text-sm"></i>
-            <span class="text-xs">Tim HMSI</span>
-        </div>
-        @endforelse
-    </div>
-</div>
+                <h5 class="text-xl font-bold text-gray-800 mb-3">Tim Sedang Disiapkan</h5>
+                <p class="text-gray-500 mb-6 max-w-sm mx-auto">Pengurus HMSI akan segera diperkenalkan!</p>
             </div>
-
-            <!-- Hover Effect Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-t from-sky-500/0 to-sky-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"></div>
+            @endforelse
         </div>
-    </div>
-    @empty
-    <!-- Empty State -->
-    <div class="col-span-full text-center py-16 bg-white rounded-2xl border border-gray-100">
-        <div class="mb-6">
-            <div class="w-20 h-20 bg-gradient-to-br from-sky-100 to-sky-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i class="fa-solid fa-users text-3xl text-sky-500"></i>
-            </div>
-        </div>
-        <h5 class="text-xl font-bold text-gray-800 mb-3">Tim Sedang Disiapkan</h5>
-        <p class="text-gray-500 mb-6 max-w-sm mx-auto">Pengurus HMSI akan segera diperkenalkan!</p>
-    </div>
-    @endforelse
-</div>
 
         <!-- Fun CTA Section -->
         @if($teamMembers->count() > 0)
@@ -928,9 +926,9 @@
         </div>
     </div>
 </section>
+
 <!-- Journal Section -->
-<!-- Journal Section -->
-<section class="relative bg-gradient-to-br from-sky-50 via-white to-sky-50 pt-32 pb-32 overflow-hidden">
+<section class="relative bg-gradient-to-br from-sky-50 via-white to-sky-50 pt-32 md:pb-32 overflow-hidden">
     <!-- Background Decorations -->
     <div class="absolute top-20 left-16 opacity-20">
         <div class="w-28 h-28 bg-sky-500 rounded-full animate-pulse"></div>
@@ -942,7 +940,7 @@
         <div class="w-20 h-20 bg-sky-300 rounded-full animate-ping"></div>
     </div>
 
-    <div class="container mx-auto px-4 relative z-10">
+    <div class="container mx-auto px-4 relative z-10" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <!-- Header Section -->
         <div class="text-center mb-16">
             <div class="flex items-center justify-center gap-3 mb-4 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">

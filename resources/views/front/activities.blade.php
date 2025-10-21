@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="banner-six-area bg-image paralax__animation" data-background="{{ asset('learnit/assets/images/bg/banner-six-bg.jpg') }}">
+<section class="banner-six-area bg-image paralax__animation md:pt-48 pt-36 pb-28" data-background="{{ asset('learnit/assets/images/bg/banner-six-bg.jpg') }}">
     <div class="banner-six__shape1" data-depth="0.03">
         <img class="animation__sunMove" src="{{ asset('learnit/assets/images/shape/banner-six-shape1.png') }}" alt="image">
     </div>
@@ -13,7 +13,7 @@
         <img class="animation__arryUpDown" src="{{ asset('learnit/assets/images/shape/banner-six-shape3.png') }}" alt="image">
     </div>
     
-    <div class="container">
+    <div class="container" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <div class="text-center">
             <div class="flex items-center justify-center gap-3 mb-6 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                 <div class="w-12 h-12 bg-sky-500 rounded-full flex items-center justify-center animate-bounce">
@@ -76,7 +76,7 @@
 <!--  -->
 
 <!-- Filter & Activities List -->
-<section id="activities-list" class="relative bg-gradient-to-br from-slate-50 via-white to-sky-50 pt-20 pb-32 overflow-hidden">
+<section id="activities-list" class="relative bg-gradient-to-br from-slate-50 via-white to-sky-50 pt-16 md:pb-16 overflow-hidden">
     <!-- Background Decorations -->
     <div class="absolute top-20 left-10 opacity-20">
         <div class="w-24 h-24 bg-sky-500 rounded-full animate-pulse"></div>
@@ -85,7 +85,7 @@
         <div class="w-32 h-32 bg-blue-400 rounded-full animate-bounce"></div>
     </div>
     
-    <div class="container mx-auto px-4 relative z-10">
+    <div class="container mx-auto px-4 relative z-10" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <!-- Filter Section -->
         <div class="bg-white rounded-2xl shadow-lg p-6 mb-12 wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
             <div class="flex items-center gap-4 mb-6">
@@ -376,17 +376,17 @@
 </section>
 
 <!-- CTA Section -->
-<section class="relative bg-gradient-to-r from-sky-500 to-blue-600 pt-20 pb-20 overflow-hidden">
+<section class="relative bg-gradient-to-r from-sky-500 to-blue-600 pt-16 pb-16 overflow-hidden">
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-10">
         <div class="w-full h-full bg-repeat" style="background-image: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"60\" height=\"60\" viewBox=\"0 0 60 60\"><g fill=\"%23ffffff\" fill-opacity=\"0.4\"><circle cx=\"30\" cy=\"30\" r=\"2\"/></g></svg>')"></div>
     </div>
     
-    <div class="container mx-auto px-4 relative z-10">
-        <div class="text-center text-white">
+    <div class="container mx-auto px-4 relative z-10" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
+        <div class="text-center ">
             <div class="flex items-center justify-center gap-3 mb-6">
                 <span class="text-3xl animate-bounce">🚀</span>
-                <h3 class="text-3xl font-bold">Jangan Sampai Terlewat!</h3>
+                <h3 class="text-3xl font-bold text-white">Jangan Sampai Terlewat!</h3>
                 <span class="text-3xl animate-bounce" style="animation-delay: 0.5s;">⭐</span>
             </div>
             
@@ -395,13 +395,13 @@
             </p>
             
             <div class="flex flex-wrap items-center justify-center gap-4">
-                <a href="https://whatsapp.com/channel/0029VbANFa4CMY0AhvOBVI1K" 
+                <a href="https://whatsapp.com/channel/0029VbANFa4CMY0AhvOBVI1K" target="blank_"
                    class="inline-flex items-center gap-3 bg-white text-sky-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
                     <i class="fa-brands fa-whatsapp text-lg"></i>
                     Masuk Saluran WhatsApp
                 </a>
                 
-                <a href="https://www.instagram.com/hmsiunsil?igsh=cGdjb3Uya3pheGU5" 
+                <a href="https://www.instagram.com/hmsiunsil?igsh=cGdjb3Uya3pheGU5" target="blank_"
                    class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white px-6 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20">
                     <i class="fa-brands fa-instagram text-lg"></i>
                     Ikuti Instagram

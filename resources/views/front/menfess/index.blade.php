@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="banner-six-area bg-image paralax__animation" data-background="{{ asset('learnit/assets/images/bg/banner-six-bg.jpg') }}">
+<section class="banner-six-area bg-image paralax__animation md:pt-48 pt-36 pb-28" data-background="{{ asset('learnit/assets/images/bg/banner-six-bg.jpg') }}">
     <div class="banner-six__shape1" data-depth="0.03">
         <img class="animation__sunMove" src="{{ asset('learnit/assets/images/shape/banner-six-shape1.png') }}" alt="image">
     </div>
@@ -13,7 +13,7 @@
         <img class="animation__arryUpDown" src="{{ asset('learnit/assets/images/shape/banner-six-shape3.png') }}" alt="image">
     </div>
     
-    <div class="container">
+    <div class="container" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <div class="text-center">
             <div class="flex items-center justify-center gap-3 mb-6 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                 <div class="w-12 h-12 bg-gradient-to-r from-sky-500 to-blue-600 rounded-full flex items-center justify-center animate-bounce">
@@ -77,7 +77,7 @@
 
 
 <!-- Filter & Menfess List -->
-<section id="menfess-list" class="relative bg-gradient-to-br from-slate-50 via-white to-sky-50 pt-20 pb-32 overflow-hidden">
+<section id="menfess-list" class="relative bg-gradient-to-br from-slate-50 via-white to-sky-50 pt-16 md:pb-16 overflow-hidden">
     <!-- Background Decorations -->
     <div class="absolute top-20 left-10 opacity-20">
         <div class="w-24 h-24 bg-sky-500 rounded-full animate-pulse"></div>
@@ -86,7 +86,7 @@
         <div class="w-32 h-32 bg-blue-400 rounded-full animate-bounce"></div>
     </div>
     
-    <div class="container mx-auto px-4 relative z-10">
+    <div class="container mx-auto px-4 relative z-10" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <!-- Filter Section -->
         <div class="bg-white rounded-2xl shadow-lg p-6 mb-12 wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
             <!-- Update Filter Section Header -->
@@ -209,153 +209,153 @@
         </div>
 
         <!-- Menfess Grid - Improved Compact Layout -->
-<div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-6">
-    @forelse($menfess as $index => $item)
-    <div class="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 wow fadeInUp border border-gray-100 h-fit" data-wow-delay="{{ $index * 50 }}ms" data-wow-duration="1500ms">
-        <!-- Header Card -->
-        <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-100">
-            <div class="flex items-center gap-2">
-                <div class="w-2 h-2 bg-sky-500 rounded-full animate-pulse"></div>
-                <span class="text-sm font-medium text-gray-700 truncate">{{ $item->sender_name }}</span>
-                
-                <!-- Category Badge -->
-                @if($item->category)
-                <span class="bg-gradient-to-r from-sky-100 to-blue-100 text-sky-700 px-2 py-1 rounded-full text-xs font-medium">
-                    @switch($item->category)
-                        @case('curhat') 💭 @break
-                        @case('cerita') 📖 @break
-                        @case('confession') 💝 @break
-                        @case('pertanyaan') ❓ @break
-                        @case('motivasi') 💪 @break
-                        @default {{ substr($item->category, 0, 1) }}
-                    @endswitch
-                </span>
-                @endif
-            </div>
-        </div>
-        
-        <!-- From & To Section -->
-        <div class="mb-4">
-            <div class="flex items-center gap-2 text-sm">
-                <span class="text-gray-500 font-medium text-xs">Untuk:</span>
-                <span class="bg-gradient-to-r from-sky-100 to-blue-100 text-sky-700 px-2 py-1 rounded-full text-xs font-medium">
-                    {{ $item->to_name ?: 'Semua' }}
-                </span>
-            </div>
-        </div>
-        
-        <!-- Message Content -->
-        <div class="mb-4">
-            <div class="bg-gradient-to-r from-gray-50 to-slate-50 rounded-lg p-3 border-l-4 border-sky-500">
-                <div class="text-gray-700 leading-relaxed text-sm line-clamp-4">
-                    {!! Str::limit($item->content, 200) !!}
+        <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-6">
+            @forelse($menfess as $index => $item)
+            <div class="bg-white rounded-xl p-5 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 wow fadeInUp border border-gray-100 h-fit" data-wow-delay="{{ $index * 50 }}ms" data-wow-duration="1500ms">
+                <!-- Header Card -->
+                <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-100">
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 bg-sky-500 rounded-full animate-pulse"></div>
+                        <span class="text-sm font-medium text-gray-700 truncate">{{ $item->sender_name }}</span>
+                        
+                        <!-- Category Badge -->
+                        @if($item->category)
+                        <span class="bg-gradient-to-r from-sky-100 to-blue-100 text-sky-700 px-2 py-1 rounded-full text-xs font-medium">
+                            @switch($item->category)
+                                @case('curhat') 💭 @break
+                                @case('cerita') 📖 @break
+                                @case('confession') 💝 @break
+                                @case('pertanyaan') ❓ @break
+                                @case('motivasi') 💪 @break
+                                @default {{ substr($item->category, 0, 1) }}
+                            @endswitch
+                        </span>
+                        @endif
+                    </div>
                 </div>
-                @if(strlen($item->content) > 200)
-                <div class="mt-2">
-                    <span class="text-sky-600 text-xs font-medium">
-                        Baca selengkapnya...
-                    </span>
-                </div>
-                @endif
-            </div>
-        </div>
-        
-        <!-- Spotify Embed -->
-        @if($item->spotify_link)
-        <div class="mb-4">
-            @php
-                $spotifyId = null;
-                $isValidSpotify = false;
                 
-                // Check for Spotify track URL patterns
-                if (preg_match('/spotify\.com\/track\/([a-zA-Z0-9]+)/', $item->spotify_link, $matches)) {
-                    $spotifyId = $matches[1];
-                    $isValidSpotify = true;
-                } elseif (preg_match('/open\.spotify\.com\/track\/([a-zA-Z0-9]+)/', $item->spotify_link, $matches)) {
-                    $spotifyId = $matches[1];
-                    $isValidSpotify = true;
-                } elseif (preg_match('/spotify:track:([a-zA-Z0-9]+)/', $item->spotify_link, $matches)) {
-                    $spotifyId = $matches[1];
-                    $isValidSpotify = true;
-                }
-            @endphp
-            
-            @if($isValidSpotify && $spotifyId)
-            <div class="bg-gradient-to-r from-green-400 to-green-500 rounded-lg overflow-hidden shadow-md">
-                <div class="bg-white">
-                    <iframe src="https://open.spotify.com/embed/track/{{ $spotifyId }}?utm_source=generator&theme=0" 
-                            width="100%" 
-                            height="152" 
-                            frameborder="0" 
-                            allowfullscreen="" 
-                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                            loading="lazy"
-                            class="rounded-b-lg">
-                    </iframe>
+                <!-- From & To Section -->
+                <div class="mb-4">
+                    <div class="flex items-center gap-2 text-sm">
+                        <span class="text-gray-500 font-medium text-xs">Untuk:</span>
+                        <span class="bg-gradient-to-r from-sky-100 to-blue-100 text-sky-700 px-2 py-1 rounded-full text-xs font-medium">
+                            {{ $item->to_name ?: 'Semua' }}
+                        </span>
+                    </div>
                 </div>
-            </div>
-            @endif
-        </div>
-        @endif
-        
-        <!-- Footer -->
-        <div class="flex items-center justify-between pt-3 border-t border-gray-100">
-            <!-- Time & Tags -->
-            <div class="flex items-center gap-3">
-                <span class="text-xs text-gray-500 font-medium">
-                    {{ $item->created_at->diffForHumans() }}
-                </span>
                 
-                @if(isset($item->tags) && $item->tags->count() > 0)
-                <div class="flex gap-1">
-                    @foreach($item->tags->take(1) as $tag)
-                    <span class="bg-sky-100 text-sky-700 px-2 py-1 rounded-full text-xs font-medium">
-                        #{{ Str::limit($tag->name, 6) }}
-                    </span>
-                    @endforeach
-                    @if($item->tags->count() > 1)
-                    <span class="text-xs text-gray-400">+{{ $item->tags->count() - 1 }}</span>
+                <!-- Message Content -->
+                <div class="mb-4">
+                    <div class="bg-gradient-to-r from-gray-50 to-slate-50 rounded-lg p-3 border-l-4 border-sky-500">
+                        <div class="text-gray-700 leading-relaxed text-sm line-clamp-4">
+                            {!! Str::limit($item->content, 200) !!}
+                        </div>
+                        @if(strlen($item->content) > 200)
+                        <div class="mt-2">
+                            <span class="text-sky-600 text-xs font-medium">
+                                Baca selengkapnya...
+                            </span>
+                        </div>
+                        @endif
+                    </div>
+                </div>
+                
+                <!-- Spotify Embed -->
+                @if($item->spotify_link)
+                <div class="mb-4">
+                    @php
+                        $spotifyId = null;
+                        $isValidSpotify = false;
+                        
+                        // Check for Spotify track URL patterns
+                        if (preg_match('/spotify\.com\/track\/([a-zA-Z0-9]+)/', $item->spotify_link, $matches)) {
+                            $spotifyId = $matches[1];
+                            $isValidSpotify = true;
+                        } elseif (preg_match('/open\.spotify\.com\/track\/([a-zA-Z0-9]+)/', $item->spotify_link, $matches)) {
+                            $spotifyId = $matches[1];
+                            $isValidSpotify = true;
+                        } elseif (preg_match('/spotify:track:([a-zA-Z0-9]+)/', $item->spotify_link, $matches)) {
+                            $spotifyId = $matches[1];
+                            $isValidSpotify = true;
+                        }
+                    @endphp
+                    
+                    @if($isValidSpotify && $spotifyId)
+                    <div class="bg-gradient-to-r from-green-400 to-green-500 rounded-lg overflow-hidden shadow-md">
+                        <div class="bg-white">
+                            <iframe src="https://open.spotify.com/embed/track/{{ $spotifyId }}?utm_source=generator&theme=0" 
+                                    width="100%" 
+                                    height="152" 
+                                    frameborder="0" 
+                                    allowfullscreen="" 
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                                    loading="lazy"
+                                    class="rounded-b-lg">
+                            </iframe>
+                        </div>
+                    </div>
                     @endif
                 </div>
                 @endif
+                
+                <!-- Footer -->
+                <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                    <!-- Time & Tags -->
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs text-gray-500 font-medium">
+                            {{ $item->created_at->diffForHumans() }}
+                        </span>
+                        
+                        @if(isset($item->tags) && $item->tags->count() > 0)
+                        <div class="flex gap-1">
+                            @foreach($item->tags->take(1) as $tag)
+                            <span class="bg-sky-100 text-sky-700 px-2 py-1 rounded-full text-xs font-medium">
+                                #{{ Str::limit($tag->name, 6) }}
+                            </span>
+                            @endforeach
+                            @if($item->tags->count() > 1)
+                            <span class="text-xs text-gray-400">+{{ $item->tags->count() - 1 }}</span>
+                            @endif
+                        </div>
+                        @endif
+                    </div>
+                    
+                    <!-- Detail Button -->
+                    <button onclick="showMenfessDetail('{{ $item->id }}')" 
+                            class="text-sky-500 hover:text-sky-400 text-sm bg-sky-100 rounded-full hover:scale-105 hover:transition duration-500 px-4 py-1 font-medium transition-colors">
+                        Detail
+                    </button>
+                </div>
             </div>
-            
-            <!-- Detail Button -->
-            <button onclick="showMenfessDetail('{{ $item->id }}')" 
-                    class="text-sky-500 hover:text-sky-400 text-sm bg-sky-100 rounded-full hover:scale-105 hover:transition duration-500 px-4 py-1 font-medium transition-colors">
-                Detail
-            </button>
-        </div>
-    </div>
-    @empty
-    <!-- Empty State -->
-    <div class="col-span-full text-center py-16 bg-white rounded-2xl border border-gray-100">
-        <div class="mb-6">
-            <div class="w-20 h-20 bg-gradient-to-br from-sky-100 to-sky-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i class="fa-regular fa-envelope text-3xl text-sky-500"></i>
+            @empty
+            <!-- Empty State -->
+            <div class="col-span-full text-center py-16 bg-white rounded-2xl border border-gray-100">
+                <div class="mb-6">
+                    <div class="w-20 h-20 bg-gradient-to-br from-sky-100 to-sky-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-regular fa-envelope text-3xl text-sky-500"></i>
+                    </div>
+                </div>
+                @if(request()->hasAny(['search', 'category', 'music']))
+                <h5 class="text-xl font-bold text-gray-800 mb-3">Tidak ada menfess yang sesuai</h5>
+                <p class="text-gray-500 mb-6 max-w-sm mx-auto">Coba ubah filter atau kata kunci pencarian!</p>
+                <!-- Update Empty State Buttons -->
+                <a href="{{ route('sifess.index') }}" 
+                class="inline-flex items-center gap-2 bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <i class="fa-solid fa-refresh"></i>
+                    Reset Filter
+                </a>
+                @else
+                <h5 class="text-xl font-bold text-gray-800 mb-3">Belum ada menfess</h5>
+                <p class="text-gray-500 mb-6 max-w-sm mx-auto">Jadilah yang pertama berbagi cerita, curhat, atau perasaan secara anonim!</p>
+                <button onclick="openMenfessModal()" 
+                    class="inline-flex items-center gap-2 bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <i class="fa-regular fa-paper-plane"></i>
+                    Kirim Menfess Pertama
+                </button>
+                @endif
             </div>
+            @endforelse
         </div>
-        @if(request()->hasAny(['search', 'category', 'music']))
-        <h5 class="text-xl font-bold text-gray-800 mb-3">Tidak ada menfess yang sesuai</h5>
-        <p class="text-gray-500 mb-6 max-w-sm mx-auto">Coba ubah filter atau kata kunci pencarian!</p>
-        <!-- Update Empty State Buttons -->
-        <a href="{{ route('sifess.index') }}" 
-           class="inline-flex items-center gap-2 bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
-            <i class="fa-solid fa-refresh"></i>
-            Reset Filter
-        </a>
-        @else
-        <h5 class="text-xl font-bold text-gray-800 mb-3">Belum ada menfess</h5>
-        <p class="text-gray-500 mb-6 max-w-sm mx-auto">Jadilah yang pertama berbagi cerita, curhat, atau perasaan secara anonim!</p>
-        <button onclick="openMenfessModal()" 
-               class="inline-flex items-center gap-2 bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
-            <i class="fa-regular fa-paper-plane"></i>
-            Kirim Menfess Pertama
-        </button>
-        @endif
-    </div>
-    @endforelse
-</div>
 
         <!-- Pagination -->
         @if($menfess->hasPages())

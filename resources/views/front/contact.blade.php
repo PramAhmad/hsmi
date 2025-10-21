@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="banner-six-area bg-image paralax__animation" data-background="{{ asset('learnit/assets/images/bg/banner-six-bg.jpg') }}">
+<section class="banner-six-area bg-image paralax__animation md:pt-48 pt-36 pb-28" data-background="{{ asset('learnit/assets/images/bg/banner-six-bg.jpg') }}">
     <div class="banner-six__shape1" data-depth="0.03">
         <img class="animation__sunMove" src="{{ asset('learnit/assets/images/shape/banner-six-shape1.png') }}" alt="image">
     </div>
@@ -13,7 +13,7 @@
         <img class="animation__arryUpDown" src="{{ asset('learnit/assets/images/shape/banner-six-shape3.png') }}" alt="image">
     </div>
     
-    <div class="container">
+    <div class="container" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <div class="text-center">
             <div class="flex items-center justify-center gap-3 mb-6 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                 <div class="w-12 h-12 bg-gradient-to-r from-sky-500 to-blue-600 rounded-full flex items-center justify-center animate-bounce">
@@ -40,7 +40,7 @@
                 <ul class="space-y-2">
                     <li class="flex items-center justify-center gap-3">
                         <span class="w-2 h-2 bg-sky-300 rounded-full animate-pulse"></span>
-                        <span>Jangan ragu untuk menghubungi kami! Tim HMSI Unsil siap membantu</span>
+                        <span>Jangan ragu untuk menghubungi kami! Tim HMSI UNSIL siap membantu</span>
                     </li>
                     <li class="flex items-center justify-center gap-3">
                         <span class="w-2 h-2 bg-blue-300 rounded-full animate-pulse" style="animation-delay: 0.3s;"></span>
@@ -74,7 +74,7 @@
 </section>
 
 <!-- Contact Section -->
-<section id="contact-info" class="relative bg-gradient-to-br from-slate-50 via-white to-sky-50 pt-20 pb-32 overflow-hidden">
+<section id="contact-info" class="relative bg-gradient-to-br from-slate-50 via-white to-sky-50 pt-16 md:pb-16 overflow-hidden">
     <!-- Background Decorations -->
     <div class="absolute top-20 left-10 opacity-20">
         <div class="w-24 h-24 bg-sky-500 rounded-full animate-pulse"></div>
@@ -83,7 +83,7 @@
         <div class="w-32 h-32 bg-blue-400 rounded-full animate-bounce"></div>
     </div>
     
-    <div class="container mx-auto px-4 relative z-10">
+    <div class="container mx-auto px-4 relative z-10" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <div class="grid lg:grid-cols-12 gap-8">
             <!-- Contact Info - Left Sidebar -->
             <div class="lg:col-span-4">
@@ -92,7 +92,7 @@
                     <div class="wow fadeInUp" data-wow-delay="200ms">
                         <h2 class="text-2xl font-bold text-gray-800 mb-4">Informasi Kontak</h2>
                         <p class="text-gray-600 leading-relaxed">
-                            Jangan ragu untuk menghubungi kami. Tim HMSI Unsil siap membantu Anda.
+                            Jangan ragu untuk menghubungi kami. Tim HMSI UNSIL siap membantu Anda.
                         </p>
                     </div>
 
@@ -124,9 +124,10 @@
                                 <div class="flex-1">
                                     <h4 class="text-lg font-semibold text-gray-800 mb-2">Alamat</h4>
                                     <p class="text-gray-600 text-sm leading-relaxed">
-                                        Jl. Siliwangi No.24<br>
-                                        Tasikmalaya, Jawa Barat<br>
-                                        Indonesia
+                                        Jl. Mugarsari, Kel. Mugarsari,<br>
+                                        Kec. Tamansari, Kota Tasikmalaya,<br>
+                                        Jawa Barat, Indonesia, (46196) 
+
                                     </p>
                                 </div>
                             </div>
@@ -144,11 +145,6 @@
                                         <p class="text-sm">
                                             <a href="mailto:hmsi@unsil.ac.id" class="text-sky-600 hover:text-sky-700 transition-colors">
                                                 hmsi@unsil.ac.id
-                                            </a>
-                                        </p>
-                                        <p class="text-sm">
-                                            <a href="mailto:info.hmsi@unsil.ac.id" class="text-sky-600 hover:text-sky-700 transition-colors">
-                                                info.hmsi@unsil.ac.id
                                             </a>
                                         </p>
                                     </div>
@@ -184,19 +180,15 @@
                                 <div class="flex-1">
                                     <h4 class="text-lg font-semibold text-gray-800 mb-3">Media Sosial</h4>
                                     <div class="flex gap-3">
-                                        <a href="https://facebook.com/hmsi.unsil" target="_blank" 
-                                           class="w-10 h-10 bg-sky-500 hover:bg-sky-600 rounded-lg flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                                            <i class="fa-brands fa-facebook-f"></i>
-                                        </a>
                                         <a href="https://instagram.com/hmsi.unsil" target="_blank" 
                                            class="w-10 h-10 bg-sky-500 hover:bg-sky-600 rounded-lg flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                                             <i class="fa-brands fa-instagram"></i>
                                         </a>
-                                        <a href="https://linkedin.com/company/hmsi-unsil" target="_blank" 
+                                        <a href="https://tiktok.com/@hmsiunsil" target="_blank" 
                                            class="w-10 h-10 bg-sky-500 hover:bg-sky-600 rounded-lg flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                                            <i class="fa-brands fa-linkedin-in"></i>
+                                            <i class="fa-brands fa-tiktok"></i>
                                         </a>
-                                        <a href="https://youtube.com/@hmsi.unsil" target="_blank" 
+                                        <a href="https://youtube.com/@hmsiunsil" target="_blank" 
                                            class="w-10 h-10 bg-sky-500 hover:bg-sky-600 rounded-lg flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                                             <i class="fa-brands fa-youtube"></i>
                                         </a>

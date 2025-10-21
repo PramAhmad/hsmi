@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="banner-six-area bg-image paralax__animation" data-background="{{ asset('learnit/assets/images/bg/banner-six-bg.jpg') }}">
+<section class="banner-six-area bg-image paralax__animation md:pt-48 pt-36 pb-28" data-background="{{ asset('learnit/assets/images/bg/banner-six-bg.jpg') }}">
     <div class="banner-six__shape1" data-depth="0.03">
         <img class="animation__sunMove" src="{{ asset('learnit/assets/images/shape/banner-six-shape1.png') }}" alt="image">
     </div>
@@ -13,7 +13,7 @@
         <img class="animation__arryUpDown" src="{{ asset('learnit/assets/images/shape/banner-six-shape3.png') }}" alt="image">
     </div>
     
-    <div class="container">
+    <div class="container" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <div class="text-center">
             <div class="flex items-center justify-center gap-3 mb-6 wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
                 <div class="w-12 h-12 bg-sky-500 rounded-full flex items-center justify-center animate-bounce">
@@ -74,8 +74,8 @@
 </section>
 
 <!-- Stats Section -->
-<section class="bg-white py-16">
-    <div class="container mx-auto px-4">
+<section class="bg-white pt-16 md:pb-16">
+    <div class="container mx-auto px-4" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <div class="grid md:grid-cols-4 gap-6">
             <div class="text-center p-6 bg-sky-50 rounded-2xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <div class="w-16 h-16 bg-sky-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -113,7 +113,7 @@
 </section>
 
 <!-- Mata Kuliah Table Section -->
-<section id="matakuliah-table" class="relative bg-gradient-to-br from-slate-50 via-white to-sky-50 pt-20 pb-32 overflow-hidden">
+<section id="matakuliah-table" class="relative bg-gradient-to-br from-slate-50 via-white to-sky-50 pt-16 pb-16 overflow-hidden">
     <!-- Background Decorations -->
     <div class="absolute top-20 left-10 opacity-20">
         <div class="w-24 h-24 bg-sky-500 rounded-full animate-pulse"></div>
@@ -122,7 +122,7 @@
         <div class="w-32 h-32 bg-blue-400 rounded-full animate-bounce"></div>
     </div>
     
-    <div class="container mx-auto px-4 relative z-10">
+    <div class="container mx-auto px-4 relative z-10 max-w-7xl">
         <!-- Filter Section -->
         <div class="bg-white rounded-2xl shadow-lg p-6 mb-12 wow fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
             <div class="flex items-center gap-4 mb-6">
@@ -443,8 +443,8 @@
 </section>
 
 <!-- Semester Overview -->
-<section class="bg-white py-16">
-    <div class="container mx-auto px-4">
+<section class="bg-white pt-16 md:pb-16">
+    <div class="container mx-auto px-4" style="transform: scale(0.9); transform-origin: top center; width: 100%; margin: 0 auto;">
         <div class="text-center mb-12">
             <h3 class="text-2xl font-bold text-gray-800 mb-4">Distribusi per Semester</h3>
             <p class="text-gray-600">Overview mata kuliah berdasarkan semester</p>
