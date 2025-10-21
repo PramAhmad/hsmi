@@ -63,7 +63,7 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        <a href="https://maps.google.com/?q=Universitas+Siliwangi+Tasikmalaya" target="_blank">Jl. Siliwangi No.24, Tasikmalaya, Jawa Barat</a>
+                        <a href="https://maps.google.com/?q=Universitas+Siliwangi+Kampus+2" target="_blank">Jl. Mugarsari, Kel. Mugarsari, Kec. Tamansari, Tasikmalaya</a>
                     </li>
                     <li><span></span></li>
                     <li>
@@ -219,7 +219,7 @@
 
             <!-- About Section - Hidden on mobile -->
             <div class="d-none d-lg-block">
-                <h5 class="text-white mb-20">Tentang HMSI</h5>
+                <h5 class="text-white mb-2">Tentang HMSI</h5>
                 <p class="paragraph-light fs-16">
                     Himpunan Mahasiswa Sistem Informasi Universitas Siliwangi yang berkomitmen memajukan bidang teknologi informasi dan mengembangkan potensi mahasiswa.
                 </p>
@@ -234,7 +234,13 @@
                 <ul>
                     <li class="md:text-base text-sm"><i class="fa-solid fa-envelope"></i> <a href="mailto:hmsi@unsil.ac.id" class="md:text-base text-sm">hmsi@unsil.ac.id</a></li>
                     <li class="md:text-base text-sm py-2"><i class="fa-solid fa-phone-volume"></i> <a href="https://wa.me/6287719904732" class="md:text-base text-sm">+62 877-1990-4732</a></li>
-                    <li class="md:text-base text-sm"><i class="fa-solid fa-location-dot"></i> <a href="https://maps.google.com/?q=Universitas+Siliwangi+Kampus+2" target="_blank" class="md:text-base text-sm">Universitas Siliwangi Kampus 2, Tasikmalaya</a></li>
+                    <li class="flex items-start gap-2 md:text-base text-sm">
+                        <i class="fa-solid fa-location-dot text-blue-600 mt-1"></i>
+                        <a href="https://maps.google.com/?q=Universitas+Siliwangi+Kampus+2" target="_blank" class="md:text-base text-sm leading-snug not-italic">
+                            Universitas Siliwangi Kampus 2,<br>
+                            Tasikmalaya
+                        </a>
+                    </li>
                 </ul>
             </div>
 

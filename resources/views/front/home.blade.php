@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Home Section -->
-<section class="banner-six-area bg-image paralax__animation md:pt-96 pt-36 md:pb-28 pb-12"
+<section class="banner-six-area bg-image paralax__animation md:pt-80 pt-36 md:pb-28 pb-12"
     data-background="{{ asset('learnit/assets/images/bg/banner-six-bg.jpg') }}">
         <div class="banner-six__shape1" data-depth="0.03">
             <img class="animation__sunMove" src="{{ asset('learnit/assets/images/shape/banner-six-shape1.png') }}" alt="image">
