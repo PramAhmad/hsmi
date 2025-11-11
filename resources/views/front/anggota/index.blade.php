@@ -51,7 +51,7 @@
                     <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-sky-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl">👥</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800">{{ $totalMembers }}</h3>
+                    <h3 class="text-2xl font-bold text-gray-800">52</h3>
                     <p class="text-gray-600 text-sm font-medium">Total Anggota</p>
                 </div>
             </div>
@@ -61,7 +61,7 @@
                     <div class="w-16 h-16 bg-gradient-to-r from-sky-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl">🏢</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800">{{ $totalDivisi }}</h3>
+                    <h3 class="text-2xl font-bold text-gray-800">11</h3>
                     <p class="text-gray-600 text-sm font-medium">Divisi Aktif</p>
                 </div>
             </div>
