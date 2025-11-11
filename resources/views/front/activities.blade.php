@@ -95,7 +95,8 @@
                 <h3 class="text-xl font-bold text-gray-800">Filter Kegiatan</h3>
             </div>
             
-            <form method="GET" action="{{ route('activities') }}" class="grid md:grid-cols-5 gap-4">
+            {{-- <form method="GET" action="{{ route('activities') }}" class="grid md:grid-cols-5 gap-4"> --}}
+            <form method="GET" action="{{ route('activities') }}" class="grid md:grid-cols-4 gap-4">
                 <!-- Search -->
                 <div class="relative">
                     <input type="text" 
@@ -107,7 +108,7 @@
                 </div>
                 
                 <!-- Category Filter -->
-                <select name="category" class="w-full  px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
+                {{-- <select name="category" class="w-full  px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
                     <option value="">Semua Kategori</option>
                     <option value="workshop" {{ request('category') == 'workshop' ? 'selected' : '' }}>🔧 Workshop</option>
                     <option value="seminar" {{ request('category') == 'seminar' ? 'selected' : '' }}>🎤 Seminar</option>
@@ -115,7 +116,7 @@
                     <option value="pelatihan" {{ request('category') == 'pelatihan' ? 'selected' : '' }}>📚 Pelatihan</option>
                     <option value="webinar" {{ request('category') == 'webinar' ? 'selected' : '' }}>💻 Webinar</option>
                     <option value="sosial" {{ request('category') == 'sosial' ? 'selected' : '' }}>🤝 Sosial</option>
-                </select>
+                </select> --}}
                 
                 <!-- Status Filter -->
                 <select name="status" class="w-full  px-4 border border-gray-200 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">

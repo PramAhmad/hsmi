@@ -480,8 +480,22 @@
             <div>
                 <h3 class="text-lg font-semibold text-slate-900">Newsletter HMSI</h3>
                 <p class="mt-4 text-sm leading-loose">
-                Dapatkan update terbaru tentang kegiatan dan informasi penting dari HMSI UNSIL.
+                Dapatkan update terbaru tentang kegiatan dan informasi penting di Social Media HMSI UNSIL.
                 </p>
+                <div class="flex gap-3 pt-3">
+                    <a href="https://instagram.com/hmsi.unsil" target="_blank" 
+                       class="w-10 h-10 bg-sky-500 hover:bg-sky-600 rounded-lg flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://tiktok.com/@hmsiunsil" target="_blank" 
+                       class="w-10 h-10 bg-sky-500 hover:bg-sky-600 rounded-lg flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://youtube.com/@hmsiunsil" target="_blank" 
+                       class="w-10 h-10 bg-sky-500 hover:bg-sky-600 rounded-lg flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
                 {{-- <form class="mt-4 flex">
                 <input
                     type="email"
